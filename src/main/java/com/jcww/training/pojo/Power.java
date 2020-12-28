@@ -9,14 +9,14 @@ public class Power {
   private String powername;
   private Integer parentId;
   private String url;
-  private List<Power> childList;
+  private List<Power> children;
 
-  public List<Power> getChildList() {
-    return childList;
+  public List<Power> getChildren() {
+    return children;
   }
 
-  public void setChildList(List<Power> childList) {
-    this.childList = childList;
+  public void setChildren(List<Power> children) {
+    this.children = children;
   }
 
   public Integer getPowerid() {
