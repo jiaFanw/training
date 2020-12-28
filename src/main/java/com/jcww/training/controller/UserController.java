@@ -19,6 +19,7 @@ public class UserController {
     public User login(HttpSession session,String username,String password){
         User user=userService.login(username,password);
        if (user!=null){
+           session.setAttribute("user",user);
            return user;
        }
         return null;
