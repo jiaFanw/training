@@ -1,12 +1,23 @@
 package com.jcww.training.pojo;
 
 
+import java.util.List;
+
 public class Power {
 
   private Integer powerid;
   private String powername;
-  private Integer roleid;
+  private Integer parentId;
+  private String url;
+  private List<Power> childList;
 
+  public List<Power> getChildList() {
+    return childList;
+  }
+
+  public void setChildList(List<Power> childList) {
+    this.childList = childList;
+  }
 
   public Integer getPowerid() {
     return powerid;
@@ -26,12 +37,21 @@ public class Power {
   }
 
 
-  public Integer getRoleid() {
-    return roleid;
+  public Integer getParentId() {
+    return parentId;
   }
 
-  public void setRoleid(Integer roleid) {
-    this.roleid = roleid;
+  public void setParentId(Integer parentId) {
+    this.parentId = parentId;
+  }
+
+
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
   }
 
 }
