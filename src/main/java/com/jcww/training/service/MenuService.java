@@ -1,4 +1,4 @@
 package com.jcww.training.service;
 
-public interface UserService {
+public interface MenuService {
 }
