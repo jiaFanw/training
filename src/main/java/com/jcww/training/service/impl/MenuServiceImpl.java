@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 @Service
@@ -16,27 +17,42 @@ public class MenuServiceImpl implements MenuService {
 
     @Override
     public List<Power> leftTree(int roleid) {
-        List<Power> menus =menuMapper.leftTree(roleid);
-        handleMenus(menus );
-        return menus ;
-    }
-    public void handleMenus(List<Power> menus) {
-        for (Power p : menus) {
-            List<Power> children = getAllByParentId(p.getPowerid());
-            p.setChildren(children);
+        List<Power> colList = menuMapper.leftTree(roleid);
+        if (colList==null || colList.size()<=0){
+            return null;
         }
-
-        Iterator<Power> iterator = menus.iterator();
-        while (iterator.hasNext()) {
-            Power menu = iterator.next();
-            if (menu.getParentId() != 0) {
-                iterator.remove();
+        LinkedList<Power> colLinkedList = new LinkedList<>();
+        colList.forEach(data->{
+            if(data.getParentId() == 0L){
+                colLinkedList.add(data);
             }
-        }
+        });
+
+        colLinkedList.forEach(data->{
+            data.setChildren(getChildren(data.getPowerid(), colList));
+        });
+        System.out.println(colLinkedList);
+        return colLinkedList;
     }
 
-    public List<Power> getAllByParentId(Integer powerid) {
-        return menuMapper.getAllByParentId(powerid);
+    //递归获取children节点
+    private List<Power> getChildren(Long parentId,List<Power> colList) {
+        //孩子集合
+        LinkedList<Power> colLinkedList = new LinkedList<>();
+        colList.forEach(data->{
+            if (parentId.equals(data.getParentId())) {
+                colLinkedList.add(data);
+            }
+        });
+        // 递归退出条件
+        if (colLinkedList.size() == 0){
+            return null;
+        }
+        // 把子菜单的子菜单再递归循环一遍
+        colLinkedList.forEach(data->{
+            data.setChildren(getChildren(data.getPowerid(),colList));
+        });
+        return colLinkedList;
     }
 
 }

@@ -6,7 +6,7 @@
 SELECT DISTINCT p.* FROM power p,`user` u,power_and_role par WHERE p.powerid=par.powerId AND u.roleid=par.roleId AND u.roleid=#{roleid}
     </select>
     <select id="getAllByParentId" resultType="com.jcww.training.pojo.Power">
-SELECT DISTINCT p.* FROM power p,`user` u,power_and_role par WHERE p.powerid=par.powerId AND u.roleid=par.roleId AND p.powerid=#{powerid}
+SELECT DISTINCT p.* FROM power p,`user` u,power_and_role par WHERE p.powerid=par.powerId AND u.roleid=par.roleId AND p.parentId=#{powerid}
     </select>
 </mapper>
 

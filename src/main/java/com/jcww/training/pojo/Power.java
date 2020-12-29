@@ -1,13 +1,14 @@
 package com.jcww.training.pojo;
 
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Power {
-
-  private Integer powerid;
+public class Power implements Serializable {
+  private static final long serialVersionUID = 1L;
+  private Long powerid;
   private String powername;
-  private Integer parentId;
+  private Long parentId;
   private String url;
   private List<Power> children;
 
@@ -19,11 +20,11 @@ public class Power {
     this.children = children;
   }
 
-  public Integer getPowerid() {
+  public Long  getPowerid() {
     return powerid;
   }
 
-  public void setPowerid(Integer powerid) {
+  public void setPowerid(Long  powerid) {
     this.powerid = powerid;
   }
 
@@ -37,11 +38,11 @@ public class Power {
   }
 
 
-  public Integer getParentId() {
+  public Long  getParentId() {
     return parentId;
   }
 
-  public void setParentId(Integer parentId) {
+  public void setParentId(Long  parentId) {
     this.parentId = parentId;
   }
 
@@ -54,4 +55,14 @@ public class Power {
     this.url = url;
   }
 
+  @Override
+  public String toString() {
+    return "Power{" +
+            "powerid=" + powerid +
+            ", powername='" + powername + '\'' +
+            ", parentId=" + parentId +
+            ", url='" + url + '\'' +
+            ", children=" + children +
+            '}';
+  }
 }
