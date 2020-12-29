@@ -10,6 +10,7 @@ import java.util.Date;
 public class Test implements Serializable {
 
   private Integer testid;//考试表id
+  private String testname;//考试名称
   @DateTimeFormat(pattern="yyyy-MM-dd")
   private Date testdate;//考试日期
   @DateTimeFormat(pattern="yyyy-MM-dd hh:mm:ss")
@@ -17,5 +18,6 @@ public class Test implements Serializable {
   @DateTimeFormat(pattern="yyyy-MM-dd hh:mm:ss")
   private Date testendtime;//考试截止日期
   private Integer testpaperid;//考试试卷表id
+
 
 }

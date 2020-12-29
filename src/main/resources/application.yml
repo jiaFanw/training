@@ -33,5 +33,5 @@ server:
 logging:
   level:
     com:
-      bgs:
-        biddingfd: debug
+      jcww:
+        training: debug
