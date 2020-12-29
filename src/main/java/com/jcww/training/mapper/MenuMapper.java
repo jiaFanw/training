@@ -10,5 +10,4 @@ public interface MenuMapper {
 
     List<Power> leftTree(int roleid);
 
-    List<Power> getAllByParentId(Integer powerid);
 }
