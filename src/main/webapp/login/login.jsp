@@ -19,6 +19,7 @@
 <script>
     $(function (){
         $("#btn1").click(function (){
+
             $.ajax({
                 url:"/user/login",
                 data:{username:$("#username").val(),password:$("#password").val()},
