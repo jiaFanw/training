@@ -23,4 +23,11 @@ public interface WJFMapper {
     List<Question> jianDa(@Param("testpaperid") Integer testpaperid);
 
     Map<String,Object> kaoShi(@Param("testpaperid") Integer testpaperid);
+
+
+    List<Map<String,Object>> markPapers();
+
+    List<Map<String,Object>> paper(@Param("testpaperid") Integer testpaperid);
+
+    List<Map<String,Object>> testPeople(@Param("testpaperid") Integer testpaperid);
 }

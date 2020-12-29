@@ -66,4 +66,26 @@
         testpaper LEFT JOIN questionandpaper ON testpaper.testpaperid=questionandpaper.paperid
         WHERE testpaper.testpaperid=1
     </select>
+
+    <select id="markPapers" resultType="Map">
+        SELECT test.*,testpaper.testpapername,testpaper.follmark,testpaper.passmark from
+        test,testpaper
+        WHERE test.testpaperid=testpaper.testpaperid
+        AND test.testendtime &lt; now()
+    </select>
+
+    <select id="paper" resultType="Map">
+        SELECT test.*,testpaper.testpapername,testpaper.follmark,testpaper.passmark from
+        test,testpaper
+        WHERE test.testpaperid=testpaper.testpaperid
+        and test.testpaperid = #{testpaperid}
+    </select>
+
+    <select id="testPeople" resultType="Map">
+        SELECT `user`.truename,`user`.jobnumber,testuser.score from
+        user,test,testuser
+        WHERE test.testid=testuser.testid
+        AND `user`.userid=testuser.userid
+        and test.testpaperid=#{testpaperid}
+    </select>
 </mapper>

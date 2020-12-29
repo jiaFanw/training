@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -20,10 +21,11 @@ public class WJFController {
     public List<Map<String,Object>> getExam(@PathVariable String user){
         List<Map<String,Object>> list = wjfService.getExam(user);
         for (Map<String,Object> map:list) {
-            String teststarttime = map.get("teststarttime").toString().substring(11);
-            String testendtime = map.get("testendtime").toString().substring(11);
+            String teststarttime = map.get("teststarttime").toString().substring(11,16);
+            String testendtime = map.get("testendtime").toString().substring(11,16);
             map.put("test",teststarttime+"-"+testendtime);
         }
+        System.out.println(list);
         return list;
     }
 
@@ -79,6 +81,35 @@ public class WJFController {
     }
 
 
+    @RequestMapping("/markPapers")
+    public List<Map<String,Object>> markPapers(){
+        List<Map<String,Object>> list = wjfService.markPapers();
+        for (Map<String,Object> map:list) {
+            String teststarttime = map.get("teststarttime").toString().substring(11,16);
+            String testendtime = map.get("testendtime").toString().substring(11,16);
+            map.put("test",teststarttime+"-"+testendtime);
+        }
+        System.out.println(list);
+        return list;
+    }
+
+    @RequestMapping("/paper")
+    public List<Map<String,Object>> paper(@RequestBody Map<String,Integer> param){
+        List<Map<String,Object>> list = wjfService.paper(param.get("testpaperid"));
+        for (Map<String,Object> map:list) {
+            String teststarttime = map.get("teststarttime").toString().substring(11,16);
+            String testendtime = map.get("testendtime").toString().substring(11,16);
+            map.put("test",teststarttime+"-"+testendtime);
+        }
+        System.out.println(list);
+        return list;
+    }
+
+
+    @RequestMapping("/testPeople")
+    public List<Map<String,Object>> testPeople(@RequestBody Map<String,Integer> param){
+        return wjfService.testPeople(param.get("testpaperid"));
+    }
 
 
 }

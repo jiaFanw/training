@@ -28,10 +28,12 @@
                             <span v-for="(daXuan,i) in daXuanTi">
                                 {{i+1}},{{daXuan.questionname}}
                                 <ul>
-                                    <li style="list-style: none;"><input type="radio" name="answer" value="A"/>{{daXuan.optiona}}</li>
-                                    <li style="list-style: none;"><input type="radio" name="answer" value="B"/>{{daXuan.optionb}}</li>
-                                    <li style="list-style: none;"><input type="radio" name="answer" value="C"/>{{daXuan.optionc}}</li>
-                                    <li style="list-style: none;"><input type="radio" name="answer" value="D"/>{{daXuan.optiond}}</li>
+                                    <el-radio-group v-model="danXuanAnswer">
+                                        <li style="list-style: none;"><el-radio label="A">{{daXuan.optiona}}</el-radio></li>
+                                        <li style="list-style: none;"><el-radio label="B">{{daXuan.optionb}}</el-radio></li>
+                                        <li style="list-style: none;"><el-radio label="C">{{daXuan.optionc}}</el-radio></li>
+                                        <li style="list-style: none;"><el-radio label="D">{{daXuan.optiond}}</el-radio></li>
+                                    </el-radio-group>
                                 </ul>
                                 <h4>分值：<span style="color: red">{{daXuan.score}}</span></h4>
                             </span>
@@ -121,6 +123,7 @@
                 testId:'',
                 userId:'',
                 jianDaAnswer:'',//简答题填写内容
+                danXuanAnswer:'',
 
             }
         },
@@ -131,7 +134,6 @@
             axios
                 .post("/WJF/kaoShi/"+_this.testpaperid)
                 .then(function (res) {
-                    console.log(res.data)
                     _this.testpapername=res.data.testpapername;
                     _this.tiShu=res.data.tiShu;
                     _this.follmark=res.data.follmark;
@@ -140,55 +142,51 @@
             axios
                 .post("/WJF/danXuan/"+_this.testpaperid)
                 .then(function (res) {
-                    console.log(res.data)
                     _this.daXuanTi=res.data;
                 })
             axios
                 .post("/WJF/duoXuan/"+_this.testpaperid)
                 .then(function (res) {
-                    console.log(res.data)
                     _this.duoXuanTi=res.data;
                 })
             axios
                 .post("/WJF/panDuan/"+_this.testpaperid)
                 .then(function (res) {
-                    console.log(res.data)
                     _this.panDuanti=res.data;
                 })
             axios
                 .post("/WJF/tianKong/"+_this.testpaperid)
                 .then(function (res) {
-                    console.log(res.data)
                     _this.tianKongTi=res.data;
                 })
             axios
                 .post("/WJF/jianDa/"+_this.testpaperid)
                 .then(function (res) {
-                    console.log(res.data)
                     _this.jianDaTi=res.data;
                 })
         },
         /*方法函数  事件等*/
         methods: {
             jiaoJuan(){
-                var _this = this;
-                _this.testId = getQueryString("testId");
-                _this.userId = getQueryString("userId");
-                this.$confirm('是否确认交卷?', '提示', {
-                    confirmButtonText: '确定',
-                    cancelButtonText: '取消',
-                    type: 'warning'
-                }).then(() => {
-                    axios
-                        .post('/WJF/jiaoJuan',{
-                            testpaperid:_this.testpaperid,
-                            testId:_this.testId,
-                            userId:_this.userId
-                        })
-                        .then(function (res) {
-                            location.href="/jsps/jiaoJuanSuccess.jsp";
-                        });
-                })
+                var danXuanAnswer = $("input[name='danXuanAnswer']:checked").val();
+                // var _this = this;
+                // _this.testId = getQueryString("testId");
+                // _this.userId = getQueryString("userId");
+                // this.$confirm('是否确认交卷?', '提示', {
+                //     confirmButtonText: '确定',
+                //     cancelButtonText: '取消',
+                //     type: 'warning'
+                // }).then(() => {
+                //     axios
+                //         .post('/WJF/jiaoJuan',{
+                //             testpaperid:_this.testpaperid,
+                //             testId:_this.testId,
+                //             userId:_this.userId
+                //         })
+                //         .then(function (res) {
+                //             location.href="/jsps/jiaoJuanSuccess.jsp";
+                //         });
+                // })
             },
         }
     });
