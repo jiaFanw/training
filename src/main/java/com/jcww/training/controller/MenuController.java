@@ -20,8 +20,7 @@ public class MenuController {
     @ResponseBody
     public List<Power> leftTree(HttpSession session){
         User user=(User) session.getAttribute("user");
-        //int roleid=user.getRoleid();
-        int roleid=1;
+        int roleid=user.getRoleid();
         return ms.leftTree(roleid);
     }
 

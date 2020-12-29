@@ -58,7 +58,7 @@
                 <dl class="layui-nav-child">
                     <dd><a href="javascript:;" >修改信息</a></dd>
                     <dd><a href="javascript:;" >安全管理</a></dd>
-                    <dd><a href="javascript:;" >退出</a></dd>
+                    <dd><a href="javascript:logout()" >退出</a></dd>
                 </dl>
             </li>
         </ul>
@@ -122,7 +122,7 @@
                 //先添加所有的主材单
                 $.each(data,function(i,obj){
                     var content='<li class="layui-nav-item">';
-                    content+='<a href="javascript:;" >'+obj.powername+'</a>';
+                    content+='<a href="'+obj.url+'" target="iframe_a">'+obj.powername+'</a>';
                     //这里是添加所有的子菜单
                     content+=loadchild(obj);
                     content+='</li>';
@@ -167,6 +167,10 @@
             console.log(content);
             return content;
         }
-    });
 
+    });
+    function logout(){
+        <%session.invalidate();%>
+        window.location.href="/jsps/login/login.jsp";
+    }
 </script>

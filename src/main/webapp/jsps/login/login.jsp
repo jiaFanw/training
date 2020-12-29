@@ -27,6 +27,7 @@
                 success:function (data){
                     if (data!=null){
                         alert("登陆成功");
+                        window.location.href="/jsps/leftTree/leftTree.jsp"
                     }
                 }
             })
