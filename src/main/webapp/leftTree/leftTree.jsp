@@ -70,9 +70,10 @@
 
         </ul>
     </div>
-
+    <iframe src="" name="iframe_a" width="1600px" height="600px"></iframe>
     <!--页面选项卡-->
     <div id="indixe-tab">
+
         <div class="layui-tab" lay-allowClose="true" lay-filter="demo1" style="margin:0px;padding:0px;">
             <ul class="layui-tab-title">
 
@@ -83,9 +84,12 @@
         </div>
     </div>
 
-    <div style="clear: both"></div>
+    <div style="clear: both">
+
+    </div>
 
 </div>
+
 </body>
 </html>
 <script type="text/javascript" src="/static/layui-v2.5.6/layui/layui.js"></script>
@@ -149,7 +153,7 @@
                     content+='<dd>';
 /*如果没有子级 返回带路径的a*/
                     if(note.children==null){
-                        content+='<a href="'+note.url+'">'+note.powername+'</a>';
+                        content+='<a href="'+note.url+'" target="iframe_a">'+note.powername+'</a>';
                         return;
                     }
                     /*有子级就返回无路径的a 保证下拉功能正常使用*/
