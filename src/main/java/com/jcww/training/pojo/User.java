@@ -13,4 +13,13 @@ public class User {
   private Integer jobnumber;
   private Integer roleid;
 
+  //paper
+  private String papername;
+  private java.sql.Date sharetime;
+  private String createuser;
+  private long paperid;
+  //assistcollection
+  private long assiststates;
+  private long collectionstates;
+
 }

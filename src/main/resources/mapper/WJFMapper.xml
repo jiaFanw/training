@@ -65,7 +65,7 @@
     <select id="kaoShi" resultType="Map">
         SELECT testpaper.*,count(*) tiShu FROM
         testpaper LEFT JOIN questionandpaper ON testpaper.testpaperid=questionandpaper.paperid
-        WHERE testpaper.testpaperid=1
+        WHERE testpaper.testpaperid=#{testpaperid}
     </select>
 
     <select id="markPapers" resultType="Map">
@@ -88,7 +88,7 @@
         WHERE test.testid=testuser.testid
         AND `user`.userid=testuser.userid
         and test.testpaperid=#{testpaperid}
-
+        and testuser.testtime &lt; 3
     </select>
 
     <select id="staffData" resultType="Map">
