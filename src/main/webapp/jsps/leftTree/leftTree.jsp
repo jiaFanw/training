@@ -40,7 +40,7 @@
 <!--首页容器-->
 <div id="index-container">
     <ul class="layui-nav" style="text-algin:left;background-color: black;">
-        <strong style="color: white;font-size: 30px">考试培训系统</strong>
+        <strong style="color: white">考试培训系统</strong>
     </ul>
     <!--信息菜单-->
     <div id="index-navigationbar">
@@ -70,7 +70,7 @@
 
         </ul>
     </div>
-    <iframe src="" name="iframe_a" width="80%" height="700px"></iframe>
+    <iframe src="" name="iframe_a" width="1600px" height="700px"></iframe>
     <!--页面选项卡-->
     <div id="indixe-tab">
 
