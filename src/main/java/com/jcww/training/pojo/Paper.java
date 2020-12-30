@@ -17,4 +17,10 @@ public class Paper implements Serializable {
   private String isnotshare;//是否共享（0,是1.否）
   private String follmark;//满分
   private String passmark;//及格分
+
+  private String danxuan;
+  private String duoxuan;
+  private String panduan;
+  private String tiankong;
+  private String jianda;
 }

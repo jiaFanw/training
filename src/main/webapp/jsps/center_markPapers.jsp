@@ -92,6 +92,7 @@
                     testpaperid:''
                 })
                 .then(function (res) {
+                    console.log("----")
                     console.log(res)
                     _this.markPapersData=res.data;
                 })
