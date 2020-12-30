@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jcww.training.mapper.WJFMapper">
+
+    <select id="getExam" resultType="Map">
+        SELECT test.*,tu.userid,tu.testtime FROM test
+        LEFT JOIN
+        (SELECT testuser.* from testuser
+        LEFT JOIN `user`
+        on testuser.userid = user.userid
+        WHERE `user`.username=#{user}) tu
+        ON
+        test.testid = tu.testid
+    </select>
+
+    <update id="reduceNum">
+        UPDATE testuser set testtime=testtime-1  WHERE testid=#{testId} and userid=#{userId}
+    </update>
+
+    <select id="danXuan" resultType="com.jcww.training.pojo.Question">
+        SELECT question.* FROM question
+        LEFT JOIN questionandpaper
+        ON question.questionid=questionandpaper.questionid
+        WHERE questiontype=1 and
+        paperid=#{testpaperid}
+    </select>
+
+    <select id="duoXuan" resultType="com.jcww.training.pojo.Question">
+         SELECT question.* FROM question
+        LEFT JOIN questionandpaper
+        ON question.questionid=questionandpaper.questionid
+        WHERE questiontype=2 and
+        paperid=#{testpaperid}
+    </select>
+
+
+    <select id="panDuan" resultType="com.jcww.training.pojo.Question">
+         SELECT question.* FROM question
+        LEFT JOIN questionandpaper
+        ON question.questionid=questionandpaper.questionid
+        WHERE questiontype=3 and
+        paperid=#{testpaperid}
+    </select>
+
+
+    <select id="tianKong" resultType="com.jcww.training.pojo.Question">
+         SELECT question.* FROM question
+        LEFT JOIN questionandpaper
+        ON question.questionid=questionandpaper.questionid
+        WHERE questiontype=4 and
+        paperid=#{testpaperid}
+    </select>
+
+
+    <select id="jianDa" resultType="com.jcww.training.pojo.Question">
+         SELECT question.* FROM question
+        LEFT JOIN questionandpaper
+        ON question.questionid=questionandpaper.questionid
+        WHERE questiontype=5 and
+        paperid=#{testpaperid}
+    </select>
+
+    <select id="kaoShi" resultType="Map">
+        SELECT testpaper.*,count(*) tiShu FROM
+        testpaper LEFT JOIN questionandpaper ON testpaper.testpaperid=questionandpaper.paperid
+        WHERE testpaper.testpaperid=1
+    </select>
+</mapper>

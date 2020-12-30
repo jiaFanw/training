@@ -1,12 +1,27 @@
 package com.jcww.training.pojo;
 
-import lombok.Data;
 
-import java.io.Serializable;
+public class Role {
 
-@Data
-public class Role implements Serializable {
+  private Integer roleid;
+  private String rolename;
 
-  private Integer roleid;//角色id
-  private String rolename;//角色名称
+
+  public Integer getRoleid() {
+    return roleid;
+  }
+
+  public void setRoleid(Integer roleid) {
+    this.roleid = roleid;
+  }
+
+
+  public String getRolename() {
+    return rolename;
+  }
+
+  public void setRolename(String rolename) {
+    this.rolename = rolename;
+  }
+
 }
