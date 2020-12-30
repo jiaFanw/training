@@ -72,16 +72,19 @@
                 }else if(Date.parse(row.testendtime) < aData){
                     alert("考试时间已过！")
                 }else if(Date.parse(row.teststarttime) < aData && Date.parse(row.testendtime) > aData){
-                    if(row.testtime <0){
+
+                    alert(row.testtime);
+                    if(row.testtime <=0){
                         alert("考试次数已用完");
-                    }else{
+                    }
+                    else{
                         axios
                             .post("/WJF/reduceNum",{
                                 testId : row.testid,
                                 userId : row.userid
                             })
                             .then(function (res) {
-                                location.href="/jsps/answer.jsp?testpaperid="+row.testpaperid+"&testId="+row.testid+"&userId"+row.userid;
+                                window.open("/jsps/answer.jsp?testpaperid="+row.testpaperid+"&testId="+row.testid+"&userId="+row.userid, '_blank');
                             })
                     }
                 }

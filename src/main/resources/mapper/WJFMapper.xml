@@ -12,6 +12,7 @@
         WHERE `user`.username=#{user}) tu
         ON
         test.testid = tu.testid
+        WHERE tu.show != 1
     </select>
 
     <update id="reduceNum">
