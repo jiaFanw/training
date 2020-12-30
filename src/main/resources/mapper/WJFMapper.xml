@@ -12,6 +12,7 @@
         WHERE `user`.username=#{user}) tu
         ON
         test.testid = tu.testid
+        WHERE tu.show != 1
     </select>
 
     <update id="reduceNum">
@@ -65,5 +66,43 @@
         SELECT testpaper.*,count(*) tiShu FROM
         testpaper LEFT JOIN questionandpaper ON testpaper.testpaperid=questionandpaper.paperid
         WHERE testpaper.testpaperid=1
+    </select>
+
+    <select id="markPapers" resultType="Map">
+        SELECT test.*,testpaper.testpapername,testpaper.follmark,testpaper.passmark from
+        test,testpaper
+        WHERE test.testpaperid=testpaper.testpaperid
+        AND test.testendtime &lt; now()
+    </select>
+
+    <select id="paper" resultType="Map">
+        SELECT test.*,testpaper.testpapername,testpaper.follmark,testpaper.passmark from
+        test,testpaper
+        WHERE test.testpaperid=testpaper.testpaperid
+        and test.testpaperid = #{testpaperid}
+    </select>
+
+    <select id="testPeople" resultType="Map">
+        SELECT `user`.truename,`user`.jobnumber,testuser.score,testuser.show from
+        user,test,testuser
+        WHERE test.testid=testuser.testid
+        AND `user`.userid=testuser.userid
+        and test.testpaperid=#{testpaperid}
+
+    </select>
+
+    <select id="staffData" resultType="Map">
+        SELECT test.testdate,test.testendtime,test.teststarttime,
+        testpaper.testpapername,testpaper.follmark,testpaper.passmark,testuser.score,c.paiming
+        FROM test,testpaper,testuser,(SELECT userid from user WHERE username=#{user}) u,
+        (select userid,
+        (select count(*) from testuser t1 where testid=1 and t1.score > t2.score)+1
+         as paiming from testuser t2
+        where testid=1 order by score desc) c
+        where test.testpaperid=testpaper.testpaperid
+        and test.testid=testuser.testid
+        and testuser.userid=u.userid
+        AND testuser.`show`=1
+        GROUP BY u.userid
     </select>
 </mapper>

@@ -70,7 +70,7 @@
 
         </ul>
     </div>
-    <iframe src="" name="iframe_a" width="1600px" height="650px"></iframe>
+    <iframe src="" name="iframe_a" width="1600px" height="700px"></iframe>
     <!--页面选项卡-->
     <div id="indixe-tab">
 

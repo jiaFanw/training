@@ -21,4 +21,14 @@ public interface WJFService {
     List<Question> jianDa(Integer testpaperid);
 
     Map<String,Object> kaoShi(Integer testpaperid);
+
+    List<Map<String,Object>> markPapers();
+
+    List<Map<String,Object>> paper(Integer testpaperid);
+
+    List<Map<String,Object>> testPeople(Integer testpaperid);
+
+    List<Map<String,Object>> staffData(String user);
+
+    Boolean jiaoJuan(Map<String,Object> map);
 }
