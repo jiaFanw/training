@@ -8,7 +8,10 @@
 <script src="${pageContext.request.contextPath }/static/vue/element/index.js"></script>
 <script src="${pageContext.request.contextPath }/static/vue/axios.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath }/static/vue/qs.js"></script>
+<script src="${pageContext.request.contextPath }/static/js/jquery-3.4.1.min.js"></script>
 <body>
+<input type="hidden" id="username" value="${user.username}">
+<input type="hidden" id="userid" value="${user.userid}">
 <div id="abc">
 
 <template>
@@ -107,7 +110,7 @@
             var _this = this;
             axios
                 .post("/WJF/staffData",{
-                    user:'ls'
+                    user:$("#username").val()
                 })
                 .then(function (res) {
                     console.log(res)

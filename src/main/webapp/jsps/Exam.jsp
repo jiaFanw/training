@@ -8,7 +8,10 @@
 <script src="${pageContext.request.contextPath }/static/vue/element/index.js"></script>
 <script src="${pageContext.request.contextPath }/static/vue/axios.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath }/static/vue/qs.js"></script>
+<script src="${pageContext.request.contextPath }/static/js/jquery-3.4.1.min.js"></script>
 <body>
+<input type="hidden" id="username" value="${user.username}">
+<input type="hidden" id="userid" value="${user.userid}">
 <div id="exam">
     <template>
         <el-table
@@ -52,7 +55,7 @@
         },
         //页面加载成功时完成
         mounted: function(){
-            var user = 'ls';
+            var user = $("#username").val();
             var _this = this;
 
             axios

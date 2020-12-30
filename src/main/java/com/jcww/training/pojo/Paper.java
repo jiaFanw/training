@@ -17,4 +17,10 @@ public class Paper implements Serializable {
   private String sharetime;//共享时间
   private String follmark;//满分
   private String passmark;//及格分
+
+  private String danxuan;
+  private String duoxuan;
+  private String panduan;
+  private String tiankong;
+  private String jianda;
 }

@@ -16,8 +16,9 @@
     }
 </style>
 <body>
-<div id="detail">
 
+
+<div id="detail">
     <template>
         <el-row>
             <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
@@ -26,8 +27,12 @@
             <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
             <el-col :span="3"><div class="grid-content bg-purple"></div></el-col>
             <el-col :span="5"><div class="grid-content bg-purple-light">
-                <el-button type="primary">发布成绩</el-button>
-                <el-button type="info">已发布成绩</el-button>
+                <span v-if="show">
+                    <el-button type="primary">发布成绩</el-button>
+                </span>
+                <span v-if="show1">
+                    <el-button type="info">已发布成绩</el-button>
+                </span>
             </div></el-col>
         </el-row>
 
@@ -123,7 +128,8 @@
             return {
                 examData:[],
                 peopleData:[],
-
+                show:true,
+                show1:false,
 
             }
         },
@@ -136,7 +142,6 @@
                     testpaperid:testpaperid
                 })
                 .then(function (res) {
-                    console.log(res)
                     _this.examData=res.data;
                 })
             axios
@@ -144,10 +149,9 @@
                     testpaperid:testpaperid
                 })
                 .then(function (res) {
-                    console.log("-----")
                     console.log(res.data)
+                    console.log("----------")
                     _this.peopleData=res.data;
-
                 })
 
         },
