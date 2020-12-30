@@ -19,4 +19,5 @@ public class Test implements Serializable {
   private Date testendtime;//考试截止日期
   private Integer testpaperid;//考试试卷表id
 
+
 }
