@@ -1,6 +1,8 @@
 package com.jcww.training.pojo;
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 public class Message {
@@ -8,6 +10,7 @@ public class Message {
   private long id;
   private String status;
   private String username;
+  @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
   private Date sentTime;
   private String category;
   private long questionid;

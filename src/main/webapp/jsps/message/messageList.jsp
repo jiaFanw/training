@@ -49,9 +49,7 @@
                     },{
                         field: 'sentTime',
                         title: '发送时间',
-                        formatter: function (value, row, index) {
-                            return changeDateFormat(value)
-                        }
+
                     },{
                         field: 'category',
                         title: '类别'
@@ -59,25 +57,14 @@
                         title:'操作',
                         formatter:function (value,row,index) {
                            /* return "<a href='"+Info(row.questionid,row.username,row.sentTime)+"'>详情</a>"*/
-                            return "<button class=\"btn btn-primary btn-lg\" data-toggle=\"modal\" data-target=\"#myModal\" onclick='"+Info(row.questionid,row.username,row.sentTime,row.category)+"'>开始演示模态框</button>"
+                            return "<button class=\"btn btn-primary btn-lg\" data-toggle=\"modal\" data-target=\"#myModal\" onclick='"+Info(row.questionid,row.username,row.sentTime,row.category)+"'>查看详情</button>"
                         }
                     }
                 ],
             })
         })
 
-        function changeDateFormat(cellval) {
-            var dateVal = cellval + "";
-            if (cellval != null) {
-                var date = new Date(parseInt(dateVal.replace("/Date(", "").replace(")/", ""), 10));
-                var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
-                var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
-                var hours = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
-                var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
-                var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
-                return date.getFullYear() + "-" + month + "-" + currentDate + " " + hours + ":" + minutes + ":" + seconds;
-            }
-        }
+
 
         function Info(questionid,username,sentTime,category){
             $.ajax({
