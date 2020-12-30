@@ -58,7 +58,7 @@
                 <dl class="layui-nav-child">
                     <dd><a href="javascript:;" >修改信息</a></dd>
                     <dd><a href="javascript:;" >安全管理</a></dd>
-                    <dd><a href="javascript:logout()" >退出</a></dd>
+                    <dd><a onclick="logout()" >退出</a></dd>
                 </dl>
             </li>
         </ul>
@@ -169,8 +169,16 @@
         }
 
     });
+    $(function (){
+
+    })
     function logout(){
-        <%session.invalidate();%>
-        window.location.href="/jsps/login/login.jsp";
+        $.ajax({
+            url:"/user/logout",
+            success:function (data){
+                window.location.href="/jsps/login/login.jsp";
+            }
+        })
+
     }
 </script>

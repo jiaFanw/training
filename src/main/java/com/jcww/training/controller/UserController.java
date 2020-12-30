@@ -24,4 +24,9 @@ public class UserController {
        }
         return null;
     }
+    @RequestMapping("logout")
+    @ResponseBody
+    public void logout(HttpSession session){
+        session.invalidate();
+    }
 }
