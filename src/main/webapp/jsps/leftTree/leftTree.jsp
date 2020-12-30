@@ -122,7 +122,13 @@
                 //先添加所有的主材单
                 $.each(data,function(i,obj){
                     var content='<li class="layui-nav-item">';
-                    content+='<a href="'+obj.url+'" target="iframe_a">'+obj.powername+'</a>';
+                    if (obj.children==null){
+                        content+='<a href="'+obj.url+'" target="iframe_a">'+obj.powername+'</a>';
+                    }
+                    if (obj.children!=null){
+                        content+='<a >'+obj.powername+'</a>';
+                    }
+
                     //这里是添加所有的子菜单
                     content+=loadchild(obj);
                     content+='</li>';
@@ -156,8 +162,11 @@
                         content+='<a href="'+note.url+'" target="iframe_a">'+note.powername+'</a>';
                         return;
                     }
-                    /*有子级就返回无路径的a 保证下拉功能正常使用*/
-                    content+='<a >'+note.powername+'</a>';
+                    if(note.children!=null){
+                        /*有子级就返回无路径的a 保证下拉功能正常使用*/
+                        content+='<a >'+note.powername+'</a>';
+                    }
+
                     content+=loadchild(note);
                     content+='</dd>';
                 });

@@ -3,5 +3,10 @@
 
 <mapper namespace="com.jcww.training.mapper.WZDMapper">
 
-
+    <select id="messageList" resultType="com.jcww.training.pojo.Message">
+    select * from message
+    </select>
+    <select id="findById" resultType="com.jcww.training.pojo.Question">
+        select * from question where questionid=#{questionid}
+    </select>
 </mapper>
