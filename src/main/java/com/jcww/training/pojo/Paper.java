@@ -14,7 +14,7 @@ public class Paper implements Serializable {
   @DateTimeFormat(pattern="yyyy-MM-dd")
   private Date createtime;//创建时间
   private String createuser;//创建人
-  private String isnotshare;//是否共享（0,是1.否）
+  private String sharetime;//共享时间
   private String follmark;//满分
   private String passmark;//及格分
 }
