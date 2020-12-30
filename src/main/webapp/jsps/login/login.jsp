@@ -42,8 +42,8 @@
 
 <center >
     用户名:<input type="text" id="username"  ><br/>
-    密码:<input type="password" id="password" ><br/>
-<input type="button" value="登录" id="btn1">
+    密&nbsp;&nbsp;&nbsp;&nbsp;码:<input type="password" id="password" ><br/>
+<input type="button" value="登录" id="btn1" class="btn-warning">
 </center>
 </div>
 </body>
