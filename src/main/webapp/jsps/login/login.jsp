@@ -16,6 +16,8 @@
 <script src="${pageContext.request.contextPath }/static/element/index.js"></script>
 <script src="${pageContext.request.contextPath }/static/vue/axios.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath }/static/vue/qs.js"></script>
+<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/bootstrap/table/bootstrap-table.css">
 <script>
     $(function (){
         $("#btn1").click(function (){
@@ -34,9 +36,15 @@
         })
     })
 </script>
-<body>
-    用户名:<input type="text" id="username"><br/>
-    密码:<input type="password" id="password"><br/>
+<body background="/static/images/2028864.jpg">
+<div >
+
+
+<center >
+    用户名:<input type="text" id="username"  ><br/>
+    密码:<input type="password" id="password" ><br/>
 <input type="button" value="登录" id="btn1">
+</center>
+</div>
 </body>
 </html>
