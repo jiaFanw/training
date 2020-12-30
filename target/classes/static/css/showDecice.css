@@ -1,0 +1,53 @@
+  div#rMenu {position:absolute; visibility:hidden; top:0; text-align: left;padding:4px;}
+	    div#rMenu a{
+	        padding: 3px 15px 3px 15px;
+	        background-color:#cad4e6;
+	        vertical-align:middle;
+	    }
+
+		#deviceTable td{
+			width: 300px;
+			height: 20px;
+		}
+		#caozuo{
+			border-style:solid;
+			border-left-style:none;
+			border-width:1px;
+			border-color:#D6D6D6;
+			overflow:hidden;
+			height:30px;	
+			width:880px;
+			margin-top:10px;
+			margin-left:10px;		
+			background: linear-gradient(to bottom,#F9F9F9,#EDEEF0);
+		}
+		#bb td{
+		height: 40px;
+		border-style: dashed;
+		border-width: 1px;
+		border-color: #CBDFF4;
+				
+	}
+	#kuozhan{
+		width:870px;
+		border-style:solid;
+		border-width:1px;
+	}
+	#kuozhan td{
+		height: 30px;
+		border-style: solid;
+		border-color: #C8DAF1;
+		border-width:1px;
+	}
+	
+	#kuozhantr td{
+		background: linear-gradient(to bottom,#F9FAFA,#EEEFF0);
+	}
+	#xiayibu{
+		text-align: center;
+	}
+	.an{
+		background-color: #EBEFF7;
+		color: #3D73AD
+	}
+	
