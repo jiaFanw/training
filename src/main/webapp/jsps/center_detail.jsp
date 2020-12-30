@@ -24,8 +24,11 @@
             <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
             <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
             <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
-            <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-            <el-col :span="4"><div class="grid-content bg-purple-light"><el-button type="primary">发布成绩</el-button></div></el-col>
+            <el-col :span="3"><div class="grid-content bg-purple"></div></el-col>
+            <el-col :span="5"><div class="grid-content bg-purple-light">
+                <el-button type="primary">发布成绩</el-button>
+                <el-button type="info">已发布成绩</el-button>
+            </div></el-col>
         </el-row>
 
         <el-table
@@ -87,7 +90,15 @@
             </el-table-column>
             <el-table-column
                     label="操作">
-                <el-link type="primary" @click="goPanJuan">去判卷</el-link>
+                <template slot-scope="scope">
+                    <span v-if="scope.row.show == 1">
+                         <el-link type="info">去判卷</el-link>
+                    </span>
+                    <span v-if="scope.row.show == 0">
+                        <el-link type="primary" @click="goPanJuan">去判卷</el-link>
+                    </span>
+                </template>
+
             </el-table-column>
         </el-table>
     </template>
@@ -133,8 +144,10 @@
                     testpaperid:testpaperid
                 })
                 .then(function (res) {
-                    console.log(res)
+                    console.log("-----")
+                    console.log(res.data)
                     _this.peopleData=res.data;
+
                 })
 
         },

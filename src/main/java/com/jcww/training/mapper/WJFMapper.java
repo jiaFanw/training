@@ -30,4 +30,6 @@ public interface WJFMapper {
     List<Map<String,Object>> paper(@Param("testpaperid") Integer testpaperid);
 
     List<Map<String,Object>> testPeople(@Param("testpaperid") Integer testpaperid);
+
+    List<Map<String,Object>> staffData(@Param("user") String user);
 }

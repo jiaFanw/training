@@ -72,5 +72,28 @@ public class WJFServiceImpl implements WJFService {
         return wjfMapper.testPeople(testpaperid);
     }
 
+    @Override
+    public List<Map<String, Object>> staffData(String user) {
+        return wjfMapper.staffData(user);
+    }
+
+    private static void daAn(Integer testpaperid){
+
+
+    }
+
+    @Override
+    public Boolean jiaoJuan(Map<String, Object> map) {
+
+        System.out.println(map.get("testpaperid"));
+        System.out.println(map.get("testId"));
+        System.out.println(map.get("userId"));
+        System.out.println(map.get("daAn"));
+
+        return null;
+    }
+
+
+
 
 }
