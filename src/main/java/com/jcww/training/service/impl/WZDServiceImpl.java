@@ -23,4 +23,9 @@ public class WZDServiceImpl implements WZDService {
     public Question findById(Integer questionid) {
         return wzdMapper.findById(questionid);
     }
+
+    @Override
+    public int changeIsNotShare(String isnotshare,Integer questionid) {
+        return wzdMapper.changeIsNotShare(isnotshare,questionid);
+    }
 }

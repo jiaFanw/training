@@ -62,6 +62,30 @@
                     }
                 ],
             })
+            $("#true").onClick(function (){
+                $.ajax({
+                    url:"/WZD/changeIsNotShare",
+                    data:{isnotshare:$("#true").val(),questionid:$("#questionid").val()},
+                    dataType: "json",
+                    success:function (data){
+                        if (data!=0){
+                            alert("修改状态成功");
+                        }
+                    },
+                })
+            })
+            $("#false").onClick(function (){
+                $.ajax({
+                    url:"/WZD/changeIsNotShare",
+                    data:{isnotshare:$("#false").val(),questionid:$("#questionid").val()},
+                    dataType: "json",
+                    success:function (data){
+                        if (data!=0){
+                            alert("修改状态成功");
+                        }
+                    },
+                })
+            })
         })
 
 
@@ -80,6 +104,7 @@
                     $("#category").val(category);
                     $("#username").val(username);
                     $("#sentTime").val(sentTime);
+                    $("#questionid").val(questionid);
                 }
             })
         }
@@ -108,11 +133,12 @@
                 试题分类:<input type="text" id="category" class="form-control">
                 发送人:<input type="text" id="username" class="form-control">
                 发送时间<input type="text" id="sentTime" class="form-control">
+                试题id<input type="text" id="questionid" class="form-control" hidden="hidden">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary" id="true" >允许共享</button>
-                <button type="button" class="btn btn-primary" id="false" >不允许共享</button>
+                <button type="button" class="btn btn-primary" id="true" value="0">允许共享</button>
+                <button type="button" class="btn btn-primary" id="false" value="2">不允许共享</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->

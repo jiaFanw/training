@@ -26,4 +26,9 @@ public class WZDController {
     public Question findById(Integer questionid){
         return wzdService.findById(questionid);
     }
+    @RequestMapping("changeIsNotShare")
+    @ResponseBody
+    public int changeIsNotShare(String isnotshare,Integer questionid){
+        return wzdService.changeIsNotShare(isnotshare,questionid);
+    }
 }

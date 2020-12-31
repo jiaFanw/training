@@ -9,4 +9,7 @@
     <select id="findById" resultType="com.jcww.training.pojo.Question">
         select * from question where questionid=#{questionid}
     </select>
+    <update id="changeIsNotShare" >
+        update qustion set isnotshare=#{isnotshare} where questionid=#{questionid}
+    </update>
 </mapper>
