@@ -10,6 +10,6 @@
         select * from question where questionid=#{questionid}
     </select>
     <update id="changeIsNotShare" >
-        update qustion set isnotshare=#{isnotshare} where questionid=#{questionid}
+        update question set isnotshare=#{isnotshare} where questionid=#{questionid}
     </update>
 </mapper>

@@ -62,7 +62,7 @@
                     }
                 ],
             })
-            $("#true").onClick(function (){
+            $("#true").click(function (){
                 $.ajax({
                     url:"/WZD/changeIsNotShare",
                     data:{isnotshare:$("#true").val(),questionid:$("#questionid").val()},
@@ -70,11 +70,12 @@
                     success:function (data){
                         if (data!=0){
                             alert("修改状态成功");
+                            window.location.reload();
                         }
                     },
                 })
             })
-            $("#false").onClick(function (){
+            $("#false").click(function (){
                 $.ajax({
                     url:"/WZD/changeIsNotShare",
                     data:{isnotshare:$("#false").val(),questionid:$("#questionid").val()},
@@ -82,6 +83,7 @@
                     success:function (data){
                         if (data!=0){
                             alert("修改状态成功");
+                           window.location.reload();
                         }
                     },
                 })
