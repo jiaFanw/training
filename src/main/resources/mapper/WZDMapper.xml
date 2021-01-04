@@ -4,12 +4,28 @@
 <mapper namespace="com.jcww.training.mapper.WZDMapper">
 
     <select id="messageList" resultType="com.jcww.training.pojo.Message">
-    select * from message
+        select * from message
     </select>
     <select id="findById" resultType="com.jcww.training.pojo.Question">
         select * from question where questionid=#{questionid}
     </select>
-    <update id="changeIsNotShare" >
+    <update id="changeIsNotShare">
         update question set isnotshare=#{isnotshare} where questionid=#{questionid}
     </update>
+    <select id="dataTable" resultType="com.jcww.training.pojo.Test">
+        SELECT test.*,testpaper.testpapername FROM test,testpaper WHERE test.testpaperid = testpaper.testpaperid
+    </select>
+    <!--取单个值简单sql-->
+    <select id="pjf" resultType="java.lang.Integer">
+        select AVG(score) from testuser where testid=#{id}
+    </select>
+    <select id="tgrs" resultType="java.lang.Integer">
+        select count(*) from testuser tu ,testpaper tp  where tu.score>tp.passmark and tu.testid=tp.testpaperid and  tu.testid=#{id}
+    </select>
+    <select id="cjrs" resultType="java.lang.Integer">
+        select count(*) from testuser tu ,testpaper tp  where tu.testid=tp.testpaperid and  tu.testid=#{id}
+    </select>
+    <select id="tgl" resultType="com.jcww.training.pojo.Test">
+    SELECT DISTINCT CONCAT(CAST(round(((select count(*) from testuser tu ,testpaper tp  where tu.score>tp.passmark and tu.testid=tp.testpaperid and  tu.testid=#{id})/(   select count(*) from testuser tu ,testpaper tp  where tu.testid=tp.testpaperid and  tu.testid=#{id}))*100,2) AS CHAR),'%')  AS tgl from testuser tu,testpaper tp
+    </select>
 </mapper>

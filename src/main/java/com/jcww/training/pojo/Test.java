@@ -18,6 +18,8 @@ public class Test implements Serializable {
   @DateTimeFormat(pattern="yyyy-MM-dd hh:mm:ss")
   private Date testendtime;//考试截止日期
   private Integer testpaperid;//考试试卷表id
-
-
+  /*考卷表的考卷名字*/
+  private String testpapername;
+  /*通过率*/
+  private String tgl;
 }
