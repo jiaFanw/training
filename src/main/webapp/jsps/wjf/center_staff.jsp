@@ -1,14 +1,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>考试中心-判卷人</title>
+    <title>考试中心-员工</title>
 </head>
 <script src="${pageContext.request.contextPath }/static/vue/vue.js"></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/static/vue/element/index.css">
 <script src="${pageContext.request.contextPath }/static/vue/element/index.js"></script>
 <script src="${pageContext.request.contextPath }/static/vue/axios.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath }/static/vue/qs.js"></script>
+<script src="${pageContext.request.contextPath }/static/js/jquery-3.4.1.min.js"></script>
 <body>
+<input type="hidden" id="username" value="${user.username}">
+<input type="hidden" id="userid" value="${user.userid}">
 <div id="abc">
 
 <template>
@@ -36,7 +39,7 @@
 
 
     <el-table
-            :data="markPapersData"
+            :data="staffData"
             border
             style="width: 100%">
         <el-table-column
@@ -60,10 +63,28 @@
                 label="开始时间-结束时间">
         </el-table-column>
         <el-table-column
+                prop="score"
+                label="成绩">
+        </el-table-column>
+        <el-table-column
+                label="是否通过">
+            <template slot-scope="scope">
+                <span v-if="scope.row.score>=scope.row.passmark">
+                    通过
+                </span>
+                <span v-if="scope.row.score<scope.row.passmark">
+                    未通过
+                </span>
+            </template>
+        </el-table-column>
+        <el-table-column
+                prop="paiming"
+                label="排名">
+        </el-table-column>
+        <el-table-column
                 label="操作">
             <template slot-scope="scope">
-                <el-link type="primary" @click="detail(scope.row.testpaperid)">考试详情</el-link>
-                <el-link type="primary">导出试卷</el-link>
+                <el-link type="primary" @click="chaKanDaJuan(scope.row)">查看答卷</el-link>
             </template>
         </el-table-column>
     </el-table>
@@ -76,7 +97,7 @@
         /*变量*/
         data () {
             return {
-                markPapersData:[],
+                staffData:[],
                 form:{
                     name: '',
                     date1: '',
@@ -87,22 +108,24 @@
         //页面加载成功时完成
         mounted: function(){
             var _this = this;
+            //查看批改完成的试卷
             axios
-                .post("/WJF/markPapers",{
-                    testpaperid:''
+                .post("/WJF/staffData",{
+                    user:$("#username").val()
                 })
                 .then(function (res) {
-                    console.log("----")
                     console.log(res)
-                    _this.markPapersData=res.data;
+                    _this.staffData=res.data;
                 })
 
         },
         /*方法函数  事件等*/
         methods: {
-            detail(testpaperid){
-                location.href="/jsps/center_detail.jsp?testpaperid="+testpaperid;
+            chaKanDaJuan(row){
+                console.log(row)
+                location.href="/jsps/wjf/answer.jsp?testpaperid="+row.testpaperid+"&userid="+row.userid+"&biaoShi=chaKan";
             }
+
         }
     });
 </script>

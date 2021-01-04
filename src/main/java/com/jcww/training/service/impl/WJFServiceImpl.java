@@ -2,11 +2,13 @@ package com.jcww.training.service.impl;
 
 import com.jcww.training.mapper.WJFMapper;
 import com.jcww.training.pojo.Question;
+import com.jcww.training.pojo.Useranswer;
 import com.jcww.training.service.WJFService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -77,23 +79,76 @@ public class WJFServiceImpl implements WJFService {
         return wjfMapper.staffData(user);
     }
 
-    private static void daAn(Integer testpaperid){
-
-
-    }
 
     @Override
     public Boolean jiaoJuan(Map<String, Object> map) {
+        Boolean b = false;
+        Useranswer us = new Useranswer();
+        us.setTestpaparid(Integer.parseInt(map.get("testpaperid").toString()));
+        us.setUserid(Integer.parseInt(map.get("userId").toString()));
+        String[] split = map.get("daAn").toString().substring(1,map.get("daAn").toString().length()-1).split(" ");
+        for (String s:split) {
+            String[] split1 = s.split(",");
+            for (int i = 0; i <split1.length ; i++) {
+                us.setQuestionid(Integer.parseInt(split1[0]));
+                us.setUseranswer(split1[1]);
+                us.setScore(Integer.parseInt(split1[2]));
+                System.out.println(us);
+                if(Integer.parseInt(map.get("num").toString()) == 3){
+                    b = wjfMapper.daAn(us);
+                }else{
+                    b = wjfMapper.upDaAn(us);
+                }
 
-        System.out.println(map.get("testpaperid"));
-        System.out.println(map.get("testId"));
-        System.out.println(map.get("userId"));
-        System.out.println(map.get("daAn"));
+                break;
+            }
 
-        return null;
+        }
+        return b;
     }
 
+    @Override
+    public List<Question> allQuestions(Integer testpaperid) {
+        return wjfMapper.allQuestions(testpaperid);
+    }
 
+    @Override
+    public List<Useranswer> userAnswer(Map<String, Integer> user) {
+        Integer testpaperid = user.get("testpaperid");
+        Integer userId = user.get("userId");
+        return wjfMapper.userAnswer(testpaperid,userId);
+    }
+
+    @Override
+    public Boolean panJuan(Map<String, Object> map) {
+
+        Boolean b = false;
+        Useranswer us = new Useranswer();
+        us.setTestpaparid(Integer.parseInt(map.get("testpaperid").toString()));
+        us.setUserid(Integer.parseInt(map.get("userId").toString()));
+        String[] split = map.get("fen").toString().substring(1,map.get("fen").toString().length()-1).split(" ");
+        for (String s:split) {
+            String[] split1 = s.split(",");
+            for (int i = 0; i <split1.length ; i++) {
+                us.setQuestionid(Integer.parseInt(split1[0]));
+                us.setScore(Integer.parseInt(split1[1]));
+                System.out.println(us);
+                Boolean bo = wjfMapper.panJuan(us);
+
+                if(bo){
+                    b = wjfMapper.fen(Integer.parseInt(map.get("testpaperid").toString()),Integer.parseInt(map.get("userId").toString()));
+                }
+                break;
+            }
+
+        }
+        return b;
+    }
+
+    @Override
+    public Boolean faBu(Integer testpaperid, Integer userId) {
+        return wjfMapper.faBu(testpaperid,userId);
+    }
 
 
 }

@@ -13,6 +13,7 @@
         ON
         test.testid = tu.testid
         WHERE tu.show != 1
+        AND test.testendtime &gt; now()
     </select>
 
     <update id="reduceNum">
@@ -20,7 +21,7 @@
     </update>
 
     <select id="danXuan" resultType="com.jcww.training.pojo.Question">
-        SELECT question.* FROM question
+        SELECT question.*,questionandpaper.paperid FROM question
         LEFT JOIN questionandpaper
         ON question.questionid=questionandpaper.questionid
         WHERE questiontype=1 and
@@ -28,7 +29,7 @@
     </select>
 
     <select id="duoXuan" resultType="com.jcww.training.pojo.Question">
-         SELECT question.* FROM question
+         SELECT question.*,questionandpaper.paperid FROM question
         LEFT JOIN questionandpaper
         ON question.questionid=questionandpaper.questionid
         WHERE questiontype=2 and
@@ -37,7 +38,7 @@
 
 
     <select id="panDuan" resultType="com.jcww.training.pojo.Question">
-         SELECT question.* FROM question
+         SELECT question.*,questionandpaper.paperid FROM question
         LEFT JOIN questionandpaper
         ON question.questionid=questionandpaper.questionid
         WHERE questiontype=3 and
@@ -46,7 +47,7 @@
 
 
     <select id="tianKong" resultType="com.jcww.training.pojo.Question">
-         SELECT question.* FROM question
+         SELECT question.*,questionandpaper.paperid FROM question
         LEFT JOIN questionandpaper
         ON question.questionid=questionandpaper.questionid
         WHERE questiontype=4 and
@@ -54,8 +55,16 @@
     </select>
 
 
+    <select id="allQuestions" resultType="com.jcww.training.pojo.Question">
+        SELECT question.*,questionandpaper.paperid FROM question
+        LEFT JOIN questionandpaper
+        ON question.questionid=questionandpaper.questionid
+        WHERE paperid=1
+    </select>
+
+
     <select id="jianDa" resultType="com.jcww.training.pojo.Question">
-         SELECT question.* FROM question
+         SELECT question.*,questionandpaper.paperid FROM question
         LEFT JOIN questionandpaper
         ON question.questionid=questionandpaper.questionid
         WHERE questiontype=5 and
@@ -83,7 +92,7 @@
     </select>
 
     <select id="testPeople" resultType="Map">
-        SELECT `user`.truename,`user`.jobnumber,testuser.score,testuser.show from
+        SELECT `user`.truename,`user`.jobnumber,testuser.score,testuser.show,`user`.userid from
         user,test,testuser
         WHERE test.testid=testuser.testid
         AND `user`.userid=testuser.userid
@@ -93,7 +102,8 @@
 
     <select id="staffData" resultType="Map">
         SELECT test.testdate,test.testendtime,test.teststarttime,
-        testpaper.testpapername,testpaper.follmark,testpaper.passmark,testuser.score,c.paiming
+        testpaper.testpapername,testpaper.follmark,testpaper.passmark,testuser.score,
+        c.paiming,testuser.userid,test.testpaperid
         FROM test,testpaper,testuser,(SELECT userid from user WHERE username=#{user}) u,
         (select userid,
         (select count(*) from testuser t1 where testid=1 and t1.score > t2.score)+1
@@ -105,4 +115,36 @@
         AND testuser.`show`=1
         GROUP BY u.userid
     </select>
+
+
+    <insert id="daAn">
+        INSERT INTO useranswer VALUES(NULL,#{questionid},#{userid},#{useranswer},#{score},#{testpaparid})
+    </insert>
+
+
+    <update id="upDaAn">
+        UPDATE useranswer SET useranswer = #{useranswer},score=#{score} WHERE testpaparid = #{testpaparid}
+        and userid=#{userid} AND questionid = #{questionid}
+    </update>
+
+
+    <select id="userAnswer" resultType="com.jcww.training.pojo.Useranswer">
+        SELECT * from
+        useranswer WHERE userid = 3 and testpaparid = 1
+    </select>
+
+    <update id="panJuan">
+        UPDATE useranswer SET score=#{score} WHERE testpaparid = #{testpaparid}
+        and userid=#{userid} AND questionid = #{questionid}
+    </update>
+
+    <update id="fen">
+        UPDATE testuser SET score=(SELECT sum(score) FROM useranswer WHERE testpaparid=#{testpaperid} and userid =#{userId})
+        WHERE userid = #{userId} and testid = (SELECT testid FROM test WHERE testpaperid = #{testpaperid})
+    </update>
+
+    <update id="faBu">
+        UPDATE testuser SET `show` = 1
+        WHERE userid = #{userId} and testid=(SELECT testid FROM test WHERE testpaperid = #{testpaperid})
+    </update>
 </mapper>

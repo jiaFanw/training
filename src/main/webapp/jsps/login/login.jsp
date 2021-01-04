@@ -36,7 +36,7 @@
         })
     })
 </script>
-<body background="/static/images/2028864.jpg">
+<body background="/static/images/2028864.jpg" style="width: 100%;height: 100%">
 <div >
 
 

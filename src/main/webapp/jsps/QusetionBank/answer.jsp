@@ -9,6 +9,9 @@
 <script src="${pageContext.request.contextPath }/static/vue/axios.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath }/static/vue/qs.js"></script>
 <script src="${pageContext.request.contextPath }/static/js/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+<meta http-equiv="Content-Type" content="application/msword; charset=gb2312"/>
 <body>
 <div id="answer">
     <el-row style="margin-top: 20px">
@@ -78,22 +81,22 @@
                             <h3>简答题</h3>
                             <span v-for="(jianDa,i) in jianDaTi">
                                 {{i+1}},{{jianDa.questionname}}
-                                <el-input type="textarea" v-model="jianDaAnswer[i]"></el-input>
+                                <el-input type="textarea"></el-input>
                                 <h4>分值：<span style="color: red">{{jianDa.score}}</span></h4>
                             </span>
                         </div>
                     </el-col>
                 </el-row>
                 <el-row>
-                    <el-col :span="10">
+                    <el-col :span="7">
                         <div class="grid-content"></div>
                     </el-col>
-                    <el-col :span="8">
+                    <el-col :span="10">
                         <div class="grid-content">
-                            <el-button type="success" style="width: 200px" @click="jiaoJuan">返回</el-button>
+                            <el-button type="success" @click="daochu">导出</el-button>
                         </div>
                     </el-col>
-                    <el-col :span="6">
+                    <el-col :span="5">
                         <div class="grid-content"></div>
                     </el-col>
                 </el-row>
@@ -269,8 +272,27 @@
                     type: 'warning'
                 }).then(() => {
                     window.location.href = "http://localhost:8080/QusetionBank/questionbank.jsp"
-                })
+            })
             },
+            daochu() {
+                var _this = this;
+                this.$confirm('是否导出?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    var pdf = new jsPDF('', 'pt', 'a4');
+                pdf.internal.scaleFactor = 2; //调节打印大小，数字越大打印越小
+                var options = {
+                    pagesplit: true //设置是否自动分页
+                };
+                $('#answer').css("background", "#fff")//如果导出的pdf为黑色背景，需要将导出的html模块内容背景 设置成白色。
+                var printHtml = $('#answer').get(0);   // 通过id获取div内容
+                pdf.addHTML(printHtml, 15, 15, options, function () {
+                    pdf.save('123.pdf');
+                });
+            })
+            }
         }
     });
 

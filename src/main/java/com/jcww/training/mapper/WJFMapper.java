@@ -1,6 +1,7 @@
 package com.jcww.training.mapper;
 
 import com.jcww.training.pojo.Question;
+import com.jcww.training.pojo.Useranswer;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -32,4 +33,18 @@ public interface WJFMapper {
     List<Map<String,Object>> testPeople(@Param("testpaperid") Integer testpaperid);
 
     List<Map<String,Object>> staffData(@Param("user") String user);
+
+    Boolean daAn(Useranswer us);
+
+    List<Question> allQuestions(@Param("testpaperid")Integer testpaperid);
+
+    Boolean upDaAn(Useranswer us);
+
+    List<Useranswer> userAnswer(@Param("testpaperid") Integer testpaperid,@Param("userId") Integer userId);
+
+    Boolean panJuan(Useranswer us);
+
+    Boolean fen(@Param("testpaperid") int testpaperid,@Param("userId") int userId);
+
+    Boolean faBu(@Param("testpaperid")Integer testpaperid,@Param("userId") Integer userId);
 }

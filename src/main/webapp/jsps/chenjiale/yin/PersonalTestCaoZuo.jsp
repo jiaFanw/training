@@ -8,8 +8,8 @@
     function preUpOK() {
         var questionid = $("#questionid").val();
         var questionname = $("#questionname").val();
-        var questiontype = $("#questiontype").val();
-        var questionclassifyid = $("#questionclassifyid").val();
+        var questiontype = $("#questiontype2").val();
+        var questionclassifyid = $("#questionclassifyid2").val();
         var optiona = $("#optiona").val();
         var optionb = $("#optionb").val();
         var optionc = $("#optionc").val();

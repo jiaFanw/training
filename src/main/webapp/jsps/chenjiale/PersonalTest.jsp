@@ -17,15 +17,10 @@
 
 </head>
 <style>
-    .class1 {
-        width: 70%;
-        height: 50%;
-        margin: 140px 0px 0px 270px;
-    }
 </style>
 <body>
 <div class="class1">
-    <div style="margin: 0px 0px -45px 800px">
+    <div style="margin: 0px 0px 0px 200px">
         <button type="button" class="btn btn-default" onclick="">同步至共享库</button>
         <button type="button" class="btn btn-default" onclick="daoru()">导入</button>
         <button type="button" class="btn btn-default" onclick="BMDC()">导出</button>
@@ -34,7 +29,7 @@
     <table id="Personal"></table>
 </div>
 
-<div class="modal fade" id="xmyModal" style="margin: 0px 0px 0px 600px">
+<div class="modal fade" id="xmyModal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body" style="text-align: center">
