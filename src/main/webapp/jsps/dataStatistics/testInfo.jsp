@@ -50,7 +50,7 @@
                         field:'testendtime'
                     },
                     {
-                        title:'参加人数',
+                        title:'应参加人数',
                         formatter:function (value,row,index) {
                             var id=row.testpaperid;
                             var a;
@@ -136,7 +136,7 @@
         })
         function Info2(testpaperid) {
             if (testpaperid!=null&&testpaperid!=undefined){
-                window.location.href="/jsps/dataStatistics/findOne?testpaperid="+testpaperid;
+                window.location.href="/jsps/dataStatistics/findOne.jsp?testpaperid="+testpaperid;
             }
         }
     </script>
@@ -147,24 +147,6 @@
 
 </table>
 
-<!-- 模态框（Modal） -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">考试详情</h4>
-            </div>
-            <div class="modal-body">
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary" ></button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal -->
-</div>
 
 </body>
 </html>

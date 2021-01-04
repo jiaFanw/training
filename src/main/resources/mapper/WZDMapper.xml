@@ -28,4 +28,10 @@
     <select id="tgl" resultType="com.jcww.training.pojo.Test">
     SELECT DISTINCT CONCAT(CAST(round(((select count(*) from testuser tu ,testpaper tp  where tu.score>tp.passmark and tu.testid=tp.testpaperid and  tu.testid=#{id})/(   select count(*) from testuser tu ,testpaper tp  where tu.testid=tp.testpaperid and  tu.testid=#{id}))*100,2) AS CHAR),'%')  AS tgl from testuser tu,testpaper tp
     </select>
+    <select id="wcjrs" resultType="java.lang.Integer">
+         select count(*) from testuser tu ,testpaper tp  where tu.testid=tp.testpaperid and tu.testtime=0 and tu.testid=#{id}
+    </select>
+    <select id="dataTable2" resultType="com.jcww.training.pojo.Test">
+        SELECT test.*,testpaper.testpapername FROM test,testpaper WHERE test.testpaperid = testpaper.testpaperid and testpaper.testpaperid =#{id}
+    </select>
 </mapper>

@@ -14,7 +14,7 @@ public interface WZDService {
     int changeIsNotShare(String isnotshare,Integer questionid);
 
     List<Test> dataTable();
-
+    /*用于显示在table列表中的十分麻烦的单个数据*/
     int cjrs(int id);
 
     int tgrs(int id);
@@ -22,4 +22,9 @@ public interface WZDService {
     Test tgl(int id);
 
     int pjf(int id);
+
+    int wcjrs(int id);
+    /**/
+    List<Test> dataTable2(int id);
+
 }

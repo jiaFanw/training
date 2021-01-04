@@ -66,4 +66,17 @@ public class WZDController {
 
         return wzdService.pjf(id);
     }
+    //未参加人数
+    @RequestMapping("wcjrs")
+    @ResponseBody
+    public int wcjrs(int id){
+        return wzdService.wcjrs(id);
+    }
+
+    /*通过id查单个考试的详情*/
+    @RequestMapping("dataTable2")
+    @ResponseBody
+    public List<Test> dataTable2(int id){
+        return wzdService.dataTable2(id);
+    }
 }

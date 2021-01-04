@@ -24,4 +24,8 @@ public interface WZDMapper {
     int cjrs(int id);
 
     Test tgl(int id);
+
+    int wcjrs(int id);
+
+    List<Test> dataTable2(int id);
 }

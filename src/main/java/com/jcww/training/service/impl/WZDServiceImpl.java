@@ -54,4 +54,14 @@ public class WZDServiceImpl implements WZDService {
     public int pjf(int id) {
         return wzdMapper.pjf(id);
     }
+
+    @Override
+    public int wcjrs(int id) {
+        return wzdMapper.wcjrs(id);
+    }
+
+    @Override
+    public List<Test> dataTable2(int id) {
+        return wzdMapper.dataTable2(id);
+    }
 }
