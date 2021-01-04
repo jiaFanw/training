@@ -22,4 +22,5 @@ public class Test implements Serializable {
   private String testpapername;
   /*通过率*/
   private String tgl;
+
 }

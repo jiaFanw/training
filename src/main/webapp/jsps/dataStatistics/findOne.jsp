@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -16,9 +17,98 @@
     <link rel="stylesheet" href="/static/bootstrap/table/bootstrap-table.css">
     <script>
         $(function () {
-            var testpaperid=${param.testpaperid};
-            $("#dataTableInfo").bootstrapTable({
-                url: "/WZD/dataTable2?id="+testpaperid,
+
+            var testpaperid =${param.testpaperid};
+
+            /*给input赋值*/
+            $.ajax({
+                url: "/WZD/dataTable2",
+                data: {id: testpaperid},
+                dataType: "json",
+                success: function (data) {
+                    $("#testpapername").val(data.testpapername);
+                    $("#testdate").val(data.testdate);
+                    $("#teststarttime").val(data.teststarttime);
+                    $("#testendtime").val(data.testendtime);
+                }
+            })
+
+            $.ajax({
+                url: "/WZD/tgrs",
+                data: {id: testpaperid},
+                dataType: "json",
+                success: function (data) {
+                    $("#tgrs").val(data);
+                }
+            })
+
+            $.ajax({
+                url: "/WZD/tgl",
+                data: {id: testpaperid},
+                dataType: "json",
+                success: function (data) {
+                    $("#tgl").val(data.tgl);
+                }
+            })
+
+            $.ajax({
+                url: "/WZD/pjf",
+                data: {id: testpaperid},
+                dataType: "json",
+                success: function (data) {
+                    $("#pjf").val(data);
+                }
+            })
+
+            $.ajax({
+                url: "/WZD/cjrs",
+                data: {id: testpaperid},
+                dataType: "json",
+                success: function (data) {
+                    $("#cjrs").val(data);
+                }
+            })
+
+            $.ajax({
+                url: "/WZD/wcjrs",
+                data: {id: testpaperid},
+                dataType: "json",
+                success: function (data) {
+                    $("#wcjrs").val(data);
+                }
+            })
+
+            $("#showWho").click(function () {
+                $("#abc").bootstrapTable({
+                    url: "/WZD/showWho?id=" + testpaperid,
+                    method: 'post',// 提交方式
+                    contentType: "application/x-www-form-urlencoded; charset=UTF-8",// 发送到服务器的编码类型
+                    pageNumber: 1,
+                    pageSize: 10,
+                    sortName: 'id',
+                    pagination: true,
+                    sortOrder: 'asc',
+                    pagination: true,// 开启分页
+                    sidePagination: "client",// 分页方式 'client'为客户端分页
+                    cache: false,// 是否使用缓存
+                    columns: [
+                        {
+                            field:'truename',
+                            title:'名字'
+                        },{
+                            field:'jobnumber',
+                            title:'工号'
+                        },{
+                            field:'username',
+                            title:'账号'
+                        },
+                    ],
+                })
+                $("#myModal").modal("show");
+            })
+
+            $("#personInfo").bootstrapTable({
+                url: "/WZD/personInfo?id=" + testpaperid,
                 method: 'post',// 提交方式
                 contentType: "application/x-www-form-urlencoded; charset=UTF-8",// 发送到服务器的编码类型
                 pageNumber: 1,
@@ -31,186 +121,60 @@
                 cache: false,// 是否使用缓存
                 columns: [
                     {
-                        title: '考试表id',
-                        field: 'testid'
+                        field: 'truename',
+                        title: '名字'
+                    }, {
+                        field: 'jobnumber',
+                        title: '工号'
                     },
                     {
-                        title: '试卷名称',
-                        field: 'testpapername'
+                        field: 'follmark',
+                        title: '总分'
                     },
                     {
-                        title: '考试日期',
-                        field: 'testdate'
+                        field: 'passmark',
+                        title: '及格分'
                     },
                     {
-                        title: '开始时间',
-                        field: 'teststarttime'
+                        field: 'score',
+                        title: '成绩'
                     },
                     {
-                        title: '结束时间',
-                        field: 'testendtime'
-                    },
-                    {
-                        title: '通过人数',
-                        formatter: function (value, row, index) {
-                            var id = row.testpaperid;
-                            var a;
-                            $.ajax({
-                                url: "/WZD/tgrs",
-                                dataType: "json",
-                                data: {id: id},
-                                type: "post",
-                                async: false,
-                                success: function (data) {
-                                    a = data;
-                                }
-
-                            })
-                            return a;
-                        }
-                    },
-                    {
-                        title: '通过率',
-                        formatter: function (value, row, index) {
-                            var id = row.testpaperid;
-                            var ab;
-                            $.ajax({
-                                url: "/WZD/tgl",
-                                dataType: "json",
-                                data: {id: id},
-                                type: "post",
-                                async: false,
-                                success: function (data) {
-                                    if (data != null) {
-                                        ab = data.tgl;
-                                    }
-
-                                }
-                            })
-                            return ab;
-                        }
-                    },
-                    {
-                        title: '平均分',
-                        formatter: function (value, row, index) {
-                            var id = row.testpaperid;
-                            var a;
-                            $.ajax({
-                                url: "/WZD/pjf",
-                                dataType: "json",
-                                data: {id: id},
-                                type: "post",
-                                async: false,
-                                success: function (data) {
-                                    a = data;
-                                }
-                            })
-                            return a;
-                        }
-                    },
-                    {
-                        title: '应参加人数',
-                        formatter: function (value, row, index) {
-                            var id = row.testpaperid;
-                            var a;
-                            $.ajax({
-                                url: "/WZD/cjrs",
-                                dataType: "json",
-                                data: {id: id},
-                                type: "post",
-                                async: false,
-                                success: function (data) {
-                                    a = data;
-                                }
-                            })
-                            return a;
-                        }
-                    },
-                    {
-                        title: '未参加人数',
-                        formatter: function (value, row, index) {
-                            var id = row.testpaperid;
-                            var a;
-                            $.ajax({
-                                url: "/WZD/wcjrs",
-                                dataType: "json",
-                                data: {id: id},
-                                type: "post",
-                                async: false,
-                                success: function (data) {
-                                    a = data;
-                                }
-                            })
-                            return a;
-                        }
-                    },
-                    {
-                        title: '操作',
-                        formatter: function (value, row, index) {
-                            return "<button  onclick='Info3(\"" + row.testpaperid + "\")'>查看缺考人员</button>"
+                        title: '是否通过',
+                        formatter:function (value,row,index) {
+                            if (row.score>row.passmark){
+                                return "√";
+                            }
+                            if (row.score<row.passmark){
+                                return "×";
+                            }
                         }
                     },
                 ],
             })
-        //展示人员详细list
 
-            $("#PersonInfo").bootstrapTable({
-                url: "",
-                method: 'post',// 提交方式
-                contentType: "application/x-www-form-urlencoded; charset=UTF-8",// 发送到服务器的编码类型
-                pageNumber: 1,
-                pageSize: 10,
-                sortName: 'id',
-                pagination: true,
-                sortOrder: 'asc',
-                pagination: true,// 开启分页
-                sidePagination: "client",// 分页方式 'client'为客户端分页
-                cache: false,// 是否使用缓存
-                columns: [
-                    {
-                        title: '',
-                        field: ''
-                    },
-                ],
-            })
         })
-//展示缺考人员
-        function Info3(id) {
-            $("#PersonTable").bootstrapTable({
-                url: "/WZD/PersonTable?id="+id,
-                method: 'post',// 提交方式
-                contentType: "application/x-www-form-urlencoded; charset=UTF-8",// 发送到服务器的编码类型
-                pageNumber: 1,
-                pageSize: 10,
-                sortName: 'id',
-                pagination: true,
-                sortOrder: 'asc',
-                pagination: true,// 开启分页
-                sidePagination: "client",// 分页方式 'client'为客户端分页
-                cache: false,// 是否使用缓存
-                columns: [
-                    {
-                        title: '',
-                        field: ''
-                    },
-                ],
-            })
-            $("#myModal").modal('show');
-        }
     </script>
 </head>
 <body>
-<table id="dataTableInfo">
+试卷名称:<input type="text" id="testpapername" name="" class="">&nbsp;
+考试日期:<input type="text" id="testdate" name="" class="">&nbsp;
+开始时间:<input type="text" id="teststarttime" name="" class="">&nbsp;
+结束时间:<input type="text" id="testendtime" name="" class="">&nbsp;<br/>
+通过人数:<input type="text" id="tgrs" name="" class="">&nbsp;
+通过率:<input type="text" id="tgl" name="" class="">&nbsp;
+平均分:<input type="text" id="pjf" name="" class="">&nbsp;
+应参加人数:<input type="text" id="cjrs" name="" class="">&nbsp;
+未参加人数:<input type="text" id="wcjrs" name="" class="">&nbsp;
+<input type="button" id="showWho" value="查看缺席人员">&nbsp;
+
+<table id="personInfo">
 
 </table>
-<table id="PersonInfo">
-
-</table>
-
 <!-- 模态框（Modal） -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" style="height: 600px">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                     &times;
@@ -219,15 +183,17 @@
                     查看缺考人员
                 </h4>
             </div>
-            <div class="modal-body">
-                <table id="PersonTable"></table>
+            <div class="modal-body" overflow="auto" style="height: 300px">
+                <table id="abc">
+
+                </table>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭
                 </button>
-                <button type="button" class="btn btn-primary">
+                <%--<button type="button" class="btn btn-primary">
                     提交更改
-                </button>
+                </button>--%>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->

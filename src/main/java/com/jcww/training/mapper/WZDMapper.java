@@ -3,10 +3,11 @@ package com.jcww.training.mapper;
 import com.jcww.training.pojo.Message;
 import com.jcww.training.pojo.Question;
 import com.jcww.training.pojo.Test;
+import com.jcww.training.pojo.Testuser;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
+
 @Repository
 public interface WZDMapper {
     List<Message> messageList();
@@ -27,5 +28,9 @@ public interface WZDMapper {
 
     int wcjrs(int id);
 
-    List<Test> dataTable2(int id);
+   Test dataTable2(int id);
+
+    List<Testuser> personInfo(Integer id);
+
+    List<Testuser> showWho(Integer id);
 }

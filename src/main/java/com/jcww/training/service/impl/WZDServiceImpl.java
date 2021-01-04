@@ -4,6 +4,7 @@ import com.jcww.training.mapper.WZDMapper;
 import com.jcww.training.pojo.Message;
 import com.jcww.training.pojo.Question;
 import com.jcww.training.pojo.Test;
+import com.jcww.training.pojo.Testuser;
 import com.jcww.training.service.WZDService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -61,7 +62,17 @@ public class WZDServiceImpl implements WZDService {
     }
 
     @Override
-    public List<Test> dataTable2(int id) {
+    public Test dataTable2(int id) {
         return wzdMapper.dataTable2(id);
+    }
+
+    @Override
+    public List<Testuser> personInfo(Integer id) {
+        return wzdMapper.personInfo(id);
+    }
+
+    @Override
+    public List<Testuser> showWho(Integer id) {
+        return wzdMapper.showWho(id);
     }
 }

@@ -3,6 +3,7 @@ package com.jcww.training.service;
 import com.jcww.training.pojo.Message;
 import com.jcww.training.pojo.Question;
 import com.jcww.training.pojo.Test;
+import com.jcww.training.pojo.Testuser;
 
 import java.util.List;
 
@@ -25,6 +26,9 @@ public interface WZDService {
 
     int wcjrs(int id);
     /**/
-    List<Test> dataTable2(int id);
+   Test dataTable2(int id);
 
+    List<Testuser> personInfo(Integer id);
+
+    List<Testuser> showWho(Integer id);
 }

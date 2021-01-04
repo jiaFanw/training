@@ -66,11 +66,11 @@
 
     <!--操作菜单-->
     <div id="index-commonmenu">
-        <ul class="layui-nav layui-nav-tree" lay-filter="demo" style="margin-right:10px;height:538px;">
+        <ul class="layui-nav layui-nav-tree" lay-filter="demo" style="margin-right:10px;height:744px;">
 
         </ul>
     </div>
-    <iframe src="" name="iframe_a" width="1600px" height="700px"></iframe>
+    <iframe src="" name="iframe_a" style="width:1600px;height:744px;"></iframe>
     <!--页面选项卡-->
     <div id="indixe-tab">
 
@@ -173,7 +173,6 @@
 
                 content+='</dl>';
             }
-            console.log(content);
             return content;
         }
 
