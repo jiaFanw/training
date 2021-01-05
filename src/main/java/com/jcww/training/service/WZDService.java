@@ -9,4 +9,6 @@ public interface WZDService {
     List<Message> messageList();
 
     Question findById(Integer questionid);
+
+    int changeIsNotShare(String isnotshare,Integer questionid);
 }
