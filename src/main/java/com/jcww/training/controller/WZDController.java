@@ -1,5 +1,4 @@
 package com.jcww.training.controller;
-
 import com.jcww.training.pojo.Message;
 import com.jcww.training.pojo.Question;
 import com.jcww.training.pojo.Test;
@@ -7,13 +6,10 @@ import com.jcww.training.pojo.Testuser;
 import com.jcww.training.service.WZDService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import java.util.List;
-
 @Controller
 @RequestMapping("WZD")
 public class WZDController {
@@ -98,15 +94,22 @@ public class WZDController {
     public Test dataTable2(int id) {
         return wzdService.dataTable2(id);
     }
-    @RequestMapping(value  ="/personInfo",method = RequestMethod.POST)
+
+    @RequestMapping(value = "/personInfo", method = RequestMethod.POST)
     @ResponseBody
-    public List<Testuser> personInfo( Integer id){
+    public List<Testuser> personInfo(Integer id) {
         return wzdService.personInfo(id);
     }
-/*查看未参加的人的信息*/
+
+    /*查看未参加的人的信息*/
     @RequestMapping("showWho")
     @ResponseBody
-    public List<Testuser> showWho(Integer id){
+    public List<Testuser> showWho(Integer id) {
         return wzdService.showWho(id);
+    }
+    @RequestMapping("personInfo2")
+    @ResponseBody
+    public  List<Testuser> personInfo2(Integer jobnumber){
+        return wzdService.personInfo2(jobnumber);
     }
 }

@@ -33,4 +33,6 @@ public interface WZDMapper {
     List<Testuser> personInfo(Integer id);
 
     List<Testuser> showWho(Integer id);
+
+    List<Testuser> personInfo2(Integer jobnumber);
 }

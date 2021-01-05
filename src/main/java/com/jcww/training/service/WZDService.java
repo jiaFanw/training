@@ -12,9 +12,10 @@ public interface WZDService {
 
     Question findById(Integer questionid);
 
-    int changeIsNotShare(String isnotshare,Integer questionid);
+    int changeIsNotShare(String isnotshare, Integer questionid);
 
     List<Test> dataTable();
+
     /*用于显示在table列表中的十分麻烦的单个数据*/
     int cjrs(int id);
 
@@ -25,10 +26,13 @@ public interface WZDService {
     int pjf(int id);
 
     int wcjrs(int id);
+
     /**/
-   Test dataTable2(int id);
+    Test dataTable2(int id);
 
     List<Testuser> personInfo(Integer id);
 
     List<Testuser> showWho(Integer id);
+
+    List<Testuser> personInfo2(Integer jobnumber);
 }

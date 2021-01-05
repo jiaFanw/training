@@ -75,4 +75,9 @@ public class WZDServiceImpl implements WZDService {
     public List<Testuser> showWho(Integer id) {
         return wzdMapper.showWho(id);
     }
+
+    @Override
+    public List<Testuser> personInfo2(Integer jobnumber) {
+        return wzdMapper.personInfo2(jobnumber);
+    }
 }

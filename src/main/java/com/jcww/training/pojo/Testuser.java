@@ -23,4 +23,6 @@ public class Testuser implements Serializable {
   private Integer score;
   //账号
   private String username;
+  //试卷名
+  private String testpapername;
 }
