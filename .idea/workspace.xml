@@ -2,49 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a58e035f-aa1e-425f-8106-cfb4a29b5f2b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cn_afterturn_easypoi_annotation_3_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cn_afterturn_easypoi_base_3_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cn_afterturn_easypoi_web_3_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_1_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsps/wjf/answer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsps/wjf/jiaoJuanSuccess.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jcww/training/controller/WJFController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jcww/training/controller/WJFController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jcww/training/controller/WZDController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jcww/training/controller/WZDController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jcww/training/mapper/WJFMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jcww/training/mapper/WJFMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jcww/training/pojo/Useranswer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jcww/training/pojo/Useranswer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jcww/training/service/WJFService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jcww/training/service/WJFService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jcww/training/service/impl/WJFServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jcww/training/service/impl/WJFServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/WJFMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/WJFMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/Exam.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/Exam.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/wjf/Exam.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/QusetionBank/answer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/QusetionBank/answer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/QusetionBank/questionbank.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/QusetionBank/questionbank.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/answer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/center_detail.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/center_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/center_markPapers.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/center_markPapers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_markPapers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/center_staff.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/center_staff.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_staff.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/PersonalTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/PersonalTest.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/yin/PersonalTestCaoZuo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/yin/PersonalTestCaoZuo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/jiaoJuanSuccess.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/leftTree/leftTree.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/leftTree/leftTree.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/login/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/login/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Paper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Paper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/WJFMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/WJFMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training.iml" beforeDir="false" afterPath="$PROJECT_DIR$/training.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -87,66 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="answer.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/answer.jsp">
+      <file leaf-file-name="WJFController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/controller/WJFController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="594" column="48" selection-start-line="594" selection-start-column="48" selection-end-line="594" selection-end-column="48" />
-              <folding>
-                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="center_detail.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_detail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="116" column="31" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="center_markPapers.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_markPapers.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="107" column="40" selection-start-line="107" selection-start-column="40" selection-end-line="107" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="center_staff.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_staff.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="125" column="40" selection-start-line="125" selection-start-column="40" selection-end-line="125" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Exam.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/Exam.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="105" column="62" selection-start-line="105" selection-start-column="62" selection-end-line="105" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jiaoJuanSuccess.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/jiaoJuanSuccess.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="5" column="35" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="35" />
+            <state relative-caret-position="475">
+              <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -237,7 +141,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/mapper/WJFMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/WJFMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsps/jiaoJuanSuccess.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/controller/WJFController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsps/Exam.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsps/answer.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsps/center_markPapers.jsp" />
@@ -248,6 +151,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_detail.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_markPapers.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_staff.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/controller/WJFController.java" />
       </list>
     </option>
   </component>
@@ -285,7 +189,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -380,27 +283,11 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="training" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="training" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsps" type="462c0819:PsiDirectoryNode" />
-              <item name="wjf" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -420,10 +307,9 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ideaWorkspace\training\src\main\webapp\jsps" />
-      <recent name="D:\ideaWorkspace\training\src\main\webapp\jsps\leftTree" />
-      <recent name="D:\ideaWorkspace\training\src\main\resources\static" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.jcww.training.mapper" />
+      <recent name="com.jcww.training.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ideaWorkspace\training\src\main\webapp\jsps" />
@@ -432,9 +318,11 @@
       <recent name="D:\ideaWorkspace\training\src\main\java\com\jcww\training\service" />
       <recent name="D:\ideaWorkspace\training\src\main\java\com\jcww\training\mapper" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.jcww.training.mapper" />
-      <recent name="com.jcww.training.service" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ideaWorkspace\training\src\main\webapp\jsps\wjf" />
+      <recent name="D:\ideaWorkspace\training\src\main\webapp\jsps" />
+      <recent name="D:\ideaWorkspace\training\src\main\webapp\jsps\leftTree" />
+      <recent name="D:\ideaWorkspace\training\src\main\resources\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -609,7 +497,8 @@
       <workItem from="1609374090263" duration="12788000" />
       <workItem from="1609460464825" duration="46297000" />
       <workItem from="1609719626743" duration="2898000" />
-      <workItem from="1609727166773" duration="26645000" />
+      <workItem from="1609727166773" duration="27587000" />
+      <workItem from="1609817961062" duration="1577000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1608946339422</created>
@@ -674,11 +563,18 @@
       <option name="project" value="LOCAL" />
       <updated>1609332289305</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="111">
+      <created>1609764673503</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609764673504</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211638000" />
+    <option name="totallyTimeSpent" value="214157000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -705,17 +601,16 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5450082" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3289689" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.0" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Run Dashboard" order="8" visible="true" weight="0.016366612" />
+      <window_info anchor="bottom" id="Run Dashboard" order="8" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.60060513" weight="0.5106383" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25567323" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2118003" />
       <window_info anchor="right" id="Bean Validation" order="4" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -723,6 +618,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -735,13 +631,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="111" />
     <MESSAGE value="页面测试" />
     <MESSAGE value="1" />
     <MESSAGE value="员工考试页面" />
     <MESSAGE value="考试中心" />
     <MESSAGE value="wjf" />
-    <option name="LAST_COMMIT_MESSAGE" value="wjf" />
+    <MESSAGE value="111" />
+    <option name="LAST_COMMIT_MESSAGE" value="111" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -901,9 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="44" column="65" lean-forward="true" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -911,9 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-69">
           <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -921,13 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#strong#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -970,18 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-23">
           <caret line="83" column="57" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h4#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h4#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -993,13 +864,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/answer11111.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5267">
-          <caret line="302" column="36" lean-forward="true" selection-start-line="302" selection-start-column="36" selection-end-line="302" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/answer11111.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/mapper/WJFMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1028,74 +893,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2829">
           <caret line="149" column="28" lean-forward="true" selection-start-line="149" selection-start-column="28" selection-end-line="149" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4550#4551#0" expanded="true" />
-            <element signature="e#4607#4608#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/controller/WJFController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1937">
-          <caret line="147" column="9" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
-          <folding>
-            <element signature="e#4732#4733#0" expanded="true" />
-            <element signature="e#4778#4779#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/answer.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
+        <state relative-caret-position="13662">
           <caret line="594" column="48" selection-start-line="594" selection-start-column="48" selection-end-line="594" selection-end-column="48" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_detail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
+        <state relative-caret-position="2668">
           <caret line="116" column="31" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_markPapers.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
+        <state relative-caret-position="2461">
           <caret line="107" column="40" selection-start-line="107" selection-start-column="40" selection-end-line="107" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_staff.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="125" column="40" selection-start-line="125" selection-start-column="40" selection-end-line="125" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/Exam.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="105" column="62" selection-start-line="105" selection-start-column="62" selection-end-line="105" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/jiaoJuanSuccess.jsp">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/Exam.jsp">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="35" />
+          <caret line="105" column="62" selection-start-line="105" selection-start-column="62" selection-end-line="105" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_staff.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="125" column="40" selection-start-line="125" selection-start-column="40" selection-end-line="125" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/controller/WJFController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
         </state>
       </provider>
     </entry>
