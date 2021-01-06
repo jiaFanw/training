@@ -1,6 +1,7 @@
 package com.jcww.training.service.impl;
 
 import com.jcww.training.mapper.WJFMapper;
+import com.jcww.training.pojo.MsgLog;
 import com.jcww.training.pojo.Question;
 import com.jcww.training.pojo.Useranswer;
 import com.jcww.training.service.WJFService;
@@ -121,7 +122,6 @@ public class WJFServiceImpl implements WJFService {
 
     @Override
     public Boolean panJuan(Map<String, Object> map) {
-
         Boolean b = false;
         Useranswer us = new Useranswer();
         us.setTestpaparid(Integer.parseInt(map.get("testpaperid").toString()));
@@ -148,6 +148,21 @@ public class WJFServiceImpl implements WJFService {
     @Override
     public Boolean faBu(Integer testpaperid, Integer userId) {
         return wjfMapper.faBu(testpaperid,userId);
+    }
+
+    @Override
+    public int update(MsgLog msgLog) {
+        return wjfMapper.update(msgLog);
+    }
+
+    @Override
+    public int save(MsgLog msgLog) {
+        return wjfMapper.save(msgLog);
+    }
+
+    @Override
+    public List<MsgLog> list(Map<String, Object> map) {
+        return wjfMapper.list(map);
     }
 
 

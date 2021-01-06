@@ -4,7 +4,10 @@
 <mapper namespace="com.jcww.training.mapper.WJFMapper">
 
     <select id="getExam" resultType="Map">
-        SELECT test.*,tu.userid,tu.testtime FROM test
+        SELECT
+          test.testid,test.testname,test.testdate,test.teststarttime,
+          test.testendtime,test.testpaperid,tu.userid,tu.testtime
+        FROM test
         LEFT JOIN
         (SELECT testuser.* from testuser
         LEFT JOIN `user`
@@ -146,5 +149,69 @@
     <update id="faBu">
         UPDATE testuser SET `show` = 1
         WHERE userid = #{userId} and testid=(SELECT testid FROM test WHERE testpaperid = #{testpaperid})
+    </update>
+
+
+    <select id="list" resultType="com.jcww.training.pojo.MsgLog">
+        select
+        `msgId`,
+        `msg`,
+        `exchange`,
+        `routingKey`,
+        `status`,
+        `tryCount`,
+        `nextTryTime`,
+        `createTime`,
+        `updateTime`
+        from
+        msgLog
+        <where>
+            <if test="status != null and status != ''"> and status = #{status} </if>
+            <if test="tryCount != null and tryCount != ''"> and tryCount &lt; ${tryCount} </if>
+        </where>
+        <if test="offset != null and limit != null">
+            limit #{offset}, #{limit}
+        </if>
+    </select>
+
+    <insert id="save" parameterType="com.jcww.training.pojo.MsgLog">
+		insert into msgLog
+		(
+			`msgId`,
+			`msg`,
+			`exchange`,
+			`routingKey`,
+			`status`,
+			`tryCount`,
+			`nextTryTime`,
+			`createTime`,
+			`updateTime`
+		)
+		values
+		(
+			#{msgId},
+			#{msg},
+			#{exchange},
+			#{routingKey},
+			#{status},
+			#{tryCount},
+			#{nextTryTime},
+			#{createTime},
+			#{updateTime}
+		)
+	</insert>
+
+    <update id="update" parameterType="com.jcww.training.pojo.MsgLog">
+        update msgLog
+        <set>
+            <if test="exchange != null">`exchange` = #{exchange}, </if>
+            <if test="routingKey != null">`routingKey` = #{routingKey}, </if>
+            <if test="status != null">`status` = #{status}, </if>
+            <if test="tryCount != null">`tryCount` = #{tryCount}, </if>
+            <if test="nextTryTime != null">`nextTryTime` = #{nextTryTime}, </if>
+            <if test="createTime != null">`createTime` = #{createTime}, </if>
+            <if test="updateTime != null">`updateTime` = #{updateTime}, </if>
+        </set>
+        where `msgId` = #{msgId}
     </update>
 </mapper>

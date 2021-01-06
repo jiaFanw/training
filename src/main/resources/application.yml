@@ -7,7 +7,7 @@ spring:
     restart:
       enabled: true
   datasource:
-    url: jdbc:mysql://192.168.34.87:3306/kaoshi?useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://192.168.37.192:3306/kaoshi?useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: 123
     driver-class-name: com.mysql.jdbc.Driver
@@ -16,6 +16,14 @@ spring:
     view:
       prefix: /jsps/
       suffix: .jsp
+  rabbitmq:
+    host: localhost
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 3
+          nitial-interval: 3000
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml

@@ -1,5 +1,6 @@
 package com.jcww.training.mapper;
 
+import com.jcww.training.pojo.MsgLog;
 import com.jcww.training.pojo.Question;
 import com.jcww.training.pojo.Useranswer;
 import org.apache.ibatis.annotations.Param;
@@ -47,4 +48,10 @@ public interface WJFMapper {
     Boolean fen(@Param("testpaperid") int testpaperid,@Param("userId") int userId);
 
     Boolean faBu(@Param("testpaperid")Integer testpaperid,@Param("userId") Integer userId);
+
+    int update(MsgLog msgLog);
+
+    int save(MsgLog msgLog);
+
+    List<MsgLog> list(Map<String,Object> map);
 }

@@ -60,7 +60,7 @@
             axios
                 .get("/WJF/getExam/"+user)
                 .then(function (res) {
-                    console.log(res)
+                    console.log(res.data)
                     _this.examTableData=res.data;
                 })
         },

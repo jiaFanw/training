@@ -96,10 +96,10 @@
             <el-table-column
                     label="操作">
                 <template slot-scope="scope">
-                    <span v-if="scope.row.show == 1">
+                    <span v-if="show1">
                          <el-link type="info">去判卷</el-link>
                     </span>
-                    <span v-if="scope.row.show == 0">
+                    <span v-if="show">
                         <el-link type="primary" @click="goPanJuan(scope.row)">去判卷</el-link>
                     </span>
                 </template>
@@ -179,18 +179,32 @@
             //发布成绩
             faBu(){
                 var _this = this;
-                console.log(_this.peopleData)
-                for (var i = 0; i < _this.peopleData.length; i++) {
-                    axios
-                        .post("/WJF/faBu",{
-                            testpaperid:_this.testpaperid,
-                            userId : _this.peopleData[i].userid
-                        })
-                        .then(function (res) {
-                            _this.show1 = true;
-                            _this.show = false;
-                        })
-                }
+                        this.$confirm('是否发布成绩?发布后判卷结果将不可修改', '提示', {
+                            confirmButtonText: '确定',
+                            cancelButtonText: '取消',
+                            type: 'warning'
+                        }).then(()=> {
+                            for (var i = 0; i < _this.peopleData.length; i++){
+                                axios
+                                    .post("/WJF/faBu", {
+                                        testpaperid: _this.testpaperid,
+                                        userId: _this.peopleData[i].userid
+                                    })
+                                    .then(function (res) {
+                                        _this.show1 = true;
+                                        _this.show = false;
+                                    })
+                        }
+                        }).catch(() => {
+                                this.$message({
+                                type: 'info',
+                                message: '已取消'
+                            });
+                        });
+
+
+
+
 
             }
         }

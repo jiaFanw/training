@@ -1,23 +1,31 @@
 package com.jcww.training.controller;
 
-import com.jcww.training.pojo.Question;
-import com.jcww.training.pojo.Test;
-import com.jcww.training.pojo.User;
-import com.jcww.training.pojo.Useranswer;
+import com.alibaba.fastjson.JSON;
+import com.jcww.training.config.Config;
+import com.jcww.training.pojo.*;
 import com.jcww.training.service.WJFService;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessageBuilder;
+import org.springframework.amqp.rabbit.connection.CorrelationData;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("WJF")
 public class WJFController {
     @Autowired
     private WJFService wjfService;
+
+    @Resource(name = "TemplateRaliable")
+    private RabbitTemplate templateRaliable;
 
     //员工考试页面，在线考试
     @GetMapping("/getExam/{user}")
@@ -31,7 +39,6 @@ public class WJFController {
         System.out.println(list);
         return list;
     }
-
 
     //员工进入考试
     @RequestMapping("/reduceNum")
@@ -79,17 +86,41 @@ public class WJFController {
     }
 
 
-
-    //需要削峰
     //员工答题完成，交卷
     @RequestMapping("/jiaoJuan")
-    public Boolean jiaoJuan(@RequestBody Map<String,Object> map){
+    public String jiaoJuan(@RequestBody Map<String,Object> map){
+        try {
+            String uuid = UUID.randomUUID().toString();
+            Date date = new Date();
+            String msg = JSON.toJSONString(map);
 
+            MsgLog msgLog = new MsgLog();
+            msgLog.setMsgId(uuid);
 
+            msgLog.setMsg(msg);
+            msgLog.setExchange("direct.no.exchange");
+            msgLog.setRoutingKey("direct.routing.key.name");
+            msgLog.setStatus(-1);
+            msgLog.setTryCount(0);
+            msgLog.setNextTryTime(date);
+            msgLog.setCreateTime(date);
+            msgLog.setUpdateTime(date);
 
+            wjfService.save(msgLog);
 
+            Message message = MessageBuilder.withBody(map.toString().getBytes()).setMessageId(uuid).build();
 
-        return wjfService.jiaoJuan(map);
+            templateRaliable.convertAndSend(
+                    "direct.no.exchange",
+                    "direct.routing.key.name",
+                    map,
+                    new CorrelationData(uuid));
+            return "ok";
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "error";
+        }
+
     }
 
 
@@ -155,5 +186,7 @@ public class WJFController {
     public Boolean faBu(@RequestBody Map<String,Integer> map){
         return wjfService.faBu(map.get("testpaperid"),map.get("userId"));
     }
+
+
 
 }

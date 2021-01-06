@@ -1,5 +1,6 @@
 package com.jcww.training.service;
 
+import com.jcww.training.pojo.MsgLog;
 import com.jcww.training.pojo.Question;
 import com.jcww.training.pojo.Useranswer;
 
@@ -40,4 +41,10 @@ public interface WJFService {
     Boolean panJuan(Map<String,Object> map);
 
     Boolean faBu(Integer testpaperid, Integer userId);
+
+    int update(MsgLog msgLog);
+
+    int save(MsgLog msgLog);
+
+    List<MsgLog> list(Map<String,Object> map);
 }
