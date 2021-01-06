@@ -4,12 +4,95 @@
 <mapper namespace="com.jcww.training.mapper.WZDMapper">
 
     <select id="messageList" resultType="com.jcww.training.pojo.Message">
-    select * from message
+        select * from message
     </select>
+
     <select id="findById" resultType="com.jcww.training.pojo.Question">
         select * from question where questionid=#{questionid}
     </select>
-    <update id="changeIsNotShare" >
+
+    <update id="changeIsNotShare">
         update question set isnotshare=#{isnotshare} where questionid=#{questionid}
     </update>
+
+    <select id="dataTable" resultType="com.jcww.training.pojo.Test">
+        SELECT test.*,testpaper.testpapername FROM test,testpaper WHERE test.testpaperid = testpaper.testpaperid
+    </select>
+
+    <!--取单个值简单sql-->
+    <select id="pjf" resultType="java.lang.Integer">
+        select IFNULL(AVG(score),0) from testuser where testid=#{id}
+    </select>
+
+    <select id="tgrs" resultType="java.lang.Integer">
+        select count(*) from testuser tu ,testpaper tp  where tu.score>tp.passmark and tu.testid=tp.testpaperid and  tu.testid=#{id}
+    </select>
+
+    <select id="cjrs" resultType="java.lang.Integer">
+        select count(*) from testuser tu ,testpaper tp  where tu.testid=tp.testpaperid and  tu.testid=#{id}
+    </select>
+
+    <select id="tgl" resultType="com.jcww.training.pojo.Test">
+    SELECT DISTINCT CONCAT(CAST(round(((select count(*) from testuser tu ,testpaper tp  where tu.score>tp.passmark and tu.testid=tp.testpaperid and  tu.testid=#{id})/(   select count(*) from testuser tu ,testpaper tp  where tu.testid=tp.testpaperid and  tu.testid=#{id}))*100,2) AS CHAR),'%')  AS tgl from testuser tu,testpaper tp
+    </select>
+
+    <select id="wcjrs" resultType="java.lang.Integer">
+         select count(*) from testuser tu ,testpaper tp  where tu.testid=tp.testpaperid and tu.testtime=0 and tu.testid=#{id}
+    </select>
+
+    <select id="dataTable2" resultType="com.jcww.training.pojo.Test">
+        SELECT test.*,testpaper.testpapername FROM test,testpaper WHERE test.testpaperid = testpaper.testpaperid and testpaper.testpaperid =#{id}
+    </select>
+
+    <select id="personInfo" resultType="com.jcww.training.pojo.Testuser">
+        select u.truename,u.jobnumber,tu.score,tp.follmark,tp.passmark,tp.testpapername,tu.testtime
+        from testuser tu
+        left join user u on tu.userid=u.userid
+        left join testpaper tp on tu.testid=tp.testpaperid
+        <if test="id!=null">
+            where tu.testid=#{id}
+        </if>
+        order by tu.score
+    </select>
+
+    <select id="showWho" resultType="com.jcww.training.pojo.Testuser">
+    select u.truename,u.jobnumber,u.username,tu.score
+        from testuser tu
+        left join user u on tu.userid=u.userid
+        left join testpaper tp on tu.testid=tp.testpaperid
+        where tu.testid=#{id} and tu.testtime=0
+        order by tu.score
+    </select>
+    <select id="personInfo2" resultType="com.jcww.training.pojo.Testuser">
+        select u.truename,u.jobnumber,tu.score,tp.follmark,tp.passmark,tp.testpapername
+        from testuser tu
+        left join user u on tu.userid=u.userid
+        left join testpaper tp on tu.testid=tp.testpaperid
+            where u.jobnumber=#{jobnumber}
+        order by tu.score
+    </select>
+    <select id="personInfo3" resultType="com.jcww.training.pojo.Testuser">
+    SELECT DISTINCT
+	u.truename,
+	u.jobnumber,
+	SUM( tu.testtime ) AS testtime,
+	SUM(tu.score>tp.passmark) AS passtime
+
+FROM
+	testuser tu
+	LEFT JOIN USER u ON tu.userid = u.userid
+	LEFT JOIN testpaper tp ON tu.testid = tp.testpaperid
+ORDER BY
+	tu.score
+    </select>
+
+    <select id="article" resultType="com.jcww.training.pojo.Article">
+        select * from article
+    </select>
+    <delete id="deleteById">
+        delete  from article where id=#{id}
+    </delete>
+    <insert id="articleAdd">
+        insert  into article() values (null,#{title},#{str},now(),0)
+    </insert>
 </mapper>

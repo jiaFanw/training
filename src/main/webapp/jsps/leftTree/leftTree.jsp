@@ -40,7 +40,7 @@
 <!--首页容器-->
 <div id="index-container">
     <ul class="layui-nav" style="text-algin:left;background-color: black;">
-        <strong style="color: white;font-size: 30px">考试培训系统</strong>
+        <strong style="color: white">考试培训系统</strong>
     </ul>
     <!--信息菜单-->
     <div id="index-navigationbar">
@@ -66,11 +66,11 @@
 
     <!--操作菜单-->
     <div id="index-commonmenu">
-        <ul class="layui-nav layui-nav-tree" lay-filter="demo" style="margin-right:10px;height:538px;">
+        <ul class="layui-nav layui-nav-tree" lay-filter="demo" style="margin-right:10px;height:744px;">
 
         </ul>
     </div>
-    <iframe src="" name="iframe_a" width="1100px" height="700px"></iframe>
+    <iframe src="" name="iframe_a" style="width:1600px;height:744px;"></iframe>
     <!--页面选项卡-->
     <div id="indixe-tab">
 
@@ -173,7 +173,6 @@
 
                 content+='</dl>';
             }
-            console.log(content);
             return content;
         }
 
