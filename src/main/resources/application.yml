@@ -16,6 +16,14 @@ spring:
     view:
       prefix: /jsps/
       suffix: .jsp
+  rabbitmq:
+    host: localhost
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 3
+          nitial-interval: 3000
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml

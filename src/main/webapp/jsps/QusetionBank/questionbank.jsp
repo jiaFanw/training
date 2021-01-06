@@ -38,8 +38,8 @@
             </select>
         </div>
         <div class="col-xs-6 col-sm-4">
-            <input type="button" id="selbysome" value="查询"><input type="button" id="clean" value="重置"><input
-                type="button" id="daochu" value="导出">
+            <input type="button" id="selbysome" value="查询"><input type="button" id="clean" value="重置">
+            <%--<input type="button" id="daochu" value="导出">--%>
         </div>
 
     </div>
@@ -263,7 +263,6 @@
             },
             columns: [
                 {
-                    field: 'checked',
                     checkbox: true,
                     align: 'center',
                 }, {

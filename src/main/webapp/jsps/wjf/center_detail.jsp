@@ -28,7 +28,7 @@
             <el-col :span="3"><div class="grid-content bg-purple"></div></el-col>
             <el-col :span="5"><div class="grid-content bg-purple-light">
                 <span v-if="show">
-                    <el-button type="primary">发布成绩</el-button>
+                    <el-button type="primary" @click="faBu">发布成绩</el-button>
                 </span>
                 <span v-if="show1">
                     <el-button type="info">已发布成绩</el-button>
@@ -96,11 +96,11 @@
             <el-table-column
                     label="操作">
                 <template slot-scope="scope">
-                    <span v-if="scope.row.show == 1">
+                    <span v-if="show1">
                          <el-link type="info">去判卷</el-link>
                     </span>
-                    <span v-if="scope.row.show == 0">
-                        <el-link type="primary" @click="goPanJuan">去判卷</el-link>
+                    <span v-if="show">
+                        <el-link type="primary" @click="goPanJuan(scope.row)">去判卷</el-link>
                     </span>
                 </template>
 
@@ -130,34 +130,81 @@
                 peopleData:[],
                 show:true,
                 show1:false,
+                testpaperid:'',
 
             }
         },
         //页面加载成功时完成
         mounted: function(){
             var _this = this;
-            var testpaperid = getQueryString("testpaperid")
+            _this.testpaperid = getQueryString("testpaperid")
+            //考试的详细信息
             axios
                 .post("/WJF/paper",{
-                    testpaperid:testpaperid
+                    testpaperid:_this.testpaperid
                 })
                 .then(function (res) {
                     _this.examData=res.data;
                 })
+            //获取当前考试参考人员
             axios
                 .post("/WJF/testPeople",{
-                    testpaperid:testpaperid
+                    testpaperid:_this.testpaperid
                 })
                 .then(function (res) {
                     console.log(res.data)
                     console.log("----------")
                     _this.peopleData=res.data;
+                    for (var i = 0; i < _this.peopleData.length; i++) {
+                        if(_this.peopleData[i].show == 1){
+                            _this.show=false,
+                             _this.show1=true
+                        }else{
+                            _this.show=true,
+                            _this.show1=false
+                        }
+                    }
                 })
+
 
         },
         /*方法函数  事件等*/
         methods: {
-            goPanJuan(){
+
+            //去批改试卷
+            goPanJuan(row){
+                var _this = this;
+                location.href="/jsps/wjf/answer.jsp?testpaperid="+_this.testpaperid+"&userid="+row.userid+"&biaoshi=pigai"
+            },
+            //发布成绩
+            faBu(){
+                var _this = this;
+                        this.$confirm('是否发布成绩?发布后判卷结果将不可修改', '提示', {
+                            confirmButtonText: '确定',
+                            cancelButtonText: '取消',
+                            type: 'warning'
+                        }).then(()=> {
+                            for (var i = 0; i < _this.peopleData.length; i++){
+                                axios
+                                    .post("/WJF/faBu", {
+                                        testpaperid: _this.testpaperid,
+                                        userId: _this.peopleData[i].userid
+                                    })
+                                    .then(function (res) {
+                                        _this.show1 = true;
+                                        _this.show = false;
+                                    })
+                        }
+                        }).catch(() => {
+                                this.$message({
+                                type: 'info',
+                                message: '已取消'
+                            });
+                        });
+
+
+
+
 
             }
         }

@@ -57,11 +57,10 @@
         mounted: function(){
             var user = $("#username").val();
             var _this = this;
-
             axios
                 .get("/WJF/getExam/"+user)
                 .then(function (res) {
-                    console.log(res)
+                    console.log(res.data)
                     _this.examTableData=res.data;
                 })
         },
@@ -75,20 +74,45 @@
                 }else if(Date.parse(row.testendtime) < aData){
                     alert("考试时间已过！")
                 }else if(Date.parse(row.teststarttime) < aData && Date.parse(row.testendtime) > aData){
-
-                    alert(row.testtime);
-                    if(row.testtime <=0){
+                    if(row.testtime <= 0){
                         alert("考试次数已用完");
                     }
                     else{
-                        axios
-                            .post("/WJF/reduceNum",{
-                                testId : row.testid,
-                                userId : row.userid
-                            })
-                            .then(function (res) {
-                                window.open("/jsps/answer.jsp?testpaperid="+row.testpaperid+"&testId="+row.testid+"&userId="+row.userid, '_blank');
-                            })
+                        //考试次数等于3时，表示员工没有参与过考试，直接进入考试
+                        if(row.testtime == 3){
+                            axios
+                                .post("/WJF/reduceNum",{
+                                    testId : row.testid,
+                                    userId : row.userid
+                                })
+                                .then(function (res) {
+                                    location.reload();
+                                    window.open("/jsps/wjf/answer.jsp?testpaperid="+row.testpaperid+"&testId="+row.testid+"&userId="+row.userid+"&num="+row.testtime, '_blank');
+                                })
+                        }else {
+                            //考试次数<3时，表示员工已经参加过考试，再次进入考试，将会覆盖上次答题的答案
+                            this.$confirm('是否再次参加考试(上次答题成绩将作废)?', '提示', {
+                                confirmButtonText: '确定',
+                                cancelButtonText: '取消',
+                                type: 'warning'
+                            }).then(() => {
+                                axios
+                                    .post("/WJF/reduceNum",{
+                                        testId : row.testid,
+                                        userId : row.userid
+                                    })
+                                    .then(function (res) {
+                                        location.reload();
+                                        window.open("/jsps/wjf/answer.jsp?testpaperid="+row.testpaperid+"&testId="+row.testid+"&userId="+row.userid+"&num="+row.testtime, '_blank');
+                                    })
+                        }).catch(() => {
+                                this.$message({
+                                type: 'info',
+                                message: '已取消'
+                            });
+                        });
+                        }
+
                     }
                 }
 

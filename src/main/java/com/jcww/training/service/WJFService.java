@@ -1,6 +1,8 @@
 package com.jcww.training.service;
 
+import com.jcww.training.pojo.MsgLog;
 import com.jcww.training.pojo.Question;
+import com.jcww.training.pojo.Useranswer;
 
 import java.util.List;
 import java.util.Map;
@@ -31,4 +33,18 @@ public interface WJFService {
     List<Map<String,Object>> staffData(String user);
 
     Boolean jiaoJuan(Map<String,Object> map);
+
+    List<Question> allQuestions(Integer testpaperid);
+
+    List<Useranswer> userAnswer(Map<String,Integer> user);
+
+    Boolean panJuan(Map<String,Object> map);
+
+    Boolean faBu(Integer testpaperid, Integer userId);
+
+    int update(MsgLog msgLog);
+
+    int save(MsgLog msgLog);
+
+    List<MsgLog> list(Map<String,Object> map);
 }
