@@ -35,4 +35,6 @@ public interface WZDService {
     List<Testuser> showWho(Integer id);
 
     List<Testuser> personInfo2(Integer jobnumber);
+
+    List<Testuser> personInfo3();
 }

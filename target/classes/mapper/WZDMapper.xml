@@ -54,7 +54,7 @@
         </if>
         order by tu.score
     </select>
-    
+
     <select id="showWho" resultType="com.jcww.training.pojo.Testuser">
     select u.truename,u.jobnumber,u.username,tu.score
         from testuser tu
@@ -70,5 +70,19 @@
         left join testpaper tp on tu.testid=tp.testpaperid
             where u.jobnumber=#{jobnumber}
         order by tu.score
+    </select>
+    <select id="personInfo3" resultType="com.jcww.training.pojo.Testuser">
+    SELECT DISTINCT
+	u.truename,
+	u.jobnumber,
+	SUM( tu.testtime ) AS testtime,
+	SUM(tu.score>tp.passmark) AS passtime
+
+FROM
+	testuser tu
+	LEFT JOIN USER u ON tu.userid = u.userid
+	LEFT JOIN testpaper tp ON tu.testid = tp.testpaperid
+ORDER BY
+	tu.score
     </select>
 </mapper>

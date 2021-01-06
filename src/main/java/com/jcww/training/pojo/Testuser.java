@@ -25,4 +25,6 @@ public class Testuser implements Serializable {
   private String username;
   //试卷名
   private String testpapername;
+  //通过考试次数
+  private String passtime;
 }

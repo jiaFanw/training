@@ -107,9 +107,16 @@ public class WZDController {
     public List<Testuser> showWho(Integer id) {
         return wzdService.showWho(id);
     }
+    //查看工号对应人员的考试信息
     @RequestMapping("personInfo2")
     @ResponseBody
     public  List<Testuser> personInfo2(Integer jobnumber){
         return wzdService.personInfo2(jobnumber);
+    }
+    //查看全部考试人员
+    @RequestMapping("personInfo3")
+    @ResponseBody
+    public List<Testuser> personInfo3(){
+        return wzdService.personInfo3();
     }
 }

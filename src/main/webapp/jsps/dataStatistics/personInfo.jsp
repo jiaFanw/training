@@ -12,7 +12,7 @@
         $(function () {
 
             $("#personTable").bootstrapTable({
-                url: "/WZD/personInfo",
+                url: "/WZD/personInfo3",
                 method: 'post',// 提交方式
                 contentType: "application/x-www-form-urlencoded; charset=UTF-8",// 发送到服务器的编码类型
                 pageNumber: 1,
@@ -37,12 +37,17 @@
                         title: '参加考试次数'
                     },
                     {
-                        field: '',
+                        field: 'passtime',
                         title: '通过考试次数'
                     },
                     {
-                        field: '',
-                        title: '通过率'
+
+                        title: '通过率',
+                        formatter:function (value,row,index) {
+                            var a=row.passtime/row.testtime*100;
+                            a+="%";
+                            return a;
+                        }
                     },
                     {
                         title: '操作',
@@ -53,47 +58,48 @@
                 ],
             })
         })
-function personInfo(jobnumber){
-    $("#abcd").bootstrapTable({
-        url: "/WZD/personInfo2?jobnumber="+jobnumber,
-        method: 'post',// 提交方式
-        contentType: "application/x-www-form-urlencoded; charset=UTF-8",// 发送到服务器的编码类型
-        pageNumber: 1,
-        pageSize: 5,
-        sortName: 'id',
-        pagination: true,
-        sortOrder: 'asc',
-        pagination: true,// 开启分页
-        sidePagination: "client",// 分页方式 'client'为客户端分页
-        cache: false,// 是否使用缓存
-        columns: [
-            {
-                field: 'testpapername',
-                title: '试卷名称'
-            }, {
-                field: 'follmark',
-                title: '总分'
-            }, {
-                field: 'passmark',
-                title: '及格分'
-            }, {
-                field: 'score',
-                title: '成绩'
-            },{
-                title:'是否通过',
-                formatter:function (value,row,index) {
-                    if (row.score>row.passmark){
-                        return "√"
+
+        function personInfo(jobnumber) {
+            $("#abcd").bootstrapTable({
+                url: "/WZD/personInfo2?jobnumber=" + jobnumber,
+                method: 'post',// 提交方式
+                contentType: "application/x-www-form-urlencoded; charset=UTF-8",// 发送到服务器的编码类型
+                pageNumber: 1,
+                pageSize: 5,
+                sortName: 'id',
+                pagination: true,
+                sortOrder: 'asc',
+                pagination: true,// 开启分页
+                sidePagination: "client",// 分页方式 'client'为客户端分页
+                cache: false,// 是否使用缓存
+                columns: [
+                    {
+                        field: 'testpapername',
+                        title: '试卷名称'
+                    }, {
+                        field: 'follmark',
+                        title: '总分'
+                    }, {
+                        field: 'passmark',
+                        title: '及格分'
+                    }, {
+                        field: 'score',
+                        title: '成绩'
+                    }, {
+                        title: '是否通过',
+                        formatter: function (value, row, index) {
+                            if (row.score > row.passmark) {
+                                return "√"
+                            }
+                            if (row.score < row.passmark) {
+                                return "×"
+                            }
+                        }
                     }
-                    if (row.score<row.passmark){
-                        return "×"
-                    }
-                }
-            }
-        ],
-    })
-    $("#myModal2").modal("show");
-}
+                ],
+            })
+            $("#myModal2").modal("show");
+        }
 
     </script>
 </head>
@@ -115,7 +121,7 @@ function personInfo(jobnumber){
                 </h4>
             </div>
             <div class="modal-body" overflow="auto" style="height: 300px">
-          <%--      //考生对应的所有考试table--%>
+                <%--      //考生对应的所有考试table--%>
                 <table id="abcd">
 
                 </table>

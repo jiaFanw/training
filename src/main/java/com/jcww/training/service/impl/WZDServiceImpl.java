@@ -80,4 +80,9 @@ public class WZDServiceImpl implements WZDService {
     public List<Testuser> personInfo2(Integer jobnumber) {
         return wzdMapper.personInfo2(jobnumber);
     }
+
+    @Override
+    public List<Testuser> personInfo3() {
+        return wzdMapper.personInfo3();
+    }
 }
