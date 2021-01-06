@@ -3,6 +3,7 @@ package com.jcww.training.mapper;
 import com.jcww.training.pojo.MsgLog;
 import com.jcww.training.pojo.Question;
 import com.jcww.training.pojo.Useranswer;
+import com.jcww.training.pojo.Video;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -54,4 +55,10 @@ public interface WJFMapper {
     int save(MsgLog msgLog);
 
     List<MsgLog> list(Map<String,Object> map);
+
+    List<Video> findVideo(Video video);
+
+    int addVideo(Video video);
+
+    Video findById(@Param("videoId") Integer videoId);
 }

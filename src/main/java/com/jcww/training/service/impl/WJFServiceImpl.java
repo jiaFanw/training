@@ -4,6 +4,7 @@ import com.jcww.training.mapper.WJFMapper;
 import com.jcww.training.pojo.MsgLog;
 import com.jcww.training.pojo.Question;
 import com.jcww.training.pojo.Useranswer;
+import com.jcww.training.pojo.Video;
 import com.jcww.training.service.WJFService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -163,6 +164,21 @@ public class WJFServiceImpl implements WJFService {
     @Override
     public List<MsgLog> list(Map<String, Object> map) {
         return wjfMapper.list(map);
+    }
+
+    @Override
+    public List<Video> findVideo(Video video) {
+        return wjfMapper.findVideo(video);
+    }
+
+    @Override
+    public int addVideo(Video video) {
+        return wjfMapper.addVideo(video);
+    }
+
+    @Override
+    public Video findById(Integer videoId) {
+        return wjfMapper.findById(videoId);
     }
 
 

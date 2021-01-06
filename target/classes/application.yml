@@ -24,6 +24,8 @@ spring:
           enabled: true
           max-attempts: 3
           nitial-interval: 3000
+  resources:
+      static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:static/,classpath:/public/,file:${web.upload-path}
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
@@ -43,3 +45,10 @@ logging:
     com:
       jcww:
         training: debug
+
+# OSS
+aliyun:
+      access-id: LTAI4GJrQdNFZGRzFPsabhFM
+      access-key: 7lREC81kpWrKg9Ufz34KMNRWXcmJA3
+      bucket: wjf-trainging
+      endpoint: oss-cn-beijing.aliyuncs.com

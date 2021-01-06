@@ -19,5 +19,15 @@ public class Test implements Serializable {
   private Date testendtime;//考试截止日期
   private Integer testpaperid;//考试试卷表id
 
+  private String teststatus;//考试状态
+  private String testtime;//考试次数
+
+  //Testpaper
+  private String passmark;//及格分
+  private Integer renshu;//人数
+  //user
+  private String truename; //用户真实姓名
+
+
 
 }

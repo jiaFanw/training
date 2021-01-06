@@ -3,6 +3,7 @@ package com.jcww.training.service;
 import com.jcww.training.pojo.MsgLog;
 import com.jcww.training.pojo.Question;
 import com.jcww.training.pojo.Useranswer;
+import com.jcww.training.pojo.Video;
 
 import java.util.List;
 import java.util.Map;
@@ -47,4 +48,10 @@ public interface WJFService {
     int save(MsgLog msgLog);
 
     List<MsgLog> list(Map<String,Object> map);
+
+    List<Video> findVideo(Video video);
+
+    int addVideo(Video video);
+
+    Video findById(Integer videoId);
 }

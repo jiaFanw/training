@@ -1,6 +1,8 @@
 package com.jcww.training.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.aliyun.oss.OSS;
+import com.aliyun.oss.OSSClientBuilder;
 import com.jcww.training.config.Config;
 import com.jcww.training.pojo.*;
 import com.jcww.training.service.WJFService;
@@ -11,8 +13,12 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -93,7 +99,6 @@ public class WJFController {
             String uuid = UUID.randomUUID().toString();
             Date date = new Date();
             String msg = JSON.toJSONString(map);
-
             MsgLog msgLog = new MsgLog();
             msgLog.setMsgId(uuid);
 
@@ -188,5 +193,70 @@ public class WJFController {
     }
 
 
+
+    //视频资料库
+    @RequestMapping("/findVideo")
+    public List<Video> findVideo(@RequestBody Video video){
+        List<Video> list=wjfService.findVideo(video);
+        return list;
+    }
+
+
+    private String realPath="D:/ideaWorkspace/training/src/main/webapp";
+    @RequestMapping("/addVideo")
+    @ResponseBody
+    public int addVideo(MultipartFile file, MultipartFile file2, Video video) throws IOException {
+        /*上传视频*/
+        long currTime = System.currentTimeMillis();//获取当前系统时间
+        String uniqueName = file.getOriginalFilename();//得到文件名
+        String suffix = uniqueName.substring(uniqueName.lastIndexOf(".")+1);//截取文件名
+        String newname = uniqueName.substring(0, uniqueName.lastIndexOf("."))+"_"+currTime+"."+suffix; //得到文件路径
+        String fpath = "/video/"+ newname;
+        String filePath = realPath  + fpath;
+        file.transferTo(new File(filePath));
+        video.setVideoFile(fpath);
+
+        /*上传图片*/
+        String endpoint = "oss-cn-beijing.aliyuncs.com";
+        String accessKeyId = "LTAI4GJrQdNFZGRzFPsabhFM";
+        String accessKeySecret = "7lREC81kpWrKg9Ufz34KMNRWXcmJA3";
+        String bucketName = "wjf-trainging";
+
+        OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
+        InputStream inputStream = null;
+        try {
+            //获取文件流
+            inputStream = file2.getInputStream();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        //获取文件名称
+        String filename = file2.getOriginalFilename();
+        //1.在文件名称中添加随机唯一的值
+        String uuid = UUID.randomUUID().toString().replaceAll("-","");
+        filename = uuid+filename;
+
+        //2.把文件按日期分类
+        /*String datePath = new DateTime().toString("yyyy/MM/dd");*/
+        filename = "wjf/"+filename;
+
+        //调用OSS方法实现上传
+        ossClient.putObject(bucketName, filename, inputStream);
+        ossClient.shutdown();
+
+        String url = "https://"+bucketName+"."+endpoint+"/"+filename;
+        video.setVideoCover(url);
+        int i=wjfService.addVideo(video);
+        return i;
+    }
+
+
+    //查看
+    @RequestMapping("findById")
+    @ResponseBody
+    public Video findById(Integer videoId){
+        Video video=wjfService.findById(videoId);
+        return video;
+    }
 
 }

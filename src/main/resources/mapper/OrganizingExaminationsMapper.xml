@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jcww.training.mapper.OrganizingExaminationsMapper">
+
+    <!--    //每次加载修改考试状态-->
+    <!--    void  updateTestStatus();-->
+    <update id="updateTestStatus">
+        update test set
+        teststatus =(
+        case
+        when NOW() &lt; teststarttime  then "1"
+        when   testendtime &lt; NOW() then "3"
+        else "2" end
+        )
+    </update>
+    <!--    //组织考试全查-->
+    <!--    List<Test> selectAllExaminationsBySome(@Param("teststatus") String teststatus, @Param("testname") String testname, @Param("startTime") String startTime,@Param("endTime") String endTime);-->
+    <select id="selectAllExaminationsBySome" resultType="com.jcww.training.pojo.Test">
+        select * from test
+        where
+        1=1
+        <if test="teststatus!=null and teststatus!='' ">
+            and teststatus = #{teststatus}
+        </if>
+        <if test="testname!=null and  testname!='' ">
+            and testname like '%${testname}%'
+        </if>
+        <if test="startTime!=null and  startTime!='' ">
+            and #{startTime} &lt; teststarttime
+        </if>
+        <if test="endTime!=null and  endTime!='' ">
+            and testendtime &lt; #{endTime}
+        </if>
+    </select>
+    <!--    //删除考试-->
+    <!--    int deleteExaminationsByTestid(Long testid);-->
+    <delete id="deleteExaminationsByTestid">
+        delete from test where testid = #{testid}
+    </delete>
+
+    <!--    //查询单个考试信息-->
+    <!--    Test selectOneExaminationsByTestId(Long testid);-->
+    <select id="selectOneExaminationsByTestId" resultType="com.jcww.training.pojo.Test">
+        select test.testname,test.testdate,test.teststarttime,test.testendtime,test.testtime,testpaper.passmark from test,testpaper
+        where
+        test.testpaperid = testpaper.testpaperid
+        and
+        testid = #{testid}
+    </select>
+
+    <!--    //查询单个考试参考人数-->
+    <!--    Test selectOneExaminationsByTestIdCount(Long testid);-->
+    <select id="selectOneExaminationsByTestIdCount" resultType="com.jcww.training.pojo.Test">
+       SELECT COUNT(*) as renshu FROM test ,testuser,user WHERE test.testid = testuser.testid and user.userid= testuser.userid and test.testid = #{testid}
+    </select>
+
+    <!--    //查询单个考试考生名称-->
+    <!--    List<Test> selectOneExaminationsByTestIdStu(Long testid);-->
+    <select id="selectOneExaminationsByTestIdStu" resultType="com.jcww.training.pojo.Test">
+       SELECT user.truename FROM test ,testuser,user WHERE test.testid = testuser.testid and user.userid= testuser.userid and test.testid = #{testid}
+    </select>
+
+    <!--    //添加考试-->
+    <!--    Integer addExaminationsTest(Test test);-->
+    <insert id="addExaminationsTest" parameterType="com.jcww.training.pojo.Test" keyProperty="testid" useGeneratedKeys="true" >
+        insert into test (testname, testdate, teststarttime, testendtime, teststatus, testtime) values (#{testname}, #{testdate}, #{teststarttime}, #{testendtime}, #{teststatus}, #{testtime})
+    </insert>
+
+    <select id="" >
+        SELECT COUNT( questiontype )as danxuancount FROM question WHERE questiontype = 1
+    </select>
+
+</mapper>

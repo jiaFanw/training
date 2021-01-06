@@ -292,9 +292,6 @@
                     _this.follmark=res.data.follmark;
                 })
 
-
-
-
             //单选题
             axios
                 .post("/WJF/danXuan/"+_this.testpaperid)
@@ -517,7 +514,6 @@
 
                 for (var i = 0; i < _this.danXuantiNum; i++) {
                     daAn.push(_this.questionid[i]+","+_this.danXuanAnswer[i])
-
                 }
                 for (var i = 0; i < _this.panDuanNum; i++) {
                     daAn.push(_this.panquestionid[i]+","+_this.panDuanAnswer[i])
@@ -532,6 +528,7 @@
                     daAn.push(_this.jianDaQuestionId[i]+","+jian)
                 }
                 var c = [];
+                console.log(daAn)
                 for (var i = 0; i < daAn.length; i++) {
                     if(_this.answer.indexOf(daAn[i]) > -1){
                         c.push(daAn[i]+","+_this.score[i])

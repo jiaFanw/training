@@ -214,4 +214,32 @@
         </set>
         where `msgId` = #{msgId}
     </update>
+
+
+
+    <!--视频库-->
+    <select id="findVideo" resultType="com.jcww.training.pojo.Video">
+        select * from video
+        <where>
+            <if test="videoStatus!=null and videoStatus!=''">
+                video_status=#{videoStatus}
+            </if>
+            <if test="videoTitle!=null and videoTitle!=''">
+                and  video_title like '%${videoTitle}%'
+            </if>
+            <if test="beginTime!=null and beginTime!=''">
+                and video_create_time between #{beginTime} and #{endTime}
+            </if>
+        </where>
+    </select>
+
+    <!--添加视频-->
+    <insert id="addVideo">
+    insert into video (video_title, video_create_time, video_file, video_cover, video_status) values(#{videoTitle},curdate(),#{videoFile},#{videoCover},#{videoStatus})
+    </insert>
+
+
+    <select id="findById" resultType="com.jcww.training.pojo.Video">
+        select * from video where video_id=#{videoId}
+    </select>
 </mapper>
