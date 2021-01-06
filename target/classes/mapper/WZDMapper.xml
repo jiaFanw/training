@@ -85,4 +85,14 @@ FROM
 ORDER BY
 	tu.score
     </select>
+
+    <select id="article" resultType="com.jcww.training.pojo.Article">
+        select * from article
+    </select>
+    <delete id="deleteById">
+        delete  from article where id=#{id}
+    </delete>
+    <insert id="articleAdd">
+        insert  into article() values (null,#{title},#{str},now(),0)
+    </insert>
 </mapper>

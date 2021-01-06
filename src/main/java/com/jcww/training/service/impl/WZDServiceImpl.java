@@ -1,10 +1,7 @@
 package com.jcww.training.service.impl;
 
 import com.jcww.training.mapper.WZDMapper;
-import com.jcww.training.pojo.Message;
-import com.jcww.training.pojo.Question;
-import com.jcww.training.pojo.Test;
-import com.jcww.training.pojo.Testuser;
+import com.jcww.training.pojo.*;
 import com.jcww.training.service.WZDService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -84,5 +81,21 @@ public class WZDServiceImpl implements WZDService {
     @Override
     public List<Testuser> personInfo3() {
         return wzdMapper.personInfo3();
+    }
+
+    @Override
+    public List<Article> article() {
+        return wzdMapper.article();
+    }
+
+    @Override
+    public int deleteById(int id) {
+        return wzdMapper.deleteById(id);
+    }
+
+    @Override
+    public int articleAdd(String title,String str) {
+
+        return wzdMapper.articleAdd(title,str);
     }
 }

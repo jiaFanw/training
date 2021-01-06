@@ -1,9 +1,6 @@
 package com.jcww.training.mapper;
 
-import com.jcww.training.pojo.Message;
-import com.jcww.training.pojo.Question;
-import com.jcww.training.pojo.Test;
-import com.jcww.training.pojo.Testuser;
+import com.jcww.training.pojo.*;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import java.util.List;
@@ -37,4 +34,10 @@ public interface WZDMapper {
     List<Testuser> personInfo2(Integer jobnumber);
 
     List<Testuser> personInfo3();
+
+    List<Article> article();
+
+    int deleteById(int id);
+
+    int articleAdd(@Param("title") String title,@Param("str") String str);
 }

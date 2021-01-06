@@ -1,8 +1,5 @@
 package com.jcww.training.controller;
-import com.jcww.training.pojo.Message;
-import com.jcww.training.pojo.Question;
-import com.jcww.training.pojo.Test;
-import com.jcww.training.pojo.Testuser;
+import com.jcww.training.pojo.*;
 import com.jcww.training.service.WZDService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -118,5 +115,23 @@ public class WZDController {
     @ResponseBody
     public List<Testuser> personInfo3(){
         return wzdService.personInfo3();
+    }
+    //文章table
+    @RequestMapping("article")
+    @ResponseBody
+    public List<Article> article(){
+        return wzdService.article();
+    }
+    //通过id删除文章
+    @RequestMapping("deleteById")
+    @ResponseBody
+    public int deleteById(int id){
+        return wzdService.deleteById(id);
+    }
+    @RequestMapping("articleAdd")
+    @ResponseBody
+    public int articleAdd(String title,String str){
+        System.out.println("标题---"+title+"内容---"+str);
+        return wzdService.articleAdd(title,str);
     }
 }
