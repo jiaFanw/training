@@ -10,7 +10,7 @@
 <head>
     <title>Title</title>
 </head>
-<script src="${pageContext.request.contextPath }/static/js/jquery-3.4.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery-3.4.1.min.js"></script>
 <script src="${pageContext.request.contextPath }/static/vue/vue.js"></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/static/element/index.css">
 <script src="${pageContext.request.contextPath }/static/element/index.js"></script>
