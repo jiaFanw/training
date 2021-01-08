@@ -24,9 +24,13 @@ public class Question implements Serializable {
   private String questiontype;//问题分类（1.单选，2多选，3.判断，4.填空，5.简答）
   private String createusername;//创建人
   private String ownuser;//拥有者
-
+  private Integer userid;//用户ID
 
 
 
   private String questionclassifyname;//试题分类名称  Questionclassify表
+  /**
+   *  User 表
+   * */
+  private String truename;
 }

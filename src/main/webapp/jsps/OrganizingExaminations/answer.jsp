@@ -84,7 +84,7 @@
                             <h3>简答题</h3>
                             <span v-for="(jianDa,i) in jianDaTi">
                                 {{i+1}},{{jianDa.questionname}}
-                                <el-input type="textarea" v-model="jianDaAnswer[i]"></el-input>
+                                <el-input type="textarea"></el-input>
                                 <h4>分值：<span style="color: red">{{jianDa.score}}</span></h4>
                             </span>
                         </div>

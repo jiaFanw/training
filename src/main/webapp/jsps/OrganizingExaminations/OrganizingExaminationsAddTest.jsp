@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath }/static/bootstrap/css/bootstrap-tab.css">
 </head>
 <body>
+<%--第一步--%>
 <form class="form-horizontal" role="form" id="firststep">
     <div class="form-group">
         <label for="testname" class="col-sm-2 control-label">考试名称</label>
@@ -58,7 +59,12 @@
 
     <div class="form-group">
         <center>
-            <table hidden id="testuserlistselect">
+            <table hidden id="testuserlistselect" border="1" width="500px">
+                <tr id="adduserstart">
+                    <td>工号</td>
+                    <td>姓名</td>
+                    <td>操作</td>
+                </tr>
             </table>
         </center>
     </div>
@@ -75,6 +81,7 @@
                value="下一步">
     </center>
 </form>
+<%--随机试卷--%>
 <form class="form-horizontal" role="form" id="secondstep1">
     <div class="form-group">
         <label for="testpapername" class="col-sm-2 control-label">试卷名称</label>
@@ -129,6 +136,7 @@
         <input type="button" id="finish1" value="完成">
     </center>
 </form>
+<%--固定试卷--%>
 <form class="form-horizontal" role="form" id="secondstep2">
     <div class="form-group">
         <label for="testpapername" class="col-sm-2 control-label">试卷名称</label>
@@ -144,7 +152,18 @@
             固定试题
             <br>
             <input id="selectQuestion" value="选择试题" type="button">
-            <table id="QuestionListadd"></table>
+            <center>
+                <table hidden id="QuestionListadd" border="1" width="800px">
+                    <tr id="addquestionstart">
+                        <td>序号</td>
+                        <td>试题类型</td>
+                        <td>试题内容</td>
+                        <td>试题分类</td>
+                        <td>分数</td>
+                        <td>操作</td>
+                    </tr>
+                </table>
+            </center>
         </div>
     </div>
 
@@ -153,8 +172,7 @@
         <label for="testname" class="col-sm-2 control-label">及格分数</label>
         <div class="col-sm-10">
             <input type="text" id="passmark1"
-                   placeholder="请输入及格分数">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;满分<input type="text" id="follmark1"
-                                                                                            placeholder="请输入及格分数">
+                   placeholder="请输入及格分数">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;满分<input type="text" id="follmark1" value="" readonly>
         </div>
     </div>
     <center>
@@ -163,6 +181,7 @@
                value="完成">
     </center>
 </form>
+<%--选择固定试卷随机试卷模态框--%>
 <div class="modal fade" id="selectExamType" aria-labelledby="myModalLabel"
      aria-hidden="true">
     <div class="modal-dialog" style="width: 1000px">
@@ -186,8 +205,7 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->
 </div>
-
-
+<%--添加人员模态框--%>
 <div class="modal fade" id="selectExamUser" aria-labelledby="myModalLabel"
      aria-hidden="true">
     <div class="modal-dialog" style="width: 1000px">
@@ -198,13 +216,72 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal" role="form"  novalidate="novalidate">
+                <form class="form-horizontal" role="form" novalidate="novalidate">
+
+                    <select id="selectArea">
+                        <option value="">全部</option>
+                        <option value="1">吉林</option>
+                        <option value="2">黑龙江</option>
+                        <option value="3">辽宁</option>
+                        <option value="4">内蒙古</option>
+                        <option value="5">河北</option>
+                        <option value="6">北京</option>
+                        <option value="7">天津</option>
+                        <option value="8">山东</option>
+                    </select>
+                    <input id="selectAreainput" value="查询" type="button">
                     <center>
-                        <table></table>
+                        <table id="selectAreaUserList">
+                        </table>
                     </center>
                 </form>
             </div>
             <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="adduser">添加</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<%--固定试卷的模态框--%>
+<div class="modal fade" id="selectGudingQuestion" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" style="width: 1000px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form" novalidate="novalidate">
+                    试题分类：<select id="selectQuestionClassily">
+                    <option value="">全部</option>
+                    <option value="1">语文</option>
+                    <option value="2">数学</option>
+                    <option value="3">英语</option>
+                    <option value="4">物理</option>
+                    <option value="5">化学</option>
+                    <option value="6">政治</option>
+                    <option value="7">历史</option>
+                </select>
+                    试题类型：<select id="selectQuestionType">
+                    <option value="">全部</option>
+                    <option value="1">单选</option>
+                    <option value="2">多选</option>
+                    <option value="3">判断</option>
+                    <option value="4">填空</option>
+                    <option value="5">简答</option>
+                </select>
+                    <input id="selectQuestionClassilyinput" value="查询" type="button">
+                    <center>
+                        <table id="selectQuestionList">
+                        </table>
+                    </center>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="addquestion">添加</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
             </div>
         </div><!-- /.modal-content -->
@@ -248,9 +325,98 @@
     })
     //关联人员总列表
     $("#TestUserListall").click(function () {
-
+        $("#selectExamUser").modal("show")
+        $("#selectAreaUserList").bootstrapTable({
+            url: '/OrganizingExaminations/selectAreaUserList',
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",//发送到服务器的编码类型
+            method: "post",
+            striped: true,
+            async: false,
+            search: true,
+            sidePagination: "client",//分页方式 'client'为客户端分页
+            cache: false,//是否使用缓存
+            queryParams: function (param) {//请求参数 封装的表格对象
+            },
+            columns: [
+                {
+                    field: 'a',
+                    checkbox: true
+                },
+                {
+                    field: 'userid',
+                    title: '序号'
+                },
+                {
+                    field: 'truename',
+                    title: '名称'
+                }, {
+                    field: 'jobnumber',
+                    title: '工号',
+                }
+            ]
+        });
     })
-
+    //关联人员条件搜索
+    $("#selectAreainput").click(function () {
+        $("#selectAreaUserList").bootstrapTable("destroy")
+        var areaid = $("#selectArea").val()
+        $("#selectAreaUserList").bootstrapTable({
+            url: '/OrganizingExaminations/selectAreaUserList',
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",//发送到服务器的编码类型
+            method: "post",
+            striped: true,
+            async: false,
+            search: true,
+            sidePagination: "client",//分页方式 'client'为客户端分页
+            cache: false,//是否使用缓存
+            queryParams: function (param) {//请求参数 封装的表格对象
+                return {
+                    areaid: areaid
+                }
+            },
+            columns: [
+                {
+                    field: 'a',
+                    checkbox: true
+                },
+                {
+                    field: 'userid',
+                    title: '序号'
+                },
+                {
+                    field: 'truename',
+                    title: '名称'
+                }, {
+                    field: 'jobnumber',
+                    title: '工号',
+                }
+            ]
+        });
+    })
+    //从添bootstraptable加至table
+    $("#adduser").click(function () {
+        $("#adduserstart").nextAll().empty()
+        var selected = $("#selectAreaUserList").bootstrapTable('getSelections');
+        var truenames = new Array();
+        var jobnumbers = new Array();
+        var userids = new Array();
+        for (var i = 0; i < selected.length; i++) {
+            truenames[i] = selected[i].truename;
+            jobnumbers[i] = selected[i].jobnumber;
+            userids[i] = selected[i].userid;
+        }
+        $("#testuserlistselect").show()
+        for (var i = 0; i < selected.length; i++) {
+            $("#testuserlistselect").append(
+                "<tr id='" + userids[i] + "'>" +
+                "<td>" + truenames[i] + "</td>" +
+                "<td>" + jobnumbers[i] + "</td>" +
+                "<td>" +
+                "<a  href='javascript:delecttablebyuserid(" + userids[i] + ")'>" + "删除" + "</a>" +
+                "</td></tr>"
+            )
+        }
+    })
     //提交
     $("#finish1").click(function () {
         var test = {};
@@ -273,6 +439,239 @@
             }
         });
     })
+    //删除table中tr
+    function delecttablebyuserid(userid) {
+        $("#" + userid + "").empty()
+    }
+    //固定试卷试题全查
+    $("#selectQuestion").click(function () {
+        $("#selectGudingQuestion").modal("show")
+        $("#selectQuestionList").bootstrapTable({
+            url: '/OrganizingExaminations/selectQuestionList',
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",//发送到服务器的编码类型
+            method: "post",
+            striped: true,
+            async: false,
+            search: true,
+            sidePagination: "client",//分页方式 'client'为客户端分页
+            cache: false,//是否使用缓存
+            queryParams: function (param) {//请求参数 封装的表格对象
+            },
+            columns: [
+                {
+                    field: 'a',
+                    checkbox: true
+                },
+                {
+                    field: 'questionid',
+                    title: '序号'
+                },
+                {
+                    field: 'questiontype',
+                    title: '试题类型',
+                    formatter: function (value, row, index) {
+                        if (row.questiontype == 1) {
+                            return "单选"
+                        } else if (row.questiontype == 2) {
+                            return "多选"
+                        }else if (row.questiontype == 3) {
+                            return "判断"
+                        }else if (row.questiontype == 4) {
+                            return "填空"
+                        }else if (row.questiontype == 5) {
+                            return "简答"
+                        }
+                    }
+                }, {
+                    field: 'questionname',
+                    title: '试题名称',
+                    formatter: function (value, row, index) {
+                        var aaa = row.questionname;
+                        if (aaa.length <= 20) {
+                            return aaa
+                        } else {
+                            return aaa.substring(0, 20) + "......"
+                        }
+                    }
+                }, {
+                    field: 'questionclassifyid',
+                    title: '试题分类',
+                    formatter: function (value, row, index) {
+                        if (row.questionclassifyid == 1) {
+                            return "语文"
+                        } else if (row.questionclassifyid == 2) {
+                            return "数学"
+                        }else if (row.questionclassifyid == 3) {
+                            return "英语"
+                        }else if (row.questionclassifyid == 4) {
+                            return "物理"
+                        }else if (row.questionclassifyid == 5) {
+                            return "化学"
+                        }else if (row.questionclassifyid == 6) {
+                            return "政治"
+                        }else if (row.questionclassifyid == 7) {
+                            return "历史"
+                        }
+                    }
+                }, {
+                    field: 'score',
+                    title: '分数'
+                }
+            ]
+        });
+    })
+    //固定试卷试题条件查询
+    $("#selectQuestionClassilyinput").click(function () {
+        $("#selectQuestionList").bootstrapTable("destroy")
+        var selectQuestionClassily = $("#selectQuestionClassily").val()
+        var selectQuestionType = $("#selectQuestionType").val()
+        $("#selectQuestionList").bootstrapTable({
+            url: '/OrganizingExaminations/selectQuestionList',
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",//发送到服务器的编码类型
+            method: "post",
+            striped: true,
+            async: false,
+            search: true,
+            sidePagination: "client",//分页方式 'client'为客户端分页
+            cache: false,//是否使用缓存
+            queryParams: function (param) {//请求参数 封装的表格对象
+                return{
+                    questionclassifyid:selectQuestionClassily,
+                    questiontype:selectQuestionType
+                }
+            },
+            columns: [
+                {
+                    field: 'a',
+                    checkbox: true
+                },
+                {
+                    field: 'questionid',
+                    title: '序号'
+                },
+                {
+                    field: 'questiontype',
+                    title: '试题类型',
+                    formatter: function (value, row, index) {
+                        if (row.questiontype == 1) {
+                            return "单选"
+                        } else if (row.questiontype == 2) {
+                            return "多选"
+                        }else if (row.questiontype == 3) {
+                            return "判断"
+                        }else if (row.questiontype == 4) {
+                            return "填空"
+                        }else if (row.questiontype == 5) {
+                            return "简答"
+                        }
+                    }
+                }, {
+                    field: 'questionname',
+                    title: '试题名称',
+                    formatter: function (value, row, index) {
+                        var aaa = row.questionname;
+                        if (aaa.length <= 20) {
+                            return aaa
+                        } else {
+                            return aaa.substring(0, 20) + "......"
+                        }
+                    }
+                }, {
+                    field: 'questionclassifyid',
+                    title: '试题分类',
+                    formatter: function (value, row, index) {
+                        if (row.questionclassifyid == 1) {
+                            return "语文"
+                        } else if (row.questionclassifyid == 2) {
+                            return "数学"
+                        }else if (row.questionclassifyid == 3) {
+                            return "英语"
+                        }else if (row.questionclassifyid == 4) {
+                            return "物理"
+                        }else if (row.questionclassifyid == 5) {
+                            return "化学"
+                        }else if (row.questionclassifyid == 6) {
+                            return "政治"
+                        }else if (row.questionclassifyid == 7) {
+                            return "历史"
+                        }
+                    }
+                }, {
+                    field: 'score',
+                    title: '分数'
+                }
+            ]
+        });
+    })
+    //从添bootstraptable加至table
+    $("#addquestion").click(function () {
+        $("#addquestionstart").nextAll().empty()
+        var selected = $("#selectQuestionList").bootstrapTable('getSelections');
+        var questionids = new Array();
+        var questiontypes = new Array();
+        var questionnames = new Array();
+        var questionclassifyids = new Array();
+        var scores = new Array();
+        for (var i = 0; i < selected.length; i++) {
+            questionids[i] = selected[i].questionid;
+            if (selected[i].questionname.length<=20){
+                questionnames[i] = selected[i].questionname;
+            }else {
+                questionnames[i] = selected[i].questionname.substring(0,20)+"……";
+            }
+            if (selected[i].questiontype == 1){
+                questiontypes[i] = "单选"
+            }else if (selected[i].questiontype == 2){
+                questiontypes[i] = "多选"
+            }else if (selected[i].questiontype == 3){
+                questiontypes[i] = "判断"
+            }else if (selected[i].questiontype == 4){
+                questiontypes[i] = "填空"
+            }else if (selected[i].questiontype == 5){
+                questiontypes[i] = "简答"
+            }
+            if (selected[i].questionclassifyid == 1){
+                questionclassifyids[i] = "语文"
+            }else if (selected[i].questionclassifyid == 2){
+                questionclassifyids[i] = "数学"
+            }else if (selected[i].questionclassifyid == 3){
+                questionclassifyids[i] = "英语"
+            }else if (selected[i].questionclassifyid == 4){
+                questionclassifyids[i] = "物理"
+            }else if (selected[i].questionclassifyid == 5){
+                questionclassifyids[i] = "化学"
+            }else if (selected[i].questionclassifyid == 6){
+                questionclassifyids[i] = "政治"
+            }else if (selected[i].questionclassifyid == 7){
+                questionclassifyids[i] = "历史"
+            }
+            scores[i] = selected[i].score;
+        }
+        $("#QuestionListadd").show()
+        var a = 0;
+        for (var i = 0; i < selected.length; i++) {
+            $("#QuestionListadd").append(
+                "<tr id='" + questionids[i] + "'>" +
+                "<td>" + questionids[i] + "</td>" +
+                "<td>" + questiontypes[i] + "</td>" +
+                "<td>" + questionnames[i] + "</td>" +
+                "<td>" + questionclassifyids[i] + "</td>" +
+                "<td>" + scores[i] + "</td>" +
+                "<td>" +
+                "<a  href='javascript:delecetablebyuserid(" + questionids[i] +","+ scores[i]+ ")'>" + "删除" + "</a>" +
+                "</td></tr>"
+            )
+            a = a+parseInt(scores[i]);
+        }
+        $("#follmark1").val(a);
+    })
+    //删除table中tr
+    function delecetablebyuserid(questionids,scores) {
+        $("#" + questionids + "").empty();
+        var score = $("#follmark1").val()
+        $("#follmark1").val(score-parseInt(scores))
+    }
+
 
 </script>
 

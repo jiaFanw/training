@@ -181,5 +181,15 @@ public class WJFServiceImpl implements WJFService {
         return wjfMapper.findById(videoId);
     }
 
+    @Override
+    public int updVideo(Video video) {
+        return wjfMapper.updVideo(video);
+    }
+
+    @Override
+    public int delVideo(Integer videoId) {
+        return wjfMapper.delVideo(videoId);
+    }
+
 
 }

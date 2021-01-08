@@ -35,4 +35,10 @@ public interface OrganizingExaminationsMapper {
     Question selecttiankongCount(Integer questionclassifyid);
     //查询简答个数
     Question selectjiandaCount(Integer questionclassifyid);
+
+    //查询所有考生（根据地名查询）
+    List<User> selectAreaUserList(Long areaid);
+    //查询所有试题
+    List<Question> selectQuestionList(@Param("questionclassifyid") Long questionclassifyid,@Param("questiontype")Long questiontype);
+
 }

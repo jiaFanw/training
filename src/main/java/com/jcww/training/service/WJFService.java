@@ -54,4 +54,8 @@ public interface WJFService {
     int addVideo(Video video);
 
     Video findById(Integer videoId);
+
+    int updVideo(Video video);
+
+    int delVideo(Integer videoId);
 }

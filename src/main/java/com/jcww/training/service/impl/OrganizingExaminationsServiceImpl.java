@@ -3,6 +3,7 @@ package com.jcww.training.service.impl;
 import com.jcww.training.mapper.OrganizingExaminationsMapper;
 import com.jcww.training.pojo.Question;
 import com.jcww.training.pojo.Test;
+import com.jcww.training.pojo.User;
 import com.jcww.training.service.OrganizingExaminationsService;
 import org.springframework.stereotype.Service;
 
@@ -73,5 +74,15 @@ public class OrganizingExaminationsServiceImpl implements OrganizingExaminations
     @Override
     public Question selectjiandaCount(Integer questionclassifyid) {
         return organizingExaminationsMapper.selectjiandaCount(questionclassifyid);
+    }
+
+    @Override
+    public List<User> selectAreaUserList(Long areaid) {
+        return organizingExaminationsMapper.selectAreaUserList(areaid);
+    }
+
+    @Override
+    public List<Question> selectQuestionList(Long questionclassifyid, Long questiontype) {
+        return organizingExaminationsMapper.selectQuestionList(questionclassifyid,questiontype);
     }
 }

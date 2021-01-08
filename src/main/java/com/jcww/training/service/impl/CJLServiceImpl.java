@@ -2,6 +2,7 @@ package com.jcww.training.service.impl;
 
 import com.jcww.training.mapper.CJLMapper;
 import com.jcww.training.pojo.Question;
+import com.jcww.training.pojo.Share;
 import com.jcww.training.service.CJLService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,13 +15,8 @@ public class CJLServiceImpl implements CJLService {
     private CJLMapper cjlMapper;
 
     @Override
-    public List<Question> MyQuestionBank() {
-        return cjlMapper.MyQuestionBank();
-    }
-
-    @Override
-    public int DaoRu(List<Question> li) {
-        return cjlMapper.DaoRu(li);
+    public List<Question> QuestionBank() {
+        return cjlMapper.QuestionBank();
     }
 
     @Override
@@ -41,5 +37,45 @@ public class CJLServiceImpl implements CJLService {
     @Override
     public int preup(Question question) {
         return cjlMapper.preup(question);
+    }
+
+    @Override
+    public List<Question> MyQuestionBank(String myqus) {
+        return cjlMapper.MyQuestionBank(myqus);
+    }
+
+    @Override
+    public List<Question> SharedQuestionBank() {
+        return cjlMapper.SharedQuestionBank();
+    }
+
+    @Override
+    public List<Question> SharedQuestionBankshenhe() {
+        return cjlMapper.SharedQuestionBankshenhe();
+    }
+
+    @Override
+    public int SharedTurnDown(Question question) {
+        return cjlMapper.SharedTurnDown(question);
+    }
+
+    @Override
+    public int SharedBy(Question question) {
+        return cjlMapper.SharedBy(question);
+    }
+
+    @Override
+    public int ApplicationSH(Question question) {
+        return cjlMapper.ApplicationSH(question);
+    }
+
+    @Override
+    public int AddShared(Share share) {
+        return cjlMapper.AddShared(share);
+    }
+
+    @Override
+    public Share ViewName(String questionname, String createusername) {
+        return cjlMapper.ViewName(questionname,createusername);
     }
 }

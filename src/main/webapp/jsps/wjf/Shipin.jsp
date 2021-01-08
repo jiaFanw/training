@@ -86,23 +86,23 @@
     <el-dialog title="" :visible.sync="search">
             <el-form :model="vi">
                 <el-col :span="10">
-                    <el-form-item label="视频标题" :label-width="formLabelWidth">
+                    <el-form-item label="视频标题" >
                         <el-input v-model="vi.videoTitle" autocomplete="off"></el-input>
                     </el-form-item>
                 </el-col>
                 <el-col :span="20">
-                    <el-form-item label="视频内容" :label-width="formLabelWidth">
+                    <el-form-item label="视频内容" >
                         <input type="file" class="file" name="file">
                     </el-form-item>
                 </el-col>
                 <el-col :span="20">
-                    <el-form-item label="视频封面" :label-width="formLabelWidth">
+                    <el-form-item label="视频封面" >
                         <input type="file" class="file2" name="file2">
                     </el-form-item>
                     </el-form-item>
                 </el-col>
                 <el-col :span="20">
-                    <el-form-item label="是否同步至共享库："  :label-width="formLabelWidth">
+                    <el-form-item label="是否同步至共享库：" >
                         <el-switch
                                 style="display: block;margin-top: 15px"
                                 v-model="vi.videoStatus"
@@ -153,6 +153,7 @@
             <el-button @click="search2 = false">关闭</el-button>
         </div>
     </el-dialog>
+
 
 
 
@@ -292,6 +293,31 @@
                     });
             },
 
+
+            delId(index,row) {
+                var videoId=row.videoId
+                /*this.tableData.splice(index,1);*/
+
+
+                this.$confirm('是否确认删除?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    axios.post('/WJF/delVideo?videoId='+videoId,{
+                    }).then(function (res)  {
+                        location.reload();
+                    }).catch(function (error) {
+                    });
+                }).catch(() => {
+                        this.$message({
+                        type: 'info',
+                        message: '已取消'
+                    });
+                });
+
+            },
+
            /*查看*/
             findById:function (row) {
                 this.search2=true;
@@ -300,6 +326,16 @@
                 axios.post('/WJF/findById?videoId='+videoId,{
                 }).then(function (res)  {
 
+                }).catch(function (error) {
+                });
+            },
+
+            findById3:function (row) {
+                this.search4=true;
+                var videoId=row.videoId;
+                this.vide=row;
+                axios.post('/WJF/findById?videoId='+videoId,{
+                }).then(function (res)  {
                 }).catch(function (error) {
                 });
             },

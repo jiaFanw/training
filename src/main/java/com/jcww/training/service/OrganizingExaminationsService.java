@@ -2,6 +2,7 @@ package com.jcww.training.service;
 
 import com.jcww.training.pojo.Question;
 import com.jcww.training.pojo.Test;
+import com.jcww.training.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -31,4 +32,8 @@ public interface OrganizingExaminationsService {
     Question selecttiankongCount(Integer questionclassifyid);
     //查询简答个数
     Question selectjiandaCount(Integer questionclassifyid);
+
+    List<User> selectAreaUserList(Long areaid);
+
+    List<Question> selectQuestionList(Long questionclassifyid, Long questiontype);
 }

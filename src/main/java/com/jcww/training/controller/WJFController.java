@@ -256,5 +256,101 @@ public class WJFController {
         return video;
     }
 
+    @RequestMapping("/updVideo")
+    @ResponseBody
+    public int updVideo(MultipartFile file,MultipartFile file2, Video video) throws IOException {
+        if (file==null && file2!=null){
+            /*上传图片*/
+            String endpoint = "oss-cn-beijing.aliyuncs.com";
+            String accessKeyId = "LTAI4GJrQdNFZGRzFPsabhFM";
+            String accessKeySecret = "7lREC81kpWrKg9Ufz34KMNRWXcmJA3";
+            String bucketName = "wjf-trainging";
+
+            OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
+            InputStream inputStream = null;
+            try {
+                //获取文件流
+                inputStream = file2.getInputStream();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            //获取文件名称
+            String filename = file2.getOriginalFilename();
+            //1.在文件名称中添加随机唯一的值
+            String uuid = UUID.randomUUID().toString().replaceAll("-","");
+            filename = uuid+filename;
+
+            //2.把文件按日期分类
+            /*String datePath = new DateTime().toString("yyyy/MM/dd");*/
+            filename = "yhy/"+filename;
+
+            //调用OSS方法实现上传
+            ossClient.putObject(bucketName, filename, inputStream);
+            ossClient.shutdown();
+
+            String url = "https://"+bucketName+"."+endpoint+"/"+filename;
+            video.setVideoCover(url);
+        }else if(file!=null && file2==null){
+            /*上传视频*/
+            long currTime = System.currentTimeMillis();//获取当前系统时间
+            String uniqueName = file.getOriginalFilename();//得到文件名
+            String suffix = uniqueName.substring(uniqueName.lastIndexOf(".")+1);//截取文件名
+            String newname = uniqueName.substring(0, uniqueName.lastIndexOf("."))+"_"+currTime+"."+suffix; //得到文件路径
+            String fpath = "/video/"+ newname;
+            String filePath = realPath  + fpath;
+            file.transferTo(new File(filePath));
+            video.setVideoFile(fpath);
+        }else {
+            /*上传视频*/
+            long currTime = System.currentTimeMillis();//获取当前系统时间
+            String uniqueName = file.getOriginalFilename();//得到文件名
+            String suffix = uniqueName.substring(uniqueName.lastIndexOf(".") + 1);//截取文件名
+            String newname = uniqueName.substring(0, uniqueName.lastIndexOf(".")) + "_" + currTime + "." + suffix; //得到文件路径
+            String fpath = "/video/" + newname;
+            String filePath = realPath + fpath;
+            file.transferTo(new File(filePath));
+            video.setVideoFile(fpath);
+
+            /*上传图片*/
+            String endpoint = "oss-cn-beijing.aliyuncs.com";
+            String accessKeyId = "LTAI4GJrQdNFZGRzFPsabhFM";
+            String accessKeySecret = "7lREC81kpWrKg9Ufz34KMNRWXcmJA3";
+            String bucketName = "wjf-trainging";
+
+            OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
+            InputStream inputStream = null;
+            try {
+                //获取文件流
+                inputStream = file2.getInputStream();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            //获取文件名称
+            String filename = file2.getOriginalFilename();
+            //1.在文件名称中添加随机唯一的值
+            String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+            filename = uuid + filename;
+
+            //2.把文件按日期分类
+            /*String datePath = new DateTime().toString("yyyy/MM/dd");*/
+            filename = "yhy/" + filename;
+
+            //调用OSS方法实现上传
+            ossClient.putObject(bucketName, filename, inputStream);
+            ossClient.shutdown();
+
+            String url = "https://" + bucketName + "." + endpoint + "/" + filename;
+            video.setVideoCover(url);
+        }
+        int i=wjfService.updVideo(video);
+        return i;
+    }
+
+    @RequestMapping("delVideo")
+    @ResponseBody
+    public int delVideo(Integer videoId){
+        int i=wjfService.delVideo(videoId);
+        return i;
+    }
 
 }

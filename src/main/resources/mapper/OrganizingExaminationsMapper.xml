@@ -70,4 +70,25 @@
         SELECT COUNT( questiontype )as danxuancount FROM question WHERE questiontype = 1
     </select>
 
+    <!--    //查询所有考生（根据地名查询）-->
+    <!--    List<User> selectAreaUserList(Long areaid);-->
+    <select id="selectAreaUserList" resultType="com.jcww.training.pojo.User">
+        SELECT userid, jobnumber , truename FROM user WHERE roleid = 3
+        <if test="areaid!=null and areaid!=''">
+            and areaid = #{areaid}
+        </if>
+    </select>
+
+    <!--    //查询所有试题-->
+    <!--    List<Question> selectQuestionList(Long questionclassifyid,Long questiontype);-->
+    <select id="selectQuestionList" resultType="com.jcww.training.pojo.Question">
+        SELECT questionid,questiontype,questionname,questionclassifyid,score  FROM question WHERE 1=1
+        <if test="questionclassifyid!=null and questionclassifyid!=''">
+            and questionclassifyid = #{questionclassifyid}
+        </if>
+        <if test="questiontype!=null and questiontype!=''">
+            and questiontype = #{questiontype}
+        </if>
+    </select>
+
 </mapper>

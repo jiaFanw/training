@@ -235,11 +235,20 @@
 
     <!--添加视频-->
     <insert id="addVideo">
-    insert into video (video_title, video_create_time, video_file, video_cover, video_status) values(#{videoTitle},curdate(),#{videoFile},#{videoCover},#{videoStatus})
+      insert into video (video_title, video_create_time, video_file, video_cover, video_status) values(#{videoTitle},curdate(),#{videoFile},#{videoCover},#{videoStatus})
     </insert>
 
 
     <select id="findById" resultType="com.jcww.training.pojo.Video">
         select * from video where video_id=#{videoId}
     </select>
+
+
+    <update id="updVideo">
+        update video set video_title=#{videoTitle},video_file=#{videoFile},video_cover=#{videoCover} where video_id=#{videoId}
+    </update>
+
+    <delete id="delVideo">
+        delete from video where video_id=#{videoId}
+    </delete>
 </mapper>

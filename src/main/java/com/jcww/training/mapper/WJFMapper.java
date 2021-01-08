@@ -61,4 +61,8 @@ public interface WJFMapper {
     int addVideo(Video video);
 
     Video findById(@Param("videoId") Integer videoId);
+
+    int updVideo(Video video);
+
+    int delVideo(@Param("videoId")Integer videoId);
 }
