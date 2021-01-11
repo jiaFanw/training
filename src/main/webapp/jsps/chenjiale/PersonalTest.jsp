@@ -26,10 +26,13 @@
         <button type="button" class="btn btn-default" id="Mytiku">我的题库</button>
         <button type="button" class="btn btn-default" id="tiku">题库</button>
     </div>--%>
-    <div style="margin: 0px 0px -45px 800px">
+    <div style="margin: 0px 0px -45px 600px">
+        <button type="button" class="btn btn-default" id="sharedku" onclick="sharedku()">我的共享题库</button>
+        <button type="button" class="btn btn-default" id="Mytiku" onclick="Mytiku()">我的题库</button>
         <button type="button" class="btn btn-default" id="addti" onclick="PerAdd()">新增试题</button>
     </div>
     <table id="Personal"></table>
+    <table id="MyShareTable"></table>
 </div>
 <div class="modal fade" id="xmyModal" style="margin: 0px 0px 0px 600px">
     <div class="modal-dialog">
@@ -104,13 +107,13 @@
             ]
         });
 
-        /*$("#tiku").click(function (){
+        /*$("#shareku").click(function (){
             $.ajax({
                 type: "post",
                 url: "{pageContext.request.contextPath }/CJL/QuestionBank",
                 dataType:"json",
                 success : function(json) {
-                    $("#Personal").bootstrapTable('load', json);
+                    $("#MyShareTable").bootstrapTable('load', json);
                 }
             });
         })
@@ -126,6 +129,115 @@
             });
         })*/
     })
+
+    function Mytiku(){
+        $("#MyShareTable").bootstrapTable('destroy');
+        $("#Personal").bootstrapTable({
+            url: "${pageContext.request.contextPath }/CJL/MyQuestionBank",
+            pageNumber: 1,
+            pageSize: 10,
+            pageList: [5,10,30],
+            pagination: true,
+            sidePagination: 'client',
+            striped: true,
+            search: true,
+            queryParams: function (param) {
+                return {
+                    limit: param.limit,
+                    offset: param.offset
+                }
+            },
+            columns: [
+                {
+                    field: 'questionname',
+                    title: '试题内容'
+                }, {
+                    field: 'questionclassifyname',
+                    title: '分类'
+                }, {
+                    field: 'questiontype',
+                    title: '试题类型'
+                }, {
+                    field: 'answer',
+                    title: '标准答案'
+                }, {
+                    field: 'score',
+                    title: '分数'
+                }, {
+                    title: "操作",
+                    formatter: function (value, row, index) {
+                        return "<a href='javascript:ViewID(" + row.questionid + ")'>查看</a>";
+                    }
+                }, {
+                    title: "操作",
+                    formatter: function (value, row, index) {
+                        return "<a href='javascript:edit(" + row.questionid + ")'>编辑</a>";
+                    }
+                }, {
+                    title: "操作",
+                    formatter: function (value, row, index) {
+                        return "<a href='javascript:deletePer(" + row.questionid + ")'>删除</a>";
+                    }
+                }
+            ]
+        });
+    }
+
+
+    function sharedku(){
+        $("#Personal").bootstrapTable('destroy');
+        $("#MyShareTable").bootstrapTable({
+            url: "${pageContext.request.contextPath }/CJL/MySharedByUserName",
+            pageNumber: 1,
+            pageSize: 10,
+            pageList: [5,10,30],
+            pagination: true,
+            sidePagination: 'client',
+            striped: true,
+            search: true,
+            queryParams: function (param) {
+                return {
+                    limit: param.limit,
+                    offset: param.offset
+                }
+            },
+            columns: [
+                {
+                    field: 'questionname',
+                    title: '试题内容'
+                }, {
+                    field: 'questionclassifyname',
+                    title: '分类'
+                }, {
+                    field: 'questiontype',
+                    title: '试题类型'
+                }, {
+                    field: 'answer',
+                    title: '标准答案'
+                }, {
+                    field: 'score',
+                    title: '分数'
+                }, {
+                    title: "操作",
+                    formatter: function (value, row, index) {
+                        return "<a href='javascript:SharedViewID(" + row.questionid + ")'>查看</a>";
+                    }
+                }, {
+                    title: "操作",
+                    formatter: function (value, row, index) {
+                        return "<a href='javascript:SharedDeletePer(" + row.questionid + ")'>删除</a>";
+                    }
+                }
+            ]
+        });
+    }
+
+
+
+
+
+
+
 
     var a = ${user.roleid}
     $(function (){
@@ -156,4 +268,5 @@
 <%@include file="/jsps/chenjiale/Personal_yin/PersonalTestTianKong.jsp" %>
 <%@include file="/jsps/chenjiale/Personal_yin/PersonalTestJianDa.jsp" %>
 <%@include file="/jsps/chenjiale/Personal_yin/PersonalTestCaoZuo.jsp" %>
+<%@include file="/jsps/chenjiale/Shared_yin/SharedTestCaoZuo.jsp" %>
 </html>

@@ -1,14 +1,12 @@
 package com.jcww.training.mapper;
 
 import com.jcww.training.pojo.Question;
-import com.jcww.training.pojo.Share;
+import com.jcww.training.pojo.Shared;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 public interface CJLMapper {
-
-    List<Question> QuestionBank();//题库
 
     int danxuanAdd(Question question);//新增单选
 
@@ -30,7 +28,11 @@ public interface CJLMapper {
 
     int ApplicationSH(Question question);//共享题审核申请
 
-    int AddShared(Share share);//添加至我的题库
+    int AddShared(Shared shared);//添加至我的题库
 
-    Share ViewName(@Param("questionname") String questionname, @Param("createusername") String createusername);//查重
+    List<Shared> MySharedByUserName(String myqus);//我的共享
+
+    Shared SharedViewID(@Param("questionid") Integer questionid);//共享查看
+
+    int SharedDeletePer(Integer questionid);//共享删除
 }

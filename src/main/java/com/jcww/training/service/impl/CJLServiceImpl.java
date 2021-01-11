@@ -2,7 +2,7 @@ package com.jcww.training.service.impl;
 
 import com.jcww.training.mapper.CJLMapper;
 import com.jcww.training.pojo.Question;
-import com.jcww.training.pojo.Share;
+import com.jcww.training.pojo.Shared;
 import com.jcww.training.service.CJLService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,11 +13,6 @@ import java.util.List;
 public class CJLServiceImpl implements CJLService {
     @Autowired
     private CJLMapper cjlMapper;
-
-    @Override
-    public List<Question> QuestionBank() {
-        return cjlMapper.QuestionBank();
-    }
 
     @Override
     public int danxuanAdd(Question question) {
@@ -70,12 +65,22 @@ public class CJLServiceImpl implements CJLService {
     }
 
     @Override
-    public int AddShared(Share share) {
-        return cjlMapper.AddShared(share);
+    public int AddShared(Shared shared) {
+        return cjlMapper.AddShared(shared);
     }
 
     @Override
-    public Share ViewName(String questionname, String createusername) {
-        return cjlMapper.ViewName(questionname,createusername);
+    public List<Shared> MySharedByUserName(String myqus) {
+        return cjlMapper.MySharedByUserName(myqus);
+    }
+
+    @Override
+    public Shared SharedViewID(Integer questionid) {
+        return cjlMapper.SharedViewID(questionid);
+    }
+
+    @Override
+    public int SharedDeletePer(Integer questionid) {
+        return cjlMapper.SharedDeletePer(questionid);
     }
 }

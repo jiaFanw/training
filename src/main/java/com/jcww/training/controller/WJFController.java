@@ -195,6 +195,9 @@ public class WJFController {
         video.setVideoFile(fpath);
 
 
+
+
+
         int i=wjfService.addVideo(video);
         return i;
     }
@@ -211,6 +214,13 @@ public class WJFController {
     @RequestMapping("/updVideo")
     @ResponseBody
     public int updVideo(MultipartFile file,MultipartFile file2, Video video) throws IOException {
+
+
+
+
+
+
+
 
         int i=wjfService.updVideo(video);
         return i;

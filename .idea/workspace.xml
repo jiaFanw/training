@@ -1,0 +1,1975 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a58e035f-aa1e-425f-8106-cfb4a29b5f2b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d688d96c-69f5-4089-865d-13963ac06ea6/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jcww/training/pojo/Shared.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Shared_yin/SharedTestCaoZuo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d688d96c-69f5-4089-865d-13963ac06ea6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d688d96c-69f5-4089-865d-13963ac06ea6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cn_afterturn_easypoi_annotation_3_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cn_afterturn_easypoi_annotation_3_2_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cn_afterturn_easypoi_base_3_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cn_afterturn_easypoi_base_3_2_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cn_afterturn_easypoi_web_3_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cn_afterturn_easypoi_web_3_2_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_core_3_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_core_3_4_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_ecs_4_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_ecs_4_2_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_kms_2_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_kms_2_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_ram_3_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_ram_3_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_sts_3_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_sts_3_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_oss_aliyun_sdk_oss_3_10_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_oss_aliyun_sdk_oss_3_10_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_1_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_4_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_boot_starter_3_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_boot_starter_3_1_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_4_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_4_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_generator_3_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_generator_3_4_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_11_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_11_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_11_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_11_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_1_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_1_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_5_10_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_5_10_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_6_0_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_6_0_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_55_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_55_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_55_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_55_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_55_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_55_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_55_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_55_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_55_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_55_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_55_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_55_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_bean_validators_2_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_bean_validators_2_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_22.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_22.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_18.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_18.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_14.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_15.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_15.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_15.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_41.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_41.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_41.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_41.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_jasper_9_0_41.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_jasper_9_0_41.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_41.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_41.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_engine_core_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_engine_core_2_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_18_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_18_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_ecj_3_18_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_ecj_3_18_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jakarta_el_3_0_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jakarta_el_3_0_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jdom_jdom2_2_0_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jdom_jdom2_2_0_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_6_28.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_6_28.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_6_28.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_6_28.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_16.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_16.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_4_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_4_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_4_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_4_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_4_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_4_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_3_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_3_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_27.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_27.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__p6spy_p6spy_3_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__p6spy_p6spy_3_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jcww/training/controller/CJLController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jcww/training/controller/WJFController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jcww/training/controller/WJFController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jcww/training/mapper/CJLMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jcww/training/pojo/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jcww/training/pojo/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jcww/training/service/CJLService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jcww/training/service/impl/CJLServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CJLMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui-v2.5.6/layui/font/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/layui-v2.5.6/layui/font/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/PersonalTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/PersonalTest.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Personal_yin/PersonalTestCaoZuo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Personal_yin/PersonalTestCaoZuo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Shared_yin/SharedTestReview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Shared_yin/SharedTestReview.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/TrainingApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/config/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/config/TemplateReliableConfig$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/config/TemplateReliableConfig$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/config/TemplateReliableConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/controller/CJLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jcww/training/controller/CJLController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/controller/JJGController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/controller/MenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/controller/QuestionBankController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/controller/Revice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/controller/WJFController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jcww/training/controller/WJFController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/controller/WZDController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/mapper/CJLMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jcww/training/mapper/CJLMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/mapper/JJGMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/mapper/MenuMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/mapper/QuestionBankMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/mapper/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/mapper/WJFMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jcww/training/mapper/WJFMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/mapper/WZDMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Article.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Assistcollection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/MsgLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Paper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Power.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/PowerAndRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Questionandpaper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Questionclassify.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Testpaper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Testuser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Useranswer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/service/CJLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jcww/training/service/CJLService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/service/JJGService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/service/MenuService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/service/QuestionBankService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/service/WJFService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jcww/training/service/WJFService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/service/WZDService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/CJLServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/CJLServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/JJGServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/MenuServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/QuestionBankServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/WJFServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/WJFServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/WZDServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/utils/TableParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/utils/TemplateExcelUtil$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jcww/training/utils/TemplateExcelUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CJLMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CJLMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/JJGMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/MenuMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/QuestionBankMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/WJFMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/WJFMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/WZDMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap-tab.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/js/bootstrap-closable-tab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/js/bootstrap-tab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/js/bootstrap-table-zh-CN.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/js/closable-tab-div.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/table/bootstrap-table-zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/table/bootstrap-table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/table/bootstrap-table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/table/bootstrap-table.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/table/bootstrap-table.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/imageUpload.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/showDecice.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/element/fonts/element-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/element/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/element/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/1001204.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/1001414.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/1001510.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/2001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/2002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/2028864.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/bj1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/cloud.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery-3.3.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery-3.4.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/uploadImg26.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/layui.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/font/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/font/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/font/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/font/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/font/iconfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/colorpicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/rate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/transfer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/免责声明.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/文档与示例/GitHub.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/文档与示例/Gitee 码云.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/文档与示例/在线示例.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/文档与示例/快速上手.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/layui-v2.5.6/更新日志.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/user-defined/bannerList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/user-defined/common.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/user-defined/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/user-defined/front.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/user-defined/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/user-defined/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/user-defined/public.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vue/axios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vue/element/fonts/element-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vue/element/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vue/element/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vue/qs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/vue/vue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jcww/training/TrainingApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training.iml" beforeDir="false" afterPath="$PROJECT_DIR$/training.iml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="training" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-158">
+              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WJFController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/controller/WJFController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="223" selection-start-line="223" selection-end-line="223" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonalTest.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/PersonalTest.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="581">
+              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getExam</find>
+      <find>markPapers</find>
+      <find>aliyun</find>
+      <find>yhy</find>
+      <find>我的视频库</find>
+      <find>WJF</find>
+      <find>search</find>
+      <find>search2</find>
+      <find>danXuantiNum</find>
+      <find>tiShu</find>
+      <find>addVideo</find>
+      <find>findById3</find>
+      <find>updVideo</find>
+      <find>testPeople</find>
+      <find>addTestjsp</find>
+      <find>video</find>
+      <find>row</find>
+      <find>查看</find>
+      <find>findById</find>
+      <find>sss</find>
+      <find>MyQuestionBank</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/pojo/MsgLog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/config/TemplateReliableConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/config/Revice.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsps/wjf/Exam.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/config/Config.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/job/MQMessageJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/controller/Revice.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_detail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsps/wjf/videoDataBase.jsp" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/pojo/Video.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/OrganizingExaminationsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/pojo/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/pojo/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsps/wjf/answer.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsps/leftTree/leftTree.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/SharedTest.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/PersonalTest.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/service/WJFService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/mapper/WJFMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/WJFMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/controller/OrganizingExaminationsController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/OrganizingExaminationsMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/service/impl/OrganizingExaminationsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Shared_yin/SharedTestReview.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsps/OrganizingExaminations/answer.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsps/OrganizingExaminations/OrganizingExaminationsAddTest.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/mapper/OrganizingExaminationsMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/service/OrganizingExaminationsService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/OrganizingExaminations/answer.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/OrganizingExaminations/OrganizingExaminationsAddTest.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/OrganizingExaminations/OrganizingExaminationsShow.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsps/OrganizingExaminations/OrganizingExaminationsShow.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsps/login/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/config/MyWebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsps/wjf/Shipin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/service/impl/WJFServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/pojo/Question.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/service/CJLService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/mapper/CJLMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/service/impl/CJLServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/CJLMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/controller/CJLController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jcww/training/controller/WJFController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/apache/apache-maven-3.5.0" />
+        <option name="userSettingsFile" value="D:\apache\apache-maven-3.5.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="training" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="training" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="629" />
+    <option name="y" value="27" />
+    <option name="width" value="780" />
+    <option name="height" value="728" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jsps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jsps" type="462c0819:PsiDirectoryNode" />
+              <item name="chenjiale" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../training1" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ideaWorkspace\training\src\main\resources\mapper" />
+      <recent name="D:\ideaWorkspace\training\src\main\webapp" />
+      <recent name="D:\ideaWorkspace\training\src\main\java\com\jcww\training\service\impl" />
+      <recent name="D:\ideaWorkspace\training\src\main\java\com\jcww\training\service" />
+      <recent name="D:\ideaWorkspace\training\src\main\java\com\jcww\training\mapper" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jcww.training.pojo" />
+      <recent name="com.jcww.training.mapper" />
+      <recent name="com.jcww.training.service.impl" />
+      <recent name="com.jcww.training.service" />
+      <recent name="com.jcww.training.controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ideaWorkspace\training\src\main\webapp\jsps" />
+      <recent name="D:\ideaWorkspace\training\src\main\resources\mapper" />
+      <recent name="D:\ideaWorkspace\training\src\main\webapp\jsps\OrganizingExaminations" />
+    </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/compiler.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/dataSources/d688d96c-69f5-4089-865d-13963ac06ea6.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__cn_afterturn_easypoi_annotation_3_2_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__cn_afterturn_easypoi_base_3_2_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__cn_afterturn_easypoi_web_3_2_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_10.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_6.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_core_3_4_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_ecs_4_2_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_kms_2_7_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_ram_3_0_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_sts_3_0_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_oss_aliyun_sdk_oss_3_10_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_1_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_4_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_boot_starter_3_1_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_4_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_4_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_generator_3_4_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_3.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_11_3.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_11_3.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_11_3.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_11_3.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_5.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_1_6.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_6.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_5_10_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_5.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_6_0_1_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_55_Final.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_55_Final.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_55_Final.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_55_Final.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_55_Final.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_55_Final.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_bean_validators_2_9_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_22.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_18.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_18.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_11.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_14.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_3.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_15.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_15.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_15.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_41.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_41.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_jasper_9_0_41.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_41.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_engine_core_2_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_6.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_18_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_ecj_3_18_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jakarta_el_3_0_3.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_jdom_jdom2_2_0_6.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_7_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_6_28.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_6_28.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_5.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_5.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_16.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_2_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_4_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_4_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_4_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_4_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_3_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_7_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_27.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__p6spy_p6spy_3_8_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/application.yml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/layui-v2.5.6/layui/font/iconfont.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/training.iml</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/dataSources.local.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/dataSources/d688d96c-69f5-4089-865d-13963ac06ea6/storage_v2/_src_/schema/information_schema.FNRwLQ.meta</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/jarRepositories.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/uiDesigner.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/jcww/training/pojo/Shared.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Personal_yin/PersonalTestDanXuan.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Personal_yin/PersonalTestDuoXuan.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Personal_yin/PersonalTestJianDa.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Personal_yin/PersonalTestPanDuan.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Personal_yin/PersonalTestPoi.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Personal_yin/PersonalTestTianKong.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/SharedTest.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Shared_yin/SharedTestCaoZuo.jsp</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/yin/PersonalTestCaoZuo.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/yin/PersonalTestDanXuan.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/yin/PersonalTestDuoXuan.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/yin/PersonalTestJianDa.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/yin/PersonalTestPanDuan.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/yin/PersonalTestPoi.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/yin/PersonalTestTianKong.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/application.yml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/TrainingApplication.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/config/Config.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/config/TemplateReliableConfig$1.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/config/TemplateReliableConfig$2.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/config/TemplateReliableConfig.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/controller/JJGController.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/controller/MenuController.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/controller/QuestionBankController.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/controller/Revice.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/controller/UserController.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/controller/WZDController.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/mapper/JJGMapper.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/mapper/MenuMapper.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/mapper/QuestionBankMapper.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/mapper/UserMapper.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/mapper/WZDMapper.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Article.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Assistcollection.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Message.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/MsgLog.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Paper.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Power.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/PowerAndRole.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Questionandpaper.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Questionclassify.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Role.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Test.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Testpaper.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Testuser.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/User.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Useranswer.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/service/JJGService.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/service/MenuService.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/service/QuestionBankService.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/service/UserService.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/service/WZDService.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/JJGServiceImpl.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/MenuServiceImpl.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/QuestionBankServiceImpl.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/UserServiceImpl.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/WZDServiceImpl.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/utils/TableParam.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/utils/TemplateExcelUtil$1.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/utils/TemplateExcelUtil.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/mapper/JJGMapper.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/mapper/MenuMapper.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/mapper/QuestionBankMapper.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/mapper/UserMapper.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/mapper/WZDMapper.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap-tab.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/bootstrap/js/bootstrap-closable-tab.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/bootstrap/js/bootstrap-tab.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/bootstrap/js/bootstrap-table-zh-CN.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/bootstrap/js/bootstrap.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/bootstrap/js/bootstrap.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/bootstrap/js/closable-tab-div.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/bootstrap/js/npm.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/bootstrap/table/bootstrap-table-zh-CN.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/bootstrap/table/bootstrap-table.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/bootstrap/table/bootstrap-table.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/bootstrap/table/bootstrap-table.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/bootstrap/table/bootstrap-table.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/css/imageUpload.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/css/layui.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/css/login.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/css/showDecice.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/css/style.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/element/fonts/element-icons.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/element/index.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/element/index.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/images/1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/images/1001204.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/images/1001414.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/images/1001510.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/images/2001.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/images/2002.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/images/2028864.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/images/bj1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/js/cloud.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/js/jquery-3.3.1.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/js/jquery-3.4.1.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/js/jquery.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/js/script.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/js/uploadImg26.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/js/vue.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/layui.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/layui.mobile.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/code.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/laydate/default/laydate.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/layer/default/icon-ext.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/layer/default/icon.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/layer/default/layer.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/layer/default/loading-0.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/layer/default/loading-1.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/css/modules/layer/default/loading-2.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/font/iconfont.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/font/iconfont.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/font/iconfont.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/font/iconfont.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/font/iconfont.woff2</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/0.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/1.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/10.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/11.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/12.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/13.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/14.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/15.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/16.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/17.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/18.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/19.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/2.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/20.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/21.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/22.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/23.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/24.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/25.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/26.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/27.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/28.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/29.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/3.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/30.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/31.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/32.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/33.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/34.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/35.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/36.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/37.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/38.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/39.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/4.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/40.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/41.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/42.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/43.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/44.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/45.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/46.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/47.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/48.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/49.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/5.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/50.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/51.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/52.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/53.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/54.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/55.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/56.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/57.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/58.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/59.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/6.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/60.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/61.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/62.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/63.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/64.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/65.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/66.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/67.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/68.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/69.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/7.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/70.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/71.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/8.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/images/face/9.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/carousel.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/code.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/colorpicker.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/element.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/flow.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/form.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/jquery.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/laydate.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/layedit.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/layer.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/laypage.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/laytpl.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/mobile.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/rate.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/slider.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/table.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/transfer.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/tree.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/upload.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/lay/modules/util.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/layui.all.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/layui/layui.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/免责声明.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/文档与示例/GitHub.url</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/文档与示例/Gitee 码云.url</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/文档与示例/在线示例.url</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/文档与示例/快速上手.url</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/layui-v2.5.6/更新日志.url</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/user-defined/bannerList.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/user-defined/common.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/user-defined/common.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/user-defined/front.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/user-defined/main.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/user-defined/main.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/user-defined/public.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/vue/axios.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/vue/element/fonts/element-icons.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/vue/element/index.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/vue/element/index.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/vue/qs.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/static/vue/vue.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/test-classes/com/jcww/training/TrainingApplicationTests.class</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/jcww/training/pojo/Question.java</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Personal_yin/PersonalTestCaoZuo.jsp</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/WJFServiceImpl.class</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/service/impl/CJLServiceImpl.class</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/PersonalTest.jsp</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/jcww/training/service/CJLService.java</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/pojo/Question.class</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/service/WJFService.class</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/mapper/CJLMapper.xml</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/service/CJLService.class</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Shared_yin/SharedTestReview.jsp</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/mapper/CJLMapper.class</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/mapper/WJFMapper.class</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/jcww/training/controller/CJLController.java</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/mapper/CJLMapper.xml</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/jcww/training/mapper/CJLMapper.java</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/jcww/training/service/impl/CJLServiceImpl.java</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/controller/CJLController.class</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/mapper/WJFMapper.xml</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/com/jcww/training/controller/WJFController.class</PATH>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+    <option name="contentProportion" value="0.12432432" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.TrainingApplication">
+    <configuration name="WJFController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jcww.training.controller.WJFController" />
+      <module name="training" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jcww.training.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jcww.training.controller.test" />
+      <module name="training" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jcww.training.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TrainingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="training" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jcww.training.TrainingApplication" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.TrainingApplication" />
+      <item itemvalue="Application.test" />
+      <item itemvalue="Application.WJFController" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WJFController" />
+        <item itemvalue="Application.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a58e035f-aa1e-425f-8106-cfb4a29b5f2b" name="Default" comment="" />
+      <created>1608726218130</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608726218130</updated>
+      <workItem from="1608726228905" duration="1436000" />
+      <workItem from="1608769352983" duration="9008000" />
+      <workItem from="1608855631507" duration="23205000" />
+      <workItem from="1609114954886" duration="844000" />
+      <workItem from="1609116687931" duration="31117000" />
+      <workItem from="1609201370582" duration="23666000" />
+      <workItem from="1609287652590" duration="21467000" />
+      <workItem from="1609316013648" duration="4449000" />
+      <workItem from="1609325268546" duration="6064000" />
+      <workItem from="1609331471416" duration="441000" />
+      <workItem from="1609331923403" duration="74000" />
+      <workItem from="1609332001179" duration="451000" />
+      <workItem from="1609332501577" duration="788000" />
+      <workItem from="1609374090263" duration="12788000" />
+      <workItem from="1609460464825" duration="46297000" />
+      <workItem from="1609719626743" duration="2898000" />
+      <workItem from="1609727166773" duration="27587000" />
+      <workItem from="1609817961062" duration="17075000" />
+      <workItem from="1609892571230" duration="22718000" />
+      <workItem from="1609936705310" duration="1315000" />
+      <workItem from="1609979020184" duration="1163000" />
+      <workItem from="1609987319648" duration="10225000" />
+      <workItem from="1610024729901" duration="472000" />
+      <workItem from="1610065236156" duration="10022000" />
+      <workItem from="1610079880052" duration="2635000" />
+      <workItem from="1610085101420" duration="136000" />
+      <workItem from="1610085359309" duration="256000" />
+      <workItem from="1610085622068" duration="6615000" />
+      <workItem from="1610154263160" duration="2280000" />
+      <workItem from="1610157235152" duration="10140000" />
+      <workItem from="1610324292453" duration="20939000" />
+    </task>
+    <task id="LOCAL-00001" summary="111">
+      <created>1608946339422</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608946339422</updated>
+    </task>
+    <task id="LOCAL-00002" summary="页面测试">
+      <created>1609066141505</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609066141505</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1">
+      <created>1609123602304</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609123602304</updated>
+    </task>
+    <task id="LOCAL-00004" summary="员工考试页面">
+      <created>1609211699193</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609211699193</updated>
+    </task>
+    <task id="LOCAL-00005" summary="考试中心">
+      <created>1609239015610</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609239015610</updated>
+    </task>
+    <task id="LOCAL-00006" summary="wjf">
+      <created>1609315272685</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609315272685</updated>
+    </task>
+    <task id="LOCAL-00007" summary="wjf">
+      <created>1609318457231</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609318457232</updated>
+    </task>
+    <task id="LOCAL-00008" summary="wjf">
+      <created>1609331077090</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609331077091</updated>
+    </task>
+    <task id="LOCAL-00009" summary="wjf">
+      <created>1609332289305</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609332289305</updated>
+    </task>
+    <task id="LOCAL-00010" summary="111">
+      <created>1609764673503</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609764673504</updated>
+    </task>
+    <task id="LOCAL-00011" summary="111">
+      <created>1609825673046</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1609825673046</updated>
+    </task>
+    <task id="LOCAL-00012" summary="wjf">
+      <created>1609895803052</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609895803052</updated>
+    </task>
+    <task id="LOCAL-00013" summary="123">
+      <created>1609936122406</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1609936122406</updated>
+    </task>
+    <task id="LOCAL-00014" summary="111">
+      <created>1610001973793</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610001973793</updated>
+    </task>
+    <task id="LOCAL-00015" summary="wjf">
+      <created>1610076229011</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1610076229011</updated>
+    </task>
+    <task id="LOCAL-00016" summary="111">
+      <created>1610361905758</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1610361905758</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="104143000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.44704992" side_tool="true" weight="0.41243863" />
+      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.09757943" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="3" weight="0.22087745" />
+      <window_info id="Structure" order="1" sideWeight="0.50735295" side_tool="true" weight="0.3161876" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.119476266" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.66939443" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.3289689" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5529501" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.15548281" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3289689" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.86415714" visible="true" weight="0.2344932" />
+      <window_info anchor="right" id="Bean Validation" order="4" weight="0.32980332" />
+      <window_info id="Web" order="2" sideWeight="0.50735295" side_tool="true" weight="0.3161876" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" sideWeight="0.13562092" side_tool="true" weight="0.3161876" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Database Console" order="8" weight="0.3289689" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Run Dashboard" order="8" sideWeight="0.55521935" weight="0.28641573" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="页面测试" />
+    <MESSAGE value="1" />
+    <MESSAGE value="员工考试页面" />
+    <MESSAGE value="考试中心" />
+    <MESSAGE value="123" />
+    <MESSAGE value="wjf" />
+    <MESSAGE value="111" />
+    <option name="LAST_COMMIT_MESSAGE" value="111" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jcww/training/controller/UserController.java</url>
+          <line>20</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="6" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/pojo/Share.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/SharedTest.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="93" column="13" lean-forward="true" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/controller/WZDController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/service/WJFService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/mapper/WJFMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="150" column="38" selection-start-line="150" selection-start-column="28" selection-end-line="150" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/message/messageList.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/article/article.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/dataStatistics/findOne.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/dataStatistics/personInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/Shared_yin/SharedTestReview.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/dataStatistics/testInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/OrganizingExaminations/answer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="84" column="63" lean-forward="true" selection-start-line="84" selection-start-column="63" selection-end-line="84" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/QusetionBank/answer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="75" column="54" lean-forward="true" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/Exam.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="93" column="25" lean-forward="true" selection-start-line="93" selection-start-column="25" selection-end-line="112" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/OrganizingExaminations/OrganizingExaminationsShow.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="9" selection-start-line="9" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/JJGMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/OrganizingExaminationsMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/QuestionBankMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/OrganizingExaminations/OrganizingExaminationsAddTest.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4945">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MenuMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/controller/OrganizingExaminationsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/mapper/OrganizingExaminationsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/service/OrganizingExaminationsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="37" column="18" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/service/impl/OrganizingExaminationsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="85" column="94" selection-start-line="85" selection-start-column="94" selection-end-line="85" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/OrganizingExaminationsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="10" column="47" lean-forward="true" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/OrganizingExaminations/answer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/OrganizingExaminations/OrganizingExaminationsAddTest.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" selection-start-line="9" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/login/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/OrganizingExaminations/OrganizingExaminationsShow.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7268">
+          <caret line="316" column="94" selection-start-line="316" selection-start-column="94" selection-end-line="316" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/answer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="374" column="37" lean-forward="true" selection-start-line="374" selection-start-column="37" selection-end-line="374" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/WJFMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="245" selection-start-line="245" selection-end-line="245" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/controller/Revice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/config/TemplateReliableConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/controller/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/center_staff.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/wjf/Shipin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="137" column="31" selection-start-line="137" selection-start-column="31" selection-end-line="137" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/service/impl/WJFServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="96" column="57" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/config/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/config/MyWebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/mapper/CJLMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="32" column="40" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/service/impl/CJLServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1997#1998#0" expanded="true" />
+            <element signature="e#2055#2056#0" expanded="true" />
+            <element signature="e#2123#2124#0" expanded="true" />
+            <element signature="e#2180#2181#0" expanded="true" />
+            <element signature="e#2248#2249#0" expanded="true" />
+            <element signature="e#2308#2309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/service/CJLService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CJLMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3289">
+          <caret line="73" column="21" lean-forward="true" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/controller/CJLController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2091#2092#0" expanded="true" />
+            <element signature="e#2143#2144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/pojo/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-158">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jcww/training/controller/WJFController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="223" selection-start-line="223" selection-end-line="223" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/chenjiale/PersonalTest.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

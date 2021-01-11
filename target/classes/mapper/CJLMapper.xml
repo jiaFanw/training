@@ -3,74 +3,63 @@
 
 <mapper namespace="com.jcww.training.mapper.CJLMapper">
 
-    <!--题库/我的题库-->
+    <!--题库-->
     <sql id="ZiDuan">
-        SELECT qt.questionid,
-               qt.questionname,
-               qucla.questionclassifyname,
-               CASE qt.questiontype
-                   WHEN '1' THEN '单选'
-                   WHEN '2' THEN '多选'
-                   WHEN '3' THEN '判断'
-                   WHEN '4' THEN '填空'
-                   WHEN '5' THEN '简答'
-                   ELSE 'Error' END AS questiontype,
-               qt.answer,
-               qt.score,
-               qt.createtime
+        SELECT
+            qt.questionid,
+            qt.questionname,
+            qucla.questionclassifyname,
+            CASE qt.questiontype
+                WHEN '1' THEN '单选'
+                WHEN '2' THEN '多选'
+                WHEN '3' THEN '判断'
+                WHEN '4' THEN '填空'
+                WHEN '5' THEN '简答'
+                ELSE 'Error' END AS questiontype,
+            qt.answer,
+            qt.score,
+            qt.createtime
         FROM question qt
-                 LEFT JOIN questionclassify AS qucla ON qucla.questionclassifyid = qt.questionclassifyid
-                 LEFT JOIN User AS us ON us.userid = qt.userid
+            LEFT JOIN questionclassify AS qucla ON qucla.questionclassifyid = qt.questionclassifyid
     </sql>
 
+
+    <!--共享题库-->
     <sql id="ShareZiDuan">
-        SELECT sr.questionid,
-               sr.questionname,
-               qucla.questionclassifyname,
-               CASE sr.questiontype
-                   WHEN '1' THEN
-                       '单选'
-                   WHEN '2' THEN
-                       '多选'
-                   WHEN '3' THEN
-                       '判断'
-                   WHEN '4' THEN
-                       '填空'
-                   WHEN '5' THEN
-                       '简答'
-                   ELSE
-                       'Error'
-                   END AS questiontype,
-               sr.answer,
-               sr.score,
-               sr.createtime
-        FROM share sr
-                 LEFT JOIN questionclassify AS qucla ON qucla.questionclassifyid = sr.questionclassifyid
+        SELECT
+            sr.questionid,
+            sr.questionname,
+            qucla.questionclassifyname,
+            CASE sr.questiontype
+                WHEN '1' THEN '单选'
+                WHEN '2' THEN '多选'
+                WHEN '3' THEN '判断'
+                WHEN '4' THEN '填空'
+                WHEN '5' THEN '简答'
+                ELSE 'Error' END AS questiontype,
+            sr.answer,
+            sr.score,
+            sr.createtime
+        FROM shared sr
+            LEFT JOIN questionclassify AS qucla ON qucla.questionclassifyid = sr.questionclassifyid
     </sql>
-
-    <!--List<Question> QuestionBank(String uname);-->
-    <select id="QuestionBank" resultType="com.jcww.training.pojo.Question">
-        <include refid="ZiDuan"/>
-        WHERE qt.questiontype = #{questiontype}
-        ORDER BY qt.createtime DESC
-    </select>
 
     <!--List<Question> MyQuestionBank(String myqus);//我的题库-->
-    <!--
-    <include refid="ZiDuan"/>
-        WHERE us.truename = #{truename}
-        ORDER BY qt.createtime desc
-    -->
     <select id="MyQuestionBank" resultType="com.jcww.training.pojo.Question">
+        <include refid="ZiDuan"/>
+        WHERE qt.createusername = #{createusername}
+        ORDER BY qt.createtime DESC
+    </select>
+    <!--<select id="MyQuestionBank" resultType="com.jcww.training.pojo.Question">
         SELECT *
         FROM (
         <include refid="ZiDuan"/>
         WHERE us.truename = #{truename}
-        UNION ALL
+        UNION ALL   (UNION   UNION ALL两张表的数据显示在同一结果集)
         <include refid="ShareZiDuan"/>
         WHERE sr.createusername = #{createusername}
         ) AS a
-    </select>
+    </select>-->
 
     <!--int danxuanAdd(Question question);-->
     <insert id="danxuanAdd">
@@ -167,7 +156,6 @@
     <select id="SharedQuestionBank" resultType="com.jcww.training.pojo.Question">
         <include refid="ZiDuan"/>
         WHERE qt.isnotshare = 0
-        ORDER BY qt.createtime DESC
     </select>
 
     <!--List<Question> SharedQuestionBankshenhe();-->
@@ -204,9 +192,9 @@
         </if>
     </insert>
 
-    <!--int AddShared(Share share);-->
+    <!--int AddShared(Share shared);-->
     <insert id="AddShared">
-        insert into share
+        insert into shared
         (
             questionid,
             isnotshare,
@@ -246,10 +234,37 @@
         )
     </insert>
 
-    <!--Share ViewName(@Param("questionname") String questionname,@Param("createusername") String createusername);-->
-    <select id="ViewName" resultType="com.jcww.training.pojo.Share">
-        select questionname,userid from share where questionname=#{questionname} and createusername=#{createusername}
+    <!--List<Shared> MySharedByUserName(String myqus);-->
+    <select id="MySharedByUserName" resultType="com.jcww.training.pojo.Shared">
+        <include refid="ShareZiDuan"/>
+        WHERE sr.createusername = #{createusername}
+        ORDER BY sr.createtime DESC
     </select>
+
+    <!--Shared SharedViewID(@Param("questionid") Integer questionid);-->
+    <select id="SharedViewID" resultType="com.jcww.training.pojo.Shared">
+        SELECT
+            sr.questionid,
+            sr.questionname,
+            sr.questiontype,
+            qucla.questionclassifyid,
+            sr.optiona,
+            sr.optionb,
+            sr.optionc,
+            sr.optiond,
+            sr.answer,
+            sr.score,
+            sr.createtime,
+            sr.ownuser
+        FROM shared sr
+            LEFT JOIN questionclassify AS qucla ON qucla.questionclassifyid = sr.questionclassifyid
+        WHERE sr.questionid = #{questionid}
+    </select>
+
+    <!--int SharedDeletePer(Integer questionid);-->
+    <delete id="SharedDeletePer">
+        delete from shared where questionid=#{questionid}
+    </delete>
 
         <!--
         SELECT ques.questionname,

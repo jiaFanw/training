@@ -1,7 +1,7 @@
 package com.jcww.training.controller;
 
 import com.jcww.training.pojo.Question;
-import com.jcww.training.pojo.Share;
+import com.jcww.training.pojo.Shared;
 import com.jcww.training.pojo.User;
 import com.jcww.training.service.CJLService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,22 +26,9 @@ public class CJLController {
     /*我的题库*/
     @RequestMapping("MyQuestionBank")
     public List<Question> MyQuestionBank(HttpSession session) {
-        List<Question> list = null;
         User user = (User) session.getAttribute("user");
         String myqus = user.getTruename();
-        int rid = user.getRoleid();
-        if (rid != 4) {
-            list = cjlService.MyQuestionBank(myqus);
-        } else {
-            list = cjlService.QuestionBank();
-        }
-        return list;
-    }
-
-    /*题库*/
-    @RequestMapping("QuestionBank")
-    public List<Question> QuestionBank() {
-        List<Question> list = cjlService.QuestionBank();
+        List<Question> list = cjlService.MyQuestionBank(myqus);
         return list;
     }
 
@@ -138,19 +125,34 @@ public class CJLController {
 
     /*添加至我的题库*/
     @RequestMapping("AddShared")
-    public int AddShared(Share share, HttpSession session) {
+    public int AddShared(Shared shared, HttpSession session) {
         User user = (User) session.getAttribute("user");
         String myqus = user.getTruename();
-        share.setCreateusername(myqus);
-        int i = cjlService.AddShared(share);
+        shared.setCreateusername(myqus);
+        int i = cjlService.AddShared(shared);
         return i;
     }
 
-    /*查重*/
-    @RequestMapping("ViewName")
-    public Share ViewName(String questionname,String createusername) {
-        return cjlService.ViewName(questionname,createusername);
+    /*我的共享*/
+    @RequestMapping("MySharedByUserName")
+    public List<Shared> MySharedByUserName(HttpSession session){
+        User user = (User) session.getAttribute("user");
+        String myqus = user.getTruename();
+        List<Shared> list = cjlService.MySharedByUserName(myqus);
+        return list;
     }
 
+    /*共享查看*/
+    @RequestMapping("SharedViewID")
+    public Shared SharedViewID(Integer questionid) {
+        Shared shared = cjlService.SharedViewID(questionid);
+        return shared;
+    }
 
+    /*共享删除*/
+    @RequestMapping("SharedDeletePer")
+    public int SharedDeletePer(Integer questionid){
+        int i = cjlService.SharedDeletePer(questionid);
+        return i;
+    }
 }

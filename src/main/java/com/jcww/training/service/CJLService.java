@@ -1,13 +1,11 @@
 package com.jcww.training.service;
 
 import com.jcww.training.pojo.Question;
-import com.jcww.training.pojo.Share;
+import com.jcww.training.pojo.Shared;
 
 import java.util.List;
 
 public interface CJLService {
-    List<Question> QuestionBank();
-
     int danxuanAdd(Question question);
 
     int perDel(Integer questionid);
@@ -28,7 +26,11 @@ public interface CJLService {
 
     int ApplicationSH(Question question);
 
-    int AddShared(Share share);
+    int AddShared(Shared shared);
 
-    Share ViewName(String questionname, String createusername);
+    List<Shared> MySharedByUserName(String myqus);
+
+    Shared SharedViewID(Integer questionid);
+
+    int SharedDeletePer(Integer questionid);
 }

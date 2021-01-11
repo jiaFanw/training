@@ -74,6 +74,7 @@
 
     function edit(questionid) {
         $("#perUp").modal('show')
+        $("#ownuser1").hide();
         $.ajax({
             type: 'post',
             url: '${pageContext.request.contextPath}/CJL/ViewID',
@@ -108,6 +109,8 @@
 
     function ViewID(questionid) {
         $("#ViewIDD").modal('show')
+        $("#ownuser1").hide();
+        $("#isnotshare1").show();
         $.ajax({
             type: 'post',
             url: '${pageContext.request.contextPath}/CJL/ViewID',
@@ -179,8 +182,8 @@
 
                 <input type="hidden" class="control" id="questionid2" name="questionid">
 
-                <input type="hidden" class="control" name="createusername">
                 <input type="hidden" class="control" name="ownuser">
+                <input type="hidden" class="control" name="createusername">
                 <input type="hidden" class="control" name="resolve">
 
                 <div class="form-group">
@@ -270,10 +273,17 @@
                     </div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" id="isnotshare1">
                     <label class="col-xs-4 control-label">是否共享：</label>
                     <div class="col-xs-4">
                         <input type="text" readonly="readonly" class="form-control" id="isnotshare" name="isnotshare">
+                    </div>
+                </div>
+
+                <div class="form-group" id="ownuser1">
+                    <label class="col-xs-4 control-label">拥有者：</label>
+                    <div class="col-xs-4">
+                        <input type="text" readonly="readonly" class="form-control" id="ownuser" name="ownuser">
                     </div>
                 </div>
 

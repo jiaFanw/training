@@ -39,8 +39,8 @@
                 } else {
                     alert("添加失败");
                 }
-            },error: function (data) {
-                alert("操作失败！该试题已存在我的题库！")
+            },error: function (data){
+                alert("操作失败！该试题已存在我的题库中！")
             }
         });
     }
@@ -100,26 +100,8 @@
                     $("#tjzwdtk").hide();
                 }
 
-/*
-                var quename = data.questionname;
-                var crername = data.createusername;
 
-
-                var questionname = rows.questionname;
-                var createusername = rows.createusername;
-                $.ajax({
-                    type: 'post',
-                    url: '{pageContext.request.contextPath}/CJL/ViewName',
-                    data: {"questionname": questionname,"createusername":createusername},
-                    dataType: 'json',
-                    success: function (data) {
-                        if (data.questionname == quename & data.createusername != crername){
-                            $("#tjzwdtk").hide();
-                        }
-                    },error: function (data){
-                        alert("error")
-                    }
-                })*/
+                
             }
         })
     }
@@ -285,7 +267,7 @@
                 <div class="form-group">
                     <label class="col-xs-4 control-label">创建人：</label>
                     <div class="col-xs-4">
-                        <input type="text" readonly="readonly" class="form-control" name="createusername">
+                        <input type="text" readonly="readonly" class="form-control" id="createusername" name="createusername">
                     </div>
                 </div>
 
