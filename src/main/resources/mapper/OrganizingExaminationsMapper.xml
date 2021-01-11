@@ -62,14 +62,51 @@
 
     <!--    //添加考试-->
     <!--    Integer addExaminationsTest(Test test);-->
-    <insert id="addExaminationsTest" parameterType="com.jcww.training.pojo.Test" keyProperty="testid" useGeneratedKeys="true" >
+    <insert id="addExaminationsTest" parameterType="com.jcww.training.pojo.Test" keyProperty="testid"
+            useGeneratedKeys="true">
         insert into test (testname, testdate, teststarttime, testendtime, teststatus, testtime) values (#{testname}, #{testdate}, #{teststarttime}, #{testendtime}, #{teststatus}, #{testtime})
     </insert>
 
-    <select id="" >
+    <!--    //查询单选个数-->
+    <!--    Question selectDanxuanCount(Integer questionclassifyid);-->
+    <select id="selectDanxuanCount" resultType="com.jcww.training.pojo.Question">
         SELECT COUNT( questiontype )as danxuancount FROM question WHERE questiontype = 1
+        <if test="questionclassifyid!=null and questionclassifyid!='' ">
+            and questionclassifyid = #{questionclassifyid}
+        </if>
     </select>
-
+    <!--    //查询多选个数-->
+    <!--    Question selectDuoxuanCount(Integer questionclassifyid);-->
+    <select id="selectDuoxuanCount" resultType="com.jcww.training.pojo.Question">
+        SELECT COUNT( questiontype )as duoxuangeshu FROM question WHERE questiontype = 2
+        <if test="questionclassifyid!=null and questionclassifyid!='' ">
+            and questionclassifyid = #{questionclassifyid}
+        </if>
+    </select>
+    <!--    //查询判读个数-->
+    <!--    Question selectPanduanCount(Integer questionclassifyid);-->
+    <select id="selectPanduanCount" resultType="com.jcww.training.pojo.Question">
+        SELECT COUNT( questiontype )as panduangeshu FROM question WHERE questiontype = 3
+        <if test="questionclassifyid!=null and questionclassifyid!='' ">
+            and questionclassifyid = #{questionclassifyid}
+        </if>
+    </select>
+    <!--    //查询填空个数-->
+    <!--    Question selecttiankongCount(Integer questionclassifyid);-->
+    <select id="selecttiankongCount" resultType="com.jcww.training.pojo.Question">
+        SELECT COUNT( questiontype )as tiankonggeshu FROM question WHERE questiontype = 4
+        <if test="questionclassifyid!=null and questionclassifyid!='' ">
+            and questionclassifyid = #{questionclassifyid}
+        </if>
+    </select>
+    <!--    //查询简答个数-->
+    <!--    Question selectjiandaCount(Integer questionclassifyid);-->
+    <select id="selectjiandaCount" resultType="com.jcww.training.pojo.Question">
+        SELECT COUNT( questiontype )as jiandageshu FROM question WHERE questiontype = 5
+        <if test="questionclassifyid!=null and questionclassifyid!='' ">
+            and questionclassifyid = #{questionclassifyid}
+        </if>
+    </select>
     <!--    //查询所有考生（根据地名查询）-->
     <!--    List<User> selectAreaUserList(Long areaid);-->
     <select id="selectAreaUserList" resultType="com.jcww.training.pojo.User">

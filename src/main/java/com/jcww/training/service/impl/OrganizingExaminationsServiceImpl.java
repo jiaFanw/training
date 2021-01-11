@@ -52,37 +52,37 @@ public class OrganizingExaminationsServiceImpl implements OrganizingExaminations
     }
     //查询单选个数
     @Override
-    public Question selectDanxuanCount(Integer questionclassifyid) {
+    public Question selectDanxuanCount(Long questionclassifyid) {
         return organizingExaminationsMapper.selectDanxuanCount(questionclassifyid);
     }
     //查询多选个数
     @Override
-    public Question selectDuoxuanCount(Integer questionclassifyid) {
+    public Question selectDuoxuanCount(Long questionclassifyid) {
         return organizingExaminationsMapper.selectDuoxuanCount(questionclassifyid);
     }
     //查询判读个数
     @Override
-    public Question selectPanduanCount(Integer questionclassifyid) {
+    public Question selectPanduanCount(Long questionclassifyid) {
         return organizingExaminationsMapper.selectPanduanCount(questionclassifyid);
     }
     //查询填空个数
     @Override
-    public Question selecttiankongCount(Integer questionclassifyid) {
+    public Question selecttiankongCount(Long questionclassifyid) {
         return organizingExaminationsMapper.selecttiankongCount(questionclassifyid);
     }
     //查询简答个数
     @Override
-    public Question selectjiandaCount(Integer questionclassifyid) {
+    public Question selectjiandaCount(Long questionclassifyid) {
         return organizingExaminationsMapper.selectjiandaCount(questionclassifyid);
     }
-
+    //查询所有考生（根据地名查询）
     @Override
     public List<User> selectAreaUserList(Long areaid) {
         return organizingExaminationsMapper.selectAreaUserList(areaid);
     }
-
+    //查询所有试题
     @Override
     public List<Question> selectQuestionList(Long questionclassifyid, Long questiontype) {
-        return organizingExaminationsMapper.selectQuestionList(questionclassifyid,questiontype);
+        return organizingExaminationsMapper.selectQuestionList(questionclassifyid, questiontype);
     }
 }

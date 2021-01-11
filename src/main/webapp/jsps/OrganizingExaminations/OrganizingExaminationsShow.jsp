@@ -9,12 +9,12 @@
 <html>
 <head>
     <title>组织考试</title>
-    <script type="text/javascript" src="${pageContext.request.contextPath }/static/js/jquery-3.4.1.min.js"></script>
-    <script src="${pageContext.request.contextPath }/static/bootstrap/table/bootstrap-table.js"></script>
-    <script src="${pageContext.request.contextPath }/static/bootstrap/js/bootstrap-tab.js"></script>
-    <script src="${pageContext.request.contextPath }/static/bootstrap/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/static/bootstrap/css/bootstrap-tab.css">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery-3.4.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/bootstrap/table/bootstrap-table.js"></script>
+    <script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap-tab.css">
 </head>
 <body>
     <div class="container">
@@ -314,7 +314,7 @@
         window.location.href = "/jsps/OrganizingExaminations/answer.jsp?testpaperid="+testpaperid;
     }
     function addTestjsp() {
-        window.location.href = "/jsps/OrganizingExaminations/OrganizingExaminationsAddTest.jsp";
+        window.location.href = "/jsps/OrganizingExaminations/OrganizingExaminationsAddTest.jsp"
     }
 
 </script>

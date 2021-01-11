@@ -3,12 +3,12 @@
 <head>
     <title>学生答题页面</title>
 </head>
-<script src="${pageContext.request.contextPath }/static/vue/vue.js"></script>
-<link rel="stylesheet" href="${pageContext.request.contextPath }/static/vue/element/index.css">
-<script src="${pageContext.request.contextPath }/static/vue/element/index.js"></script>
-<script src="${pageContext.request.contextPath }/static/vue/axios.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath }/static/vue/qs.js"></script>
-<script src="${pageContext.request.contextPath }/static/js/jquery-3.4.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/vue/vue.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/vue/element/index.css">
+<script src="${pageContext.request.contextPath}/static/vue/element/index.js"></script>
+<script src="${pageContext.request.contextPath}/static/vue/axios.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/vue/qs.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
 <meta http-equiv="Content-Type" content="application/msword; charset=gb2312"/>
@@ -84,7 +84,7 @@
                             <h3>简答题</h3>
                             <span v-for="(jianDa,i) in jianDaTi">
                                 {{i+1}},{{jianDa.questionname}}
-                                <el-input type="textarea"></el-input>
+                                <el-input type="textarea" v-model="jianDaAnswer[i]"></el-input>
                                 <h4>分值：<span style="color: red">{{jianDa.score}}</span></h4>
                             </span>
                         </div>

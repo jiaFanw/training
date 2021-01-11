@@ -23,17 +23,17 @@ public interface OrganizingExaminationsService {
     //添加考试
     Integer addExaminationsTest(Test test);
     //查询单选个数
-    Question selectDanxuanCount(Integer questionclassifyid);
+    Question selectDanxuanCount(Long questionclassifyid);
     //查询多选个数
-    Question selectDuoxuanCount(Integer questionclassifyid);
+    Question selectDuoxuanCount(Long questionclassifyid);
     //查询判读个数
-    Question selectPanduanCount(Integer questionclassifyid);
+    Question selectPanduanCount(Long questionclassifyid);
     //查询填空个数
-    Question selecttiankongCount(Integer questionclassifyid);
+    Question selecttiankongCount(Long questionclassifyid);
     //查询简答个数
-    Question selectjiandaCount(Integer questionclassifyid);
-
+    Question selectjiandaCount(Long questionclassifyid);
+    //查询所有考生（根据地名查询）
     List<User> selectAreaUserList(Long areaid);
-
+    //查询所有试题
     List<Question> selectQuestionList(Long questionclassifyid, Long questiontype);
 }

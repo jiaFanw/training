@@ -95,7 +95,6 @@ public class WJFServiceImpl implements WJFService {
                 us.setQuestionid(Integer.parseInt(split1[0]));
                 us.setUseranswer(split1[1]);
                 us.setScore(Integer.parseInt(split1[2]));
-                System.out.println(us);
                 if(Integer.parseInt(map.get("num").toString()) == 3){
                     b = wjfMapper.daAn(us);
                 }else{

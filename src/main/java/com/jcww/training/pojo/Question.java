@@ -33,4 +33,12 @@ public class Question implements Serializable {
    *  User 表
    * */
   private String truename;
+
+
+  private long danxuancount; //单选个数
+  private long duoxuangeshu; //多选个数
+  private long tiankonggeshu; //填空个数
+  private long panduangeshu; //判断个数
+  private long jiandageshu; //简答个数
+
 }

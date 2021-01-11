@@ -62,31 +62,31 @@ public class OrganizingExaminationsController {
     //查询单选个数
     @RequestMapping("selectDanxuanCount")
     @ResponseBody
-    public Question selectDanxuanCount(Integer questionclassifyid) {
+    public Question selectDanxuanCount(Long questionclassifyid) {
         return organizingExaminationsService.selectDanxuanCount(questionclassifyid);
     }
     //查询多选个数
     @RequestMapping("selectDuoxuanCount")
     @ResponseBody
-    public Question selectDuoxuanCount(Integer questionclassifyid) {
+    public Question selectDuoxuanCount(Long questionclassifyid) {
         return organizingExaminationsService.selectDuoxuanCount(questionclassifyid);
     }
     //查询判读个数
     @RequestMapping("selectPanduanCount")
     @ResponseBody
-    public Question selectPanduanCount(Integer questionclassifyid) {
+    public Question selectPanduanCount(Long questionclassifyid) {
         return organizingExaminationsService.selectPanduanCount(questionclassifyid);
     }
     //查询填空个数
     @RequestMapping("selecttiankongCount")
     @ResponseBody
-    public Question selecttiankongCount(Integer questionclassifyid) {
+    public Question selecttiankongCount(Long questionclassifyid) {
         return organizingExaminationsService.selecttiankongCount(questionclassifyid);
     }
     //查询简答个数
     @RequestMapping("selectjiandaCount")
     @ResponseBody
-    public Question selectjiandaCount(Integer questionclassifyid) {
+    public Question selectjiandaCount(Long questionclassifyid) {
         return organizingExaminationsService.selectjiandaCount(questionclassifyid);
     }
 

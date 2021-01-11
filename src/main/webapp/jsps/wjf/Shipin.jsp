@@ -128,9 +128,9 @@
                 </el-form-item>
             </el-col>
             <el-col :span="20">
-                <el-form-item label="视频内容">
-                    <embed type="video/webm" :src="video.videoFile" width="300" height="300">
-                </el-form-item>
+                    <el-form-item label="视频内容">
+                        <video controls="controls" class="video" :src="sss" width="300" height="300"></video>
+                    </el-form-item>
             </el-col>
             <el-col :span="20">
                 <el-form-item label="视频封面">
@@ -154,7 +154,44 @@
         </div>
     </el-dialog>
 
-
+    <%--编辑--%>
+    <el-dialog title="" :visible.sync="search4">
+        <el-form :model="vide">
+            <el-input type="hidden" v-model="vide.videoId"></el-input>
+            <el-col :span="10">
+                <el-form-item label="视频标题" >
+                    <el-input v-model="vide.videoTitle" autocomplete="off"></el-input>
+                </el-form-item>
+            </el-col>
+            <el-col :span="20">
+                <el-form-item label="视频内容" >
+                    <input type="file" name="file">
+                    <embed type="video/webm" :src="vide.videoFile" width="300" height="300"/>
+                </el-form-item>
+            </el-col>
+            <el-col :span="20">
+                <el-form-item label="视频封面">
+                    <input type="file" name="file2">
+                    <img :src="vide.videoCover" width="300" height="300">
+                </el-form-item>
+            </el-col>
+            <el-col :span="20">
+                <el-form-item label="是否同步至共享库：">
+                    <span v-if="vide.videoStatus=='1'">不同步</span>
+                    <span v-if="vide.videoStatus=='2'">同步</span>
+                </el-form-item>
+            </el-col>
+            <el-col :span="10">
+                <el-form-item label="创建时间：">
+                    <el-input v-model="vide.creatTimeStr" autocomplete="off" disabled></el-input>
+                </el-form-item>
+            </el-col>
+        </el-form>
+        <div slot="footer" class="dialog-footer">
+            <el-button @click="search4 = false">取 消</el-button>
+            <el-button type="primary" @click="updVideo">确 定</el-button>
+        </div>
+    </el-dialog>
 
 
 
@@ -181,7 +218,8 @@
 
         data (){
             return{
-                activeName:'first',
+                sss:'',
+            activeName:'first',
                 tableData: [],
                 handleClick:false,
                 dialogTableVisible: false,
@@ -212,7 +250,7 @@
                     videoTitle:''
                 },
                 formLabelWidth: '200px',
-                c:''
+                c:'',
             }
         },
         methods : {
@@ -288,17 +326,28 @@
                         alert("上传成功！")
                         location.reload();
                     })
-                    .catch(function (error) {
+                    .catch(function (error) {})
+            },
 
-                    });
+           /*查看*/
+            findById(row) {
+                var _this=this;
+                this.search2=true;
+                var videoId=row.videoId;
+                this.video=row;
+                this.sss = row.videoFile;
+
+                axios.post('/WJF/findById?videoId='+videoId,{
+                }).then(function (res)  {
+
+                }).catch(function (error) {
+                });
             },
 
 
-            delId(index,row) {
+            //删除
+            delId:function (index,row) {
                 var videoId=row.videoId
-                /*this.tableData.splice(index,1);*/
-
-
                 this.$confirm('是否确认删除?', '提示', {
                     confirmButtonText: '确定',
                     cancelButtonText: '取消',
@@ -315,22 +364,9 @@
                         message: '已取消'
                     });
                 });
-
             },
 
-           /*查看*/
-            findById:function (row) {
-                this.search2=true;
-                var videoId=row.videoId;
-                this.video=row;
-                axios.post('/WJF/findById?videoId='+videoId,{
-                }).then(function (res)  {
-
-                }).catch(function (error) {
-                });
-            },
-
-            findById3:function (row) {
+            findById3(row){
                 this.search4=true;
                 var videoId=row.videoId;
                 this.vide=row;
@@ -339,6 +375,30 @@
                 }).catch(function (error) {
                 });
             },
+
+
+            /*编辑*/
+            updVideo:function () {
+                var _this=this;
+                formData.append("file",document.querySelector('input[name=file]').files[0]);
+                formData.append("file2",document.querySelector('input[name=file2]').files[0]);
+                formData.append("videoTitle",_this.vide.videoTitle);
+                formData.append("videoId",_this.vide.videoId);
+                console.log(formData.get("file"))
+                console.log(formData.get("file2"))
+                var requestConfig = {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    },
+                }
+                axios.post('/WJF/updVideo',formData,{
+                }).then(function (res)  {
+                    alert("修改成功！")
+                    location.reload();
+                }).catch(function (error) {
+                });
+            },
+
 
         }
     });

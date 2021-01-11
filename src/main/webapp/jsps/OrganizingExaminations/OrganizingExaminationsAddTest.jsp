@@ -9,12 +9,12 @@
 <html>
 <head>
     <title>添加考试</title>
-    <script type="text/javascript" src="${pageContext.request.contextPath }/static/js/jquery-3.4.1.min.js"></script>
-    <script src="${pageContext.request.contextPath }/static/bootstrap/table/bootstrap-table.js"></script>
-    <script src="${pageContext.request.contextPath }/static/bootstrap/js/bootstrap-tab.js"></script>
-    <script src="${pageContext.request.contextPath }/static/bootstrap/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/static/bootstrap/css/bootstrap-tab.css">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery-3.4.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/bootstrap/table/bootstrap-table.js"></script>
+    <script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap-tab.css">
 </head>
 <body>
 <%--第一步--%>
@@ -94,6 +94,7 @@
         <label class="col-sm-2 control-label">试题类型</label>
         <div class="col-sm-4">
             <select id="questiontype">
+                <option value="">全部</option>
                 <option value="1">语文</option>
                 <option value="2">数学</option>
                 <option value="3">英语</option>
@@ -106,29 +107,28 @@
     </div>
 
     <div class="form-group">
-        <label for="testname" class="col-sm-2 control-label">参考人员</label>
+        <label for="testname" class="col-sm-2 control-label">出题方式</label>
         <div class="col-sm-10">
             抽选试题
             <br>
             单选题:<input type="text" id="danxuan">,每道题<input type="text" id="danxuanfenshu" readonly
-                                                           value="3"><br><br><br>
+                                                           value="5">分<br><br><br><input type="hidden" id="danxuanzongshu">
             多选题:<input type="text" id="duoxuan">,每道题<input type="text" id="duoxuanfenshu" readonly
-                                                           value="3"><br><br><br>
+                                                           value="5">分<br><br><br><input type="hidden" id="duoxuanzongshu">
             填空题:<input type="text" id="tiankong">,每道题<input type="text" id="tiankongfenshu" readonly
-                                                            value="2"><br><br><br>
+                                                            value="5">分<br><br><br><input type="hidden" id="tiankongzongshu">
             判断题:<input type="text" id="panduan">,每道题<input type="text" id="panduanfenshu" readonly
-                                                           value="4"><br><br><br>
-            简答题:<input type="text" id="jianda">,每道题<input type="text" id="jiandafenshu" readonly value="10"><br><br><br>
+                                                           value="5">分<br><br><br><input type="hidden" id="panduanzongshu">
+            简答题:<input type="text" id="jianda">,每道题<input type="text" id="jiandafenshu" readonly value="25">分<br><br><br><input type="hidden" id="jiandazongshu">
         </div>
     </div>
-
 
     <div class="form-group">
         <label for="testname" class="col-sm-2 control-label">及格分数</label>
         <div class="col-sm-10">
             <input type="text" id="passmark"
                    placeholder="请输入及格分数">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;满分<input type="text" id="follmark"
-                                                                                            placeholder="请输入及格分数">
+                                                                                            readonly>
         </div>
     </div>
     <center>
@@ -147,7 +147,7 @@
     </div>
 
     <div class="form-group">
-        <label for="testname" class="col-sm-2 control-label">参考人员</label>
+        <label for="testname" class="col-sm-2 control-label">出题方式</label>
         <div class="col-sm-10">
             固定试题
             <br>
@@ -291,8 +291,60 @@
     $(function () {
         $("#secondstep1").hide()
         $("#secondstep2").hide()
-    })
 
+        $('#danxuan').bind('input propertychange', function() {
+            var danxuanzongfen = $("#danxuan").val()*$("#danxuanfenshu").val()
+            var duoxuanzongfen = $("#duoxuan").val()*$("#duoxuanfenshu").val()
+            var panduanzongfen = $("#panduan").val()*$("#panduanfenshu").val()
+            var tiankongzongfen = $("#tiankong").val()*$("#tiankongfenshu").val()
+            var jiandazongfen = $("#jianda").val()*$("#jiandafenshu").val()
+            suijizongfen = parseInt(danxuanzongfen) +parseInt(duoxuanzongfen)+parseInt(panduanzongfen)+parseInt(tiankongzongfen)+parseInt(jiandazongfen)
+            console.log(suijizongfen)
+            $("#follmark").val(suijizongfen)
+
+        });
+        $('#duoxuan').bind('input propertychange', function() {
+            var danxuanzongfen = $("#danxuan").val()*$("#danxuanfenshu").val()
+            var duoxuanzongfen = $("#duoxuan").val()*$("#duoxuanfenshu").val()
+            var panduanzongfen = $("#panduan").val()*$("#panduanfenshu").val()
+            var tiankongzongfen = $("#tiankong").val()*$("#tiankongfenshu").val()
+            var jiandazongfen = $("#jianda").val()*$("#jiandafenshu").val()
+            suijizongfen = parseInt(danxuanzongfen) +parseInt(duoxuanzongfen)+parseInt(panduanzongfen)+parseInt(tiankongzongfen)+parseInt(jiandazongfen)
+            console.log(suijizongfen)
+            $("#follmark").val(suijizongfen)
+        });
+        $('#panduan').bind('input propertychange', function() {
+            var danxuanzongfen = $("#danxuan").val()*$("#danxuanfenshu").val()
+            var duoxuanzongfen = $("#duoxuan").val()*$("#duoxuanfenshu").val()
+            var panduanzongfen = $("#panduan").val()*$("#panduanfenshu").val()
+            var tiankongzongfen = $("#tiankong").val()*$("#tiankongfenshu").val()
+            var jiandazongfen = $("#jianda").val()*$("#jiandafenshu").val()
+            suijizongfen = parseInt(danxuanzongfen) +parseInt(duoxuanzongfen)+parseInt(panduanzongfen)+parseInt(tiankongzongfen)+parseInt(jiandazongfen)
+            console.log(suijizongfen)
+            $("#follmark").val(suijizongfen)
+        });
+        $('#tiankong').bind('input propertychange', function() {
+            var danxuanzongfen = $("#danxuan").val()*$("#danxuanfenshu").val()
+            var duoxuanzongfen = $("#duoxuan").val()*$("#duoxuanfenshu").val()
+            var panduanzongfen = $("#panduan").val()*$("#panduanfenshu").val()
+            var tiankongzongfen = $("#tiankong").val()*$("#tiankongfenshu").val()
+            var jiandazongfen = $("#jianda").val()*$("#jiandafenshu").val()
+            suijizongfen = parseInt(danxuanzongfen) +parseInt(duoxuanzongfen)+parseInt(panduanzongfen)+parseInt(tiankongzongfen)+parseInt(jiandazongfen)
+            console.log(suijizongfen)
+            $("#follmark").val(suijizongfen)
+        });
+        $('#jianda').bind('input propertychange', function() {
+            var danxuanzongfen = $("#danxuan").val()*$("#danxuanfenshu").val()
+            var duoxuanzongfen = $("#duoxuan").val()*$("#duoxuanfenshu").val()
+            var panduanzongfen = $("#panduan").val()*$("#panduanfenshu").val()
+            var tiankongzongfen = $("#tiankong").val()*$("#tiankongfenshu").val()
+            var jiandazongfen = $("#jianda").val()*$("#jiandafenshu").val()
+            suijizongfen = parseInt(danxuanzongfen) +parseInt(duoxuanzongfen)+parseInt(panduanzongfen)+parseInt(tiankongzongfen)+parseInt(jiandazongfen)
+            console.log(suijizongfen)
+            $("#follmark").val(suijizongfen)
+        });
+    })
+    var suijizongfen = 0
     //选择试卷类型
     $("#fisrtnextstep").click(function () {
         $("#selectExamType").modal("show")
@@ -617,7 +669,7 @@
             if (selected[i].questionname.length<=20){
                 questionnames[i] = selected[i].questionname;
             }else {
-                questionnames[i] = selected[i].questionname.substring(0,20)+"……";
+                questionnames[i] = selected[i].questionname.substring(0,20)+"......";
             }
             if (selected[i].questiontype == 1){
                 questiontypes[i] = "单选"
@@ -671,6 +723,156 @@
         var score = $("#follmark1").val()
         $("#follmark1").val(score-parseInt(scores))
     }
+    //点击单选测试是否有值
+    $("#danxuan").click(function () {
+        var questionclassifyid = $("#questiontype").val()
+        if (questionclassifyid==""){
+            alert("请选择题类型")
+        }else {
+            $.ajax({
+                url: "/OrganizingExaminations/selectDanxuanCount",
+                data: {questionclassifyid:questionclassifyid},
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    if (data) {
+                        $("#danxuanzongshu").val(data.danxuancount)
+                    }
+                }
+            });
+        }
+    })
+    $("#danxuan").blur(function () {
+        var danxuan = $("#danxuan").val()
+        var danxuanzongshu = $("#danxuanzongshu").val()
+        if(danxuan>danxuanzongshu&&danxuanzongshu!=0&&danxuan==""){
+            setTimeout(function () {
+                $("#danxuan").val(0)
+                alert("已超过题库数量")
+                $("#danxuan").focus()
+            },1000)
+        }
+    })
+    //点击多选测试是否有值
+    $("#duoxuan").click(function () {
+        var questionclassifyid = $("#questiontype").val()
+        if (questionclassifyid==""){
+            alert("请选择题类型")
+        }else {
+            $.ajax({
+                url: "/OrganizingExaminations/selectDuoxuanCount",
+                data: {questionclassifyid:questionclassifyid},
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    if (data) {
+                        $("#duoxuanzongshu").val(data.duoxuangeshu)
+                    }
+                }
+            });
+        }
+    })
+    $("#duoxuan").blur(function () {
+        var duoxuan = $("#duoxuan").val()
+        var duoxuanzongshu = $("#duoxuanzongshu").val()
+        if(duoxuan>duoxuanzongshu){
+            setTimeout(function () {
+                $("#duoxuan").val(0)
+                alert("已超过题库数量")
+                $("#duoxuan").focus()
+            },1000)
+        }
+    })
+    //点击填空测试是否有值
+    $("#tiankong").click(function () {
+        var questionclassifyid = $("#questiontype").val()
+        if (questionclassifyid==""){
+            alert("请选择题类型")
+        }else {
+            $.ajax({
+                url: "/OrganizingExaminations/selecttiankongCount",
+                data: {questionclassifyid:questionclassifyid},
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    if (data) {
+                        $("#tiankongzongshu").val(data.tiankonggeshu)
+                    }
+                }
+            });
+        }
+    })
+    $("#tiankong").blur(function () {
+        var tiankong = $("#tiankong").val()
+        var tiankongzongshu = $("#tiankongzongshu").val()
+        if(tiankong>tiankongzongshu){
+            setTimeout(function () {
+                $("#tiankong").val(0)
+                alert("已超过题库数量")
+                $("#tiankong").focus()
+            },1000)
+        }
+    })
+    //点击判断测试是否有值
+    $("#panduan").click(function () {
+        var questionclassifyid = $("#questiontype").val()
+        if (questionclassifyid==""){
+            alert("请选择题类型")
+        }else {
+            $.ajax({
+                url: "/OrganizingExaminations/selectPanduanCount",
+                data: {questionclassifyid:questionclassifyid},
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    if (data) {
+                        $("#panduanzongshu").val(data.panduangeshu)
+                    }
+                }
+            });
+        }
+    })
+    $("#panduan").blur(function () {
+        var panduan = $("#panduan").val()
+        var panduanzongshu = $("#panduanzongshu").val()
+        if(panduan>panduanzongshu){
+            setTimeout(function () {
+                $("#panduan").val(0)
+                alert("已超过题库数量")
+                $("#panduan").focus()
+            },1000)
+        }
+    })
+    //点击简答测试是否有值
+    $("#jianda").click(function () {
+        var questionclassifyid = $("#questiontype").val()
+        if (questionclassifyid==""){
+            alert("请选择题类型")
+        }else {
+            $.ajax({
+                url: "/OrganizingExaminations/selectjiandaCount",
+                data: {questionclassifyid:questionclassifyid},
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    if (data) {
+                        $("#jiandazongshu").val(data.jiandageshu)
+                    }
+                }
+            });
+        }
+    })
+    $("#jianda").blur(function () {
+        var jianda = $("#jianda").val()
+        var jiandazongshu = $("#jiandazongshu").val()
+        if(jianda>jiandazongshu){
+            setTimeout(function () {
+                $("#jianda").val(0)
+                alert("已超过题库数量")
+                $("#jiandazongshu").focus()
+            },1000)
+        }
+    })
 
 
 </script>

@@ -16,6 +16,9 @@ spring:
     view:
       prefix: /jsps/
       suffix: .jsp
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
   rabbitmq:
     host: localhost
     listener:
