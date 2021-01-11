@@ -3,55 +3,108 @@
 
 <mapper namespace="com.jcww.training.mapper.CJLMapper">
 
-    <!--List<Question> MyQuestionBank();-->
-    <select id="MyQuestionBank" resultType="com.jcww.training.pojo.Question">
+    <!--题库-->
+    <sql id="ZiDuan">
         SELECT
-        qt.questionid,
-        qt.questionname,
-        qucla.questionclassifyname,
-        CASE qt.questiontype
-        WHEN '1' THEN '单选'
-        WHEN '2' THEN '多选'
-        WHEN '3' THEN '判断'
-        WHEN '4' THEN '填空'
-        WHEN '5' THEN '简答'
-        ELSE 'Error' END AS questiontype,
-        qt.answer,
-        qt.score,
-        qt.createtime
+            qt.questionid,
+            qt.questionname,
+            qucla.questionclassifyname,
+            CASE qt.questiontype
+                WHEN '1' THEN '单选'
+                WHEN '2' THEN '多选'
+                WHEN '3' THEN '判断'
+                WHEN '4' THEN '填空'
+                WHEN '5' THEN '简答'
+                ELSE 'Error' END AS questiontype,
+            qt.answer,
+            qt.score,
+            qt.createtime
         FROM question qt
-        LEFT JOIN questionclassify AS qucla ON qucla.questionclassifyid = qt.questionclassifyid
-        ORDER BY qt.createtime DESC
-        <if test="questiontype!=null and questiontype!=''">
-            WHERE qt.questiontype = #{questiontype}
-        </if>
-    </select>
+            LEFT JOIN questionclassify AS qucla ON qucla.questionclassifyid = qt.questionclassifyid
+    </sql>
 
-    <!--int DaoRu(@Param("li") List<Question> li);-->
-    <insert id="DaoRu">
-        insert into question
-        (questionid,questionname,answer,score,resolve,optiona,optionb,optionc,optiond,isnotshare,createtime,questionclassifyid,questiontype,createusername,ownuser)
-        values
-        <foreach collection="li" item="li" separator=",">
-            (null,#{li.questionname},#{li.answer},#{li.score},#{li.resolve},#{li.optiona},#{li.optionb},#{li.optionc},#{li.optiond},#{li.isnotshare},#{li.createtime},#{li.questionclassifyid},#{li.questiontype},#{li.createusername},#{li.ownuser})
-        </foreach>
-    </insert>
+
+    <!--共享题库-->
+    <sql id="ShareZiDuan">
+        SELECT
+            sr.questionid,
+            sr.questionname,
+            qucla.questionclassifyname,
+            CASE sr.questiontype
+                WHEN '1' THEN '单选'
+                WHEN '2' THEN '多选'
+                WHEN '3' THEN '判断'
+                WHEN '4' THEN '填空'
+                WHEN '5' THEN '简答'
+                ELSE 'Error' END AS questiontype,
+            sr.answer,
+            sr.score,
+            sr.createtime
+        FROM shared sr
+            LEFT JOIN questionclassify AS qucla ON qucla.questionclassifyid = sr.questionclassifyid
+    </sql>
+
+    <!--List<Question> MyQuestionBank(String myqus);//我的题库-->
+    <select id="MyQuestionBank" resultType="com.jcww.training.pojo.Question">
+        <include refid="ZiDuan"/>
+        WHERE qt.createusername = #{createusername}
+        ORDER BY qt.createtime DESC
+    </select>
+    <!--<select id="MyQuestionBank" resultType="com.jcww.training.pojo.Question">
+        SELECT *
+        FROM (
+        <include refid="ZiDuan"/>
+        WHERE us.truename = #{truename}
+        UNION ALL   (UNION   UNION ALL两张表的数据显示在同一结果集)
+        <include refid="ShareZiDuan"/>
+        WHERE sr.createusername = #{createusername}
+        ) AS a
+    </select>-->
 
     <!--int danxuanAdd(Question question);-->
     <insert id="danxuanAdd">
         insert into question
-        (questionid, questionname, questiontype, questionclassifyid, optiona, optionb, optionc, optiond, answer, score,
-         createtime)
-        values (null, #{questionname}, #{questiontype}, #{questionclassifyid}, #{optiona}, #{optionb}, #{optionc},
-                #{optiond}, #{answer}, #{score}, #{createtime})
+        (
+             questionid,
+             questionname,
+             questiontype,
+             questionclassifyid,
+             optiona,
+             optionb,
+             optionc,
+             optiond,
+             answer,
+             score,
+             createtime,
+             createusername,
+             userid,
+             ownuser
+         )
+        VALUES
+        (
+             null,
+             #{questionname},
+             #{questiontype},
+             #{questionclassifyid},
+             #{optiona},
+             #{optionb},
+             #{optionc},
+             #{optiond},
+             #{answer},
+             #{score},
+             #{createtime},
+             #{createusername},
+             #{userid},
+             #{ownuser}
+         )
     </insert>
 
     <!--int perDel(@Param("questionid") Integer questionid);-->
     <delete id="perDel">
         DELETE qap,que
-            FROM question que
-        LEFT JOIN questionandpaper qap
-            ON que.questionid = qap.questionid
+        FROM question que
+                 LEFT JOIN questionandpaper qap
+                           ON que.questionid = qap.questionid
         WHERE que.questionid = #{questionid}
     </delete>
 
@@ -67,15 +120,22 @@
                qt.optiona,
                qt.optionb,
                qt.optionc,
-               qt.optiond
+               qt.optiond,
+               qt.ownuser,
+               CASE qt.isnotshare
+                   WHEN '0' THEN '已共享'
+                   WHEN '1' THEN '审核中'
+                   ELSE '未共享' END AS isnotshare,
+               createusername,
+               userid
         FROM question qt
                  LEFT JOIN questionclassify AS qucla ON qucla.questionclassifyid = qt.questionclassifyid
-        where qt.questionid = #{questionid}
+        WHERE qt.questionid = #{questionid}
     </select>
 
     <!--int preup(Question question);-->
     <update id="preup">
-        update question set
+        UPDATE question SET
         questionname=#{questionname},
         answer=#{answer},
         score=#{score},
@@ -91,4 +151,146 @@
             </if>
         </where>
     </update>
+
+    <!--List<Question> SharedQuestionBank();-->
+    <select id="SharedQuestionBank" resultType="com.jcww.training.pojo.Question">
+        <include refid="ZiDuan"/>
+        WHERE qt.isnotshare = 0
+    </select>
+
+    <!--List<Question> SharedQuestionBankshenhe();-->
+    <select id="SharedQuestionBankshenhe" resultType="com.jcww.training.pojo.Question">
+        <include refid="ZiDuan"/>
+        WHERE qt.isnotshare = 1
+        ORDER BY qt.createtime DESC
+    </select>
+
+    <!--int SharedTurnDown(Question question);-->
+    <insert id="SharedTurnDown">
+        UPDATE question set
+        isnotshare=2
+        <if test="questionid!=0 and questionid!=null">
+            WHERE questionid = #{questionid}
+        </if>
+    </insert>
+
+    <!--int SharedBy(Question question);-->
+    <insert id="SharedBy">
+        UPDATE question set
+        isnotshare=0
+        <if test="questionid!=0 and questionid!=null">
+            WHERE questionid = #{questionid}
+        </if>
+    </insert>
+
+    <!--int ApplicationSH(Question question);-->
+    <insert id="ApplicationSH">
+        UPDATE question set
+        isnotshare=1
+        <if test="questionid!=0 and questionid!=null">
+            WHERE questionid = #{questionid}
+        </if>
+    </insert>
+
+    <!--int AddShared(Share shared);-->
+    <insert id="AddShared">
+        insert into shared
+        (
+            questionid,
+            isnotshare,
+            userid,
+            resolve,
+            ownuser,
+            questionname,
+            questiontype,
+            questionclassifyid,
+            optiona,
+            optionb,
+            optionc,
+            optiond,
+            answer,
+            score,
+            createtime,
+            createusername
+        )
+        VALUES
+        (
+            null,
+            #{isnotshare},
+            #{userid},
+            #{resolve},
+            #{ownuser},
+            #{questionname},
+            #{questiontype},
+            #{questionclassifyid},
+            #{optiona},
+            #{optionb},
+            #{optionc},
+            #{optiond},
+            #{answer},
+            #{score},
+            #{createtime},
+            #{createusername}
+        )
+    </insert>
+
+    <!--List<Shared> MySharedByUserName(String myqus);-->
+    <select id="MySharedByUserName" resultType="com.jcww.training.pojo.Shared">
+        <include refid="ShareZiDuan"/>
+        WHERE sr.createusername = #{createusername}
+        ORDER BY sr.createtime DESC
+    </select>
+
+    <!--Shared SharedViewID(@Param("questionid") Integer questionid);-->
+    <select id="SharedViewID" resultType="com.jcww.training.pojo.Shared">
+        SELECT
+            sr.questionid,
+            sr.questionname,
+            sr.questiontype,
+            qucla.questionclassifyid,
+            sr.optiona,
+            sr.optionb,
+            sr.optionc,
+            sr.optiond,
+            sr.answer,
+            sr.score,
+            sr.createtime,
+            sr.ownuser
+        FROM shared sr
+            LEFT JOIN questionclassify AS qucla ON qucla.questionclassifyid = sr.questionclassifyid
+        WHERE sr.questionid = #{questionid}
+    </select>
+
+    <!--int SharedDeletePer(Integer questionid);-->
+    <delete id="SharedDeletePer">
+        delete from shared where questionid=#{questionid}
+    </delete>
+
+        <!--
+        SELECT ques.questionname,
+           ques.answer,
+           ques.score,
+           ques.optiona,
+           ques.optionb,
+           ques.optionc,
+           ques.optiond,
+           ques.questionclassifyid,
+           ques.questiontype
+    FROM question ques
+    WHERE ques.questionclassifyid = 1
+      and ques.questiontype >=
+          ((SELECT MAX(ques.questionid) FROM question) - (SELECT MIN(ques.questionid) FROM question)) * RAND() +
+          (SELECT MIN(ques.questionid) FROM question)
+    LIMIT 5
+
+
+
+
+
+    INSERT INTO question(
+        userid
+    )
+    SELECT userid FROM user where userid = 1;
+
+        -->
 </mapper>
